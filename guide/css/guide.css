@@ -1,0 +1,41 @@
+@charset "utf-8";
+/************************************************
+Version : 광화문에서 읽다 거닐다 느끼다 1.0
+Date : 2015-10-14
+*************************************************/
+
+/* layout */
+.commonCnt {position: relative;}
+.gu_top {position: fixed; top:0; left:0; right:0; z-index: 999; background-color:#fff;}
+body#guide {background:none;}
+.gu_top h1 {height:42px; border-bottom:2px solid #000; font-size: 30px;}
+body#guide #gnb {overflow:hidden; width:1070px; padding:38px 0 0 200px;}
+body#guide #gnb li {position:relative; float:left; z-index:10; margin:0 !important;}
+body#guide #gnb li.selected {z-index:100;}
+body#guide #guide_contain {margin-top: 80px; padding-bottom: 150px; overflow-y: auto; clear:both; position:relative; background-color:#fff;}
+body#guide #guide_contain.mo {height: calc(100vh - 80px);}
+
+.Guidewrap .guideH2 {background:#d31145; padding:20px 20px 10px; color:#fff; font-size:20px;}
+.Guidewrap .guideH3 {padding:10px 20px 10px; color:#333; font-size:15px;}
+.Guidewrap .guideH3 > span {font-size:12px; color:#717171;}
+.Guidewrap > .cont {padding:15px; border-bottom:1px solid #ddd; overflow:hidden;}
+.Guidewrap > .cont > .guideH3 {padding:10px 0 10px; color:#333; font-size:13px;}
+.Guidewrap > .cont02 {padding:15px 0; border-bottom:1px solid #ddd; overflow:hidden;}
+.Guidewrap > .cont02 > .guideH3 {padding:10px 0 10px; color:#333; font-size:13px;}
+.gu_top ul.tab01 { overflow:hidden; max-width:100% !important; height:40px; background-color:#f7f7f7;}
+.gu_top ul.tab01:after {content:""; display:block; clear:both;}
+.gu_top ul.tab01 li {float:left; height:40px;}
+.gu_top ul.tab01 li:first-child {margin-left:0; padding-left:0; background:none;}
+.gu_top ul.tab01 li::marker  {font-size: 0;}
+.gu_top ul.tab01 li a {display:block; line-height:40px; padding:0 20px; font-size:15px; color:#000; text-align:center;}
+.gu_top ul.tab01 li a:hover {background-color:#d31145; font-weight:bold; color:#fff}
+
+.btnTop {position:relative; z-index:100; overflow:hidden; width:100%; height:20px; margin:-10px 0 -10px; border-bottom:1px solid #ddd}
+.btnTop a {position:absolute; right:0; display:block; width:46px; height:20px; background:url("../guide_img/btn_top.gif") no-repeat 0 0; text-indent:-9999px;}
+.commonCnt .btnTop {border-bottom:0 !important;} /* common.html에만 적용 */
+
+
+.guideDl {}
+.guideDl dt {margin-top:13px;font-size:13px;color:#000;}
+.guideDl dd {margin-top:8px;}
+

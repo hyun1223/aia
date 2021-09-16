@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>MY AIA FileList</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript" src="../asis/jquery-3.1.1.min.js"></script>
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+<script type="text/javascript" src="js/fileList.js"></script>
+<style>
+/* reset */
+html,body{width:100%;height:100%;min-height:100%;}
+body,object,iframe,
+h1,h2,h3,h4,h5,h6,div,span,p,blockquote,pre,abbr,acronym,address,cite,code,del,dfn,em,img,figure,
+ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,
+form,fieldset,legend,a,textarea,option,button,label,table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{
+	margin:0;padding:0;border:0;outline:0;background:transparent;-webkit-box-sizing:border-box;box-sizing:border-box;-moz-box-sizing:border-box;
+	-webkit-appearance:none;appearance:none;-ms-appearance:none;-moz-appearance:none;resize:none;outline:0;
+	-webkit-text-size-adjust:none;word-break:break-all;-webkit-tap-highlight-color:rgba(0,0,0,0); 
+}
+input,select {margin:0;padding:0;font-size:12px;font-family:'NotoSansR', "맑은 고딕", "돋움", Dotum, Apple SD GothicNeo ,Droid Sans, arial, sans-serif;-webkit-box-sizing:border-box;box-sizing:border-box;-moz-box-sizing:border-box;}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display:block;}
+body {min-width:1000px;font-size:12px;font-family:'NotoSansR', "맑은 고딕", "돋움", Dotum, Apple SD Gothi Neo ,Droid Sans, arial, sans-serif;}
+
+a{color:#000; text-decoration:none;}
+a:hover {color:#194d90; text-decoration:underline;}
+a, img {border:none;}
+em {font-style:normal;}
+ol, ul{list-style:none;}
+
+
+/* common */
+.header {position:relative; overflow:hidden;}
+.header h1 {margin-bottom: 30px; padding: 20px; text-align:center; background:#d31145;}
+.header h1 img {height: 70px;}
+.header p {margin-top:2px; font-weight:normal !important; font-size:14px; color:#666; text-align:center;}
+.header p span {color:red;}
+.header #information {position:absolute; right:0; top:25px; margin-left:100px; font-size:14px; font-weight:bold;}
+
+table {width:100%; border-collapse:collapse; border-spacing:0; border-bottom:1px solid #ccc;}
+table caption, fieldset legend{overflow:hidden;z-index:-1;width:0;height:0;font-size:0;line-height:0;text-indent:-9999999px;}
+th {padding:5px 0; color:#fff; background:#d31145; border-top:1px solid #e1e1e1; border-left:1px solid #e1e1e1;}
+td {padding:7px 5px; border-top:1px solid #e1e1e1; border-left:1px solid #e1e1e1; line-height:16px;}
+tr:first-child td {border-top:1px solid #6995c0;}
+th:first-child, td:first-child {border-left:0;}
+td:first-child,
+td:nth-child(2) {font-weight:bold;}
+
+td a {color:#000; text-decoration:none;}
+table tr th select {width:60px;padding:3px; margin:10px 0 0;border:1px solid #e1e1e1;appearance:select;-webkit-appearance: select;-moz-appearance:select;}
+table tr th select.selectDepth {width:120px;}
+table tbody tr.on th,
+table tbody tr.on td {background:#f5f5f7 !important;}
+
+.overlay{position:absolute; top:0; left:0; display:none; width:100%; height:auto !important; height:100%; min-height:100%; background-color: rgba(0, 0, 0, 0.5); z-index:1; zoom:1;}
+.wrapper{padding:20px 20px 40px;}
+.menuWrap{position:relative;margin-top:10px;padding-top:30px;}
+.menu, .menu table{width:100%;}
+
+.menu>dt{position:absolute;top:0;width:20%;}
+.menu>dt a{display:block;height:30px;line-height:30px;text-align:center;cursor:pointer;border:1px solid #ccc;border-left:0;}
+.menu>dt:first-child a {border-left:1px solid #ccc;}
+.menu>dt a.selected{margin-top:0;background:#d31145; color:#fff; border-color:#f32e7c;}
+.menu>dt a.tm{border-left:1px solid #CCC;}
+.menu>dt.tm1 a{border-left:1px solid #CCC;}
+.menu>dt.tm1 a.selected{border-left:1px solid #d31145;}
+.tm2{left:20%;}
+.tm3{left:40%;}
+.tm4{left:60%;}
+.tm5{left:80%;}
+.viewAll{right:0;}
+.menu>dd{display:none;margin-top:-1px;padding:20px 0;border-top:1px solid #ccc;}
+
+.alignC {text-align:center;}
+.hold td, .hold{background:#DDC8DA}
+.del td, .del{background:#999; text-decoration:line-through;}
+.ing td, .ing{background:#FC6;}
+.link td, .link {background:#b7cedf;}
+.noHtml td, .noHtml{background:#bad8ba;}
+.line{border-left:1px solid #f6f6f6 !important;}
+.red {color:#c8212f;}
+.sIcon{display:inline-block; width:20px; height:13px;vertical-align:middle;}
+
+.btn{display:inline-block;padding:3px 5px;font-size:11px;text-align:center;letter-spacing:-1px;color:#fff;background:#1a5599;}
+.btn.off{background:#aaa;}
+.btn.end{background:#090;}
+.btn.mdy{background:#f32e7c;}
+
+.notice{display:table; width:100%;}
+/*.notice dl{width:49%; float:left;}*/
+.notice dt, .notice dd{width:100%; padding:5px 0;}
+.notice li{width:90%; position:relative; padding:0 0 3px 8px;font-size:12px;line-height:145%; color:#767676;}
+.notice .bul{position:absolute; top:8px; left:0; width:2px; height:2px; background:#626262;}
+.dNotice {overflow:hidden; width:100%; color:#666;}
+.dNotice > p {margin-bottom:10px;font-weight:bold; color:#000;}
+.dNotice ul {padding-left:5px;list-style:circle !important}
+.dNotice ul li {position:relative; padding-left:8px; margin-bottom:5px;list-style:circle !important;line-height:145%; }
+.dNotice ul li strong {display:block; margin-bottom:5px;}
+.dNotice ul li:after {content:''; display:block; position:absolute; top:8px; left:0; width:2px; height:2px; background: #626262; }
+
+.siteInfo{display:table; width:100%;}
+.siteInfo dt{display:table-cell; width:10%; min-width:120px;  padding:5px; border:1px solid #999; background:#d31145; color:#fff; font-weight:bold; letter-spacing:-1px; text-align:center; vertical-align:middle;}
+.siteInfo dd{display:table-cell;  padding:5px 10px; border:1px solid #ccc; border-right:0; border-left:0;}
+
+#toTop{display:none; position:fixed; bottom:0; width:100%;}
+#toTop a{display:block; padding:9px 10px; text-align:center; background:#333; color:#fff;}
+.blit-list li {
+    position: relative;
+    padding-left: 11px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #554344;
+}
+.blit-list li::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: 3px;
+    width: 3px;
+    height: 3px;
+    background: #554344;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.blit-list > li.pt {background-color: #f00; color: #fff;}
+.blit-list li.pt::before {
+	background-color: #fff;
+}
+.old, .old.on td, .old td a {background: #c2eeff !important;}
+.move, .move.on td, .move td a {background: #aa893a !important; color: #fff !important;}
+.bg_orange td {
+	color: #fff;
+	text-align: center;
+	background: #d31145;
+}
+</style>
+</head>
+<body>
+<div class="overlay"></div>
+<div class="wrapper">
+	<div class="header">
+		<h1><img class="navbar-brand-img hidden-xs" src="https://www.aia.co.kr/content/dam/aia/logos/aiawhite-logo.png" alt="AIA"></h1>
+		<p>※ 파일은 <span>크롬, 파이어폭스, ie9이상, 사파리등 표준 브라우저에 최적화</span>되어있습니다.</p>
+		<br><br>
+	</div>
+	<div class="menuWrap">
+		<dl class="menu">
+			<dt class="tm1"><a href="#none" class="selected">MY AIA</a></dt>
+			<dd style="display:block">
+				<table id="table1">
+					<caption>MY AIA</caption>
+					<colgroup>
+						<col style="width:180px" />
+						<col style="width:200px" />
+						<col style="width:200px" />
+						<col style="width:200px" />
+						<col style="width:300px" />
+						<col style="width:300px" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th colspan="3">경로</th>
+							<th rowspan="2">팝업</th>
+							<th rowspan="2">URL(파일명)</th>
+							<th rowspan="2">수정사항</th>
+						</tr>
+						<tr>
+							<th>D1</th>
+							<th>D2</th>
+							<th>D3</th>
+						</tr>
+					</thead>
+					<tbody class="sum">
+						<tr>
+							<td colspan="6">
+								전체 변경 - popup.css 공통으로 쓰기위해 분리 작업하였습니다.<br>
+								&lt;link rel="stylesheet" href="../css/popup.css" type="text/css"&gt; 추가 부탁드립니다.
+							</td>
+						</tr>
+						<tr>
+							<td>간편 로그인</td>
+							<td>계약자 로그인</td>
+							<td></td>
+							<td></td>
+							<td>
+								<a href="../html/MFCM000100.html" target="_blank">
+									MFCM000100.html
+								</a>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td>아이디 로그인</td>
+							<td></td>
+							<td>
+								<a href="../html/MFCM000101.html" target="_blank">
+									MFCM000101.html
+								</a>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td>카카오페이 인증 로그인</td>
+							<td></td>
+							<td>
+								<a href="../html/MFCM000300.html" target="_blank">
+									MFCM000300.html
+								</a>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td>서비스 이용불가 안내</td>
+							<td></td>
+							<td>
+								<a href="../html/MFCM000102.html" target="_blank">
+									MFCM000102.html
+								</a>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td>본인확인(모바일만)</td>
+							<td></td>
+							<td>
+								<a href="../html/MFCM000103.html" target="_blank">
+									MFCM000103.html
+								</a>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>피보험자 로그인</td>
+							<td></td>
+							<td></td>
+							<td>
+								<a href="../html/MFCM000400.html" target="_blank">
+									MFCM000400.html
+								</a>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>내 보험정보</td>
+							<td>고객 정보 변경</td>
+							<td></td>
+							<td></td>
+							<td>
+								<a href="../html/MFPR010100.html" target="_blank">
+									MFPR010100.html
+								</a>
+							</td>
+							<td>
+								<ul class="blit-list">
+									<li class="pt">버튼 추가 - 20210831 주석</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>비밀번호 변경</td>
+							<td></td>
+							<td></td>
+							<td>
+								<a href="../html/MFPR010200.html" target="_blank">
+									MFPR010200.html
+								</a>
+							</td>
+							<td>
+								<ul class="blit-list">
+									<li class="pt">본인 확인 결과 추가 및 수정 - 20210831 주석</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>회원 탈퇴</td>
+							<td></td>
+							<td></td>
+							<td>
+								<a href="../html/MFPR010300.html" target="_blank">
+									MFPR010300.html
+								</a>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>개인(신용)정보 활용 동의/변경</td>
+							<td></td>
+							<td></td>
+							<td>
+								<a href="../html/MFPR040100.html" target="_blank">
+									MFPR040100.html
+								</a>
+							</td>
+							<td>
+								<ul class="blit-list">
+									<li>버튼 삭제 - 20210825 주석 표시</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>자동이체 신청/변경</td>
+							<td>가입상품상세/신청변경상품선택</td>
+							<td></td>
+							<td></td>
+							<td>
+								<a href="../html/MFPR020100.html" target="_blank">
+									MFPR020100.html
+								</a>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>신청 정보 입력</td>
+							<td></td>
+							<td></td>
+							<td>
+								<a href="../html/MFPR020200.html" target="_blank">
+									MFPR020200.html
+								</a>
+							</td>
+							<td>
+								<ul class="blit-list">
+									<li>중복 class 발견으로 class 명 변경 - 20210825 주석 표시</li>
+									<li class="pt">계좌 확인 결과 추가 - 20210831 주석</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>자동이체 신청 완료</td>
+							<td>완료/오류</td>
+							<td></td>
+							<td>
+								<a href="../html/MFPR020300.html" target="_blank">
+									MFPR020300.html
+								</a>
+							</td>
+							<td>
+								<ul class="blit-list">
+									<li>중복 class 발견으로 class 명 변경 - 20210825 주석 표시</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>자동이체 신청 완료</td>
+							<td>실패</td>
+							<td></td>
+							<td>
+								<a href="../html/MFPR020300_2.html" target="_blank">
+									MFPR020300_2.html
+								</a>
+							</td>
+							<td>
+								<ul class="blit-list">
+									<li>중복 class 발견으로 class 명 변경 - 20210825 주석 표시</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</dd>
+			<dt class="tm2"><a href="#none">가이드</a></dt>
+			<dd style="display:none">
+				<table id="table2">
+					<caption></caption>
+					<colgroup>
+						<col style="width:180px" />
+						<col style="width:200px" />
+						<col style="width:200px" />
+						<col style="width:200px" />
+						<col style="width:300px" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th colspan="2">경로</th>
+							<th colspan="2">팝업</th>
+							<th rowspan="2">URL(파일명)</th>
+						</tr>
+						<tr>
+							<th>D1</th>
+							<th>D2</th>
+							<th>D1</th>
+							<th>D2</th>
+						</tr>
+					</thead>
+					<tbody class="sum">
+						<tr>
+							<td>기존 가이드</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>
+								<a href="form-asis.html" target="_blank">
+									form-asis.html
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>신규 가이드</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>
+								<a href="form.html" target="_blank">
+									form.html
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</dd>
+		</dl>
+
+	</div>
+
+	<div class="dNotice">
+		<p>개발자 웹 접근성 유의사항</p>
+		<ul>
+			<li><strong>기본언어 표시</strong> 모든 웹페이지에는 기본언어를 표시해야합니다. lang="ko"</li>
+			<li><strong>입력양식</strong> 1. input 타입 image, hidden,
+				sumit, button, reset을 제외한 모든 입력양식에는 1대1로 대응하는 label이 존재해야 합니다.<br>
+				2. label for 값과 id값을 일치시켜주세요. label을 사용하지 못할경우 title 을 사용합니다.<br>
+				3. select, textarea 도 포함
+			</li>
+			<li><strong>사용자 요구에 따른 실행</strong> 1. 페이지 로딩시
+				입력양식으로의 자동 포커스, 입력양식에 값을 입력했을 경우 또는 선택(option, radio, checkbox
+				등)만으로 새창이 열리거나 포커스가 이동하면 안됩니다.<br> 2. 오류입력 정정방법의 제공은 제외<br>
+				3. 새창으로 열리는 링크에는 title="새창"으로 새창이 열림을 알려야합니다. 특히 window.open등
+				스크립트로 여는 팝업에는 필수로 넣어야합니다.</li>
+			<li><strong>오류입력 정정방법의 제공</strong> 모든 입력양식에는 오류입력
+				정정방법을 제공해야합니다. 입력을 잘못 했을 경우 해당 내용을 고지(alert)하고 해당 위치로 포커스를
+				이동시켜주어야 합니다.</li>
+			<li><strong>제목 제공</strong> 1. 웹페이지 제목은 문서의 내용을 짧게
+				요약하여 제공해야하며 서로 배타적이어야합니다.<br> 2. iframe 에는 title 로 내부 문서에 대한
+				짧은 요약 제목을 달아주시고 빈 프레임일 경우 title="내용없음"으로 넣으면 됩니다.</li>
+			<li><strong>기타 유의사항</strong> 1. iframe으로 불러오는 문서도
+				웹접근성에 맞아야 합니다. 내부 문서에는 기본언어표시 lang="ko"를 넣어주세요<br> 2. ajax
+				사용시 초점을 잃지 않게 해야하며 실시간으로 변하는 컨텐츠의 경우 기능버튼에 title 속성으로 다음 데이터가
+				변경됨을 고지해야 합니다.<br> 3. 레이어팝업 사용시에 순차적으로 키보드 이용이 가능하도록 컨텐츠의
+				논리적인 구조에 위치해야 합니다.
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

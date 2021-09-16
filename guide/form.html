@@ -1,0 +1,381 @@
+﻿<!doctype html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://www.aia.co.kr/favicon.ico">
+        <meta name="loginpath" content="https://www.aia.co.kr/content/kr/ko/my-aia/login-select.html">
+        <meta name="loginapi" content="null">
+        <meta name="logoutapi" content="null">
+        <meta name="serviceapi" content="https://cyberservice.aia.co.kr">
+        <meta name="country" content="kr">
+        <link rel="stylesheet" href="/aia/asis/header.css" type="text/css">
+        <link rel="stylesheet" href="/aia/asis/head.css" type="text/css">
+        <link rel="stylesheet" href="/aia/asis/ko.css" type="text/css">
+        <link rel="stylesheet" href="/aia/asis/noto.css" type="text/css">
+        <link rel="stylesheet" href="/aia/asis/table_design.css" type="text/css">
+        <link rel="stylesheet" href="/aia/asis/transkey.css" type="text/css">
+        <link rel="stylesheet" href="/aia/css/svg.css" type="text/css"> 
+        <link rel="stylesheet" href="/aia/css/form.css" type="text/css"> 
+        <link rel="stylesheet" href="/aia/css/popup.css" type="text/css"> 
+        <script type="text/javascript" src="/aia/asis/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="/aia/asis/aia-header-v2.min.js"></script>
+        <script type="text/javascript" src="/aia/asis/aia-footer-v2.min.js"></script>
+        <script type="text/javascript" src="/aia/js/form.js"></script>
+        <title>common</title>
+        <style>
+          .ex-guide-tit {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 18px;
+            text-align: left;
+            color: #fff;
+            background-color: #B8123E;
+          }
+          .ex-guide-tit02 {
+            display: block;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+            color: #0A6E93;
+          }
+          .ex-guide-tit02::before {
+            content: '';
+            margin: 4px;
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background: #0A6E93;
+          }
+          .grp-button + hr {
+            margin: 30px -100px 0;
+          }
+        </style>
+    </head>
+    <body>
+
+      <!-- container -->
+      <div class="container input-container">
+        <strong class="ex-guide-tit">title</strong> 
+        <div class="login-my-aia">
+          <strong class="ex-guide-tit02">2줄(타이틀 2번째 줄)</strong> 
+          <div class="login-tit">
+            회원가입 필요없는
+            <h3>간편 로그인</h3>
+          </div>
+          <strong class="ex-guide-tit02">2줄(타이틀 1번째 줄)</strong> 
+          <div class="login-tit type03">
+            <h3>본인 확인</h3>
+            <p>본인확인을 위하여 생년월일을 입력해주세요.</p>
+          </div>
+          <strong class="ex-guide-tit02">1줄</strong> 
+          <div class="login-tit type02">
+            <h3>카카오페이 인증 로그인</h3>
+          </div>
+        </div>
+        <hr>
+        <strong class="ex-guide-tit">form</strong> 
+        <div class="login-my-aia">
+          <!-- form -->
+          <div class="form-box">
+            <form>
+              <strong class="ex-guide-tit02">input</strong> 
+              <!-- item -->
+              <div class="ipt-box"><!-- 오류시 class="err-sel" 추가 -->
+                <div class="ipt">
+                  <input type="text" placeholder=" " id="id01">
+                  <label for="id01">AIA 아이디 입력</label>
+                </div>
+              </div>
+              <p class="icon-error">아이디를 입력하세요.</p>
+              <!-- //item -->
+              <strong class="ex-guide-tit02">disabled</strong> 
+              <!-- item -->
+              <div class="ipt-box"><!-- 오류시 class="err-sel" 추가 -->
+                <div class="ipt">
+                  <input type="text" placeholder=" " id="id01" disabled>
+                  <label for="id01">AIA 아이디 입력</label>
+                </div>
+              </div>
+              <p class="icon-error">아이디를 입력하세요.</p>
+              <!-- //item -->
+              <strong class="ex-guide-tit02">오류</strong> 
+              <!-- item -->
+              <div class="ipt-box err-sel"><!-- 오류시 class="err-sel" 추가 -->
+                <div class="ipt">
+                  <input type="text" placeholder=" " id="id01">
+                  <label for="id01">AIA 아이디 입력</label>
+                </div>
+              </div>
+              <p class="icon-error">아이디를 입력하세요.</p>
+              <!-- //item -->
+              <strong class="ex-guide-tit02">password</strong> 
+              <!-- item -->
+              <div class="ipt-box ipt-pass">
+                <div class="ipt">
+                  <input type="password" placeholder=" "  id="id02">
+                  <label for="id02">비밀번호 입력</label>
+                  <i class="icon-eye"></i>
+                </div>
+              </div>
+              <p class="icon-error">비밀번호를 입력하세요.</p>
+              <!-- //item -->
+              <!-- item -->
+              <div class="ipt-box ipt-sel">
+                <div class="ipt">
+                  <button type="button" class="btn-sel">
+                    선택
+                  </button>
+                  <select name="" id="" title="통신사 선택">
+                    <option>통신사 선택</option>
+                    <option value="1">010</option>
+                    <option value="2">011</option>
+                    <option value="3">016</option>
+                    <option value="4">017</option>
+                    <option value="5">018</option>
+                    <option value="6">019</option>
+                  </select>
+                </div>
+              </div>
+              <p class="icon-error">비밀번호를 입력하세요.</p>
+              <!-- //item -->
+              <strong class="ex-guide-tit02">input - checkbox, input - radio</strong> 
+              <!-- check-box -->
+              <div class="check-box">
+                <div>
+                  <input type="checkbox" name="" id="id-save">
+                  <label for="id-save">아이디 저장</label>
+                </div>
+                <div>
+                  <input type="radio" name="" id="id-sav">
+                  <label for="id-sav">아이디 저장</label>
+                </div>
+              </div>
+              <!-- //check-box -->
+            </form>
+          </div>
+          <!-- //form -->            
+        </div>
+      </div>
+      <!-- // container --> 
+      <hr>
+      <!-- container -->
+      <div class="container input-container">
+        <strong class="ex-guide-tit">button</strong> 
+        <div class="login-my-aia">
+          <!-- form -->
+          <div class="form-box">
+            <form>
+              <strong class="ex-guide-tit02">L - pink</strong> 
+              <div class="grp-button">
+                <BUtton type="button" class="btnL">버튼 텍스트</BUtton>
+              </div>
+              <strong class="ex-guide-tit02">pink : disabled</strong> 
+              <div class="grp-button">
+                <BUtton type="button" class="btnL" disabled>버튼 텍스트</BUtton>
+              </div>
+              <strong class="ex-guide-tit02">M - pink</strong> 
+              <div class="grp-button">
+                <BUtton type="button" class="btnM">버튼 텍스트</BUtton>
+              </div>
+              <strong class="ex-guide-tit02">S - pink</strong> 
+              <div class="grp-button">
+                <BUtton type="button" class="btnS">버튼 텍스트</BUtton>
+              </div>
+              <hr>
+              <strong class="ex-guide-tit02">L - white</strong> 
+              <div class="grp-button type02">
+                <BUtton type="button" class="btnL">버튼 텍스트</BUtton>
+              </div>
+              <strong class="ex-guide-tit02">white : disabled</strong> 
+              <div class="grp-button type02">
+                <BUtton type="button" class="btnL" disabled>버튼 텍스트</BUtton>
+              </div>
+              <strong class="ex-guide-tit02">M - white</strong> 
+              <div class="grp-button type02">
+                <BUtton type="button" class="btnM">버튼 텍스트</BUtton>
+              </div>
+              <strong class="ex-guide-tit02">S - white</strong> 
+              <div class="grp-button type02">
+                <BUtton type="button" class="btnS">버튼 텍스트</BUtton>
+              </div>
+              <hr>
+              <strong class="ex-guide-tit02">L - gray</strong> 
+              <div class="grp-button type03">
+                <BUtton type="button" class="btnL">버튼 텍스트</BUtton>
+              </div>
+              <strong class="ex-guide-tit02">gray : disabled</strong> 
+              <div class="grp-button type03">
+                <BUtton type="button" class="btnL" disabled>버튼 텍스트</BUtton>
+              </div>
+              <strong class="ex-guide-tit02">M - gray</strong> 
+              <div class="grp-button type03">
+                <BUtton type="button" class="btnM">버튼 텍스트</BUtton>
+              </div>
+              <strong class="ex-guide-tit02">S - gray</strong> 
+              <div class="grp-button type03">
+                <BUtton type="button" class="btnS">버튼 텍스트</BUtton>
+              </div>
+
+            </form>
+          </div>
+          <!-- //form -->            
+        </div>
+      </div>
+      <!-- // container --> 
+			<!-- 안내 팝업 -->
+			<article class="layer-popup type01 pop-open01">
+				<!-- popup -->
+				<div class="wrap-popup">
+          <div class="popup">
+            <div class="pop-head">
+              <h1>본인 확인</h1>
+            </div>
+            <div class="pop-cont">              
+              <div>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+              </div>
+              <div class="grp-button-asis">
+                <div>
+                  <button type="button" class="btn btn-default btn-primary">확인</button>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn-close close-btn01">닫기</button>
+          </div>
+				</div>
+				<!-- // popup  -->
+			</article>
+			<!-- //안내 팝업  -->
+			<!-- 안내 팝업 -->
+			<article class="layer-popup type02 pop-open02">
+				<!-- popup -->
+				<div class="wrap-popup">
+          <div class="popup">
+            <div class="pop-head">
+              <h1>본인 확인</h1>
+            </div>
+            <div class="pop-cont">  
+              <div class="alt-cont">
+                <strong>제목</strong>
+                <p>
+                  컨텐츠<br>
+                  컨텐츠<br>
+                  컨텐츠
+                </p>
+              </div> 
+              <div class="grp-button-asis">
+                <div>
+                  <button type="button" class="btn btn-default btn-primary" data-target="_self">확인</button>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn-close close-btn02">닫기</button>
+          </div>
+				</div>
+				<!-- // popup  -->
+			</article>
+			<!-- //안내 팝업  -->
+			<!-- 안내 팝업 -->
+			<article class="layer-popup type03 pop-open03">
+				<!-- popup -->
+				<div class="wrap-popup">
+          <div class="popup">
+            <div class="pop-head">
+              <h1>본인 확인</h1>
+            </div>
+            <div class="pop-cont">  
+              <div>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+              </div> 
+              <div class="grp-button-asis02">
+                <div>
+                  <button type="button" class="btn btn-default btn-primary" data-target="_self">확인</button>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-default btn-secondary" data-target="_self">취소</button>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn-close close-btn03">닫기</button>
+          </div>
+				</div>
+				<!-- // popup  -->
+			</article>
+			<!-- //안내 팝업  -->
+			<!-- 안내 팝업 -->
+			<article class="layer-popup pop-sel">
+				<!-- popup -->
+				<div class="wrap-popup">
+          <div class="popup">
+            <ul>
+            </ul>
+          </div>
+				</div>
+				<!-- // popup  -->
+			</article>
+			<!-- //안내 팝업  -->
+    </body>
+</html>

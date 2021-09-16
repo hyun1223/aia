@@ -1,0 +1,181 @@
+/* table design 
+table.responsive th {
+	padding: 12px 8px 8px;
+	border-bottom: solid 1px #DBDAD4;
+}
+table.responsive td {
+	text-align: center; /* default cell alignment 
+    padding:8px;
+}
+table.responsive tr:last-child td {
+	border-bottom: solid 1px #DBDAD4;
+}
+.responsive .tb-b{border-bottom:1px solid #DBDAD4;}
+*/
+/* 팀 테이블 디자인 
+table.responsive tbody {
+                border-top: solid black 1px;
+                border-bottom: solid black 1px;
+}
+table.responsive tbody td:nth-of-type(1) {
+                vertical-align: top;
+}
+*/
+/*
+table.responsive thead {
+                background-color: #D4EDF1;
+}
+*/
+
+/* table design */
+table.responsive thead {
+				border-top: solid #DBDAD4 2px;
+}
+table.responsive th {
+                padding: 12px 8px 8px;
+                border-top: solid #DBDAD4 1px;
+}
+table.responsive td {
+                padding:8px;
+}
+table.responsive .tb-b{border-bottom:1px solid #DBDAD4;}
+
+@media (max-width: 767px){
+    table.responsive td {
+         padding: 12px 0px 8px;
+    }
+}
+
+/* 팀 테이블 디자인 */
+
+table.responsive tbody {
+                border-bottom: solid #DBDAD4 1px;
+}
+table.responsive tbody tr {
+                border-top: solid #DBDAD4 1px;
+}
+table.responsive tbody td {
+                vertical-align: top;
+}
+table.responsive tbody td {
+                text-align: center;
+}
+
+
+/* 라인추가 2016.02.16 */
+/*
+table.responsive tbody td.line {
+                vertical-align: top;
+				text-align: center;
+				border-right: solid #DBDAD4 1px;
+				padding:5px;
+}
+
+
+table.responsive .v-txtl {
+	text-align: left;
+}
+table.responsive .v-txtr {
+	text-align: right;
+}
+*/
+
+/* caption hidden 처리 */
+caption {position:absolute; top:0; left:0; overflow:hidden; font-size:0; line-height:0;}
+/*
+table.responsive tbody td:nth-of-type(2) {
+                text-align: left;
+}
+*/
+
+/* table안의 table */
+.responsive td .responsive tbody tr{border:0; padding-top:0; padding-bottom:0;}
+.responsive td .responsive tbody{border:0;}
+.responsive td .responsive td{padding-top:0; padding-bottom:0;}
+
+
+/* footer table */
+.area-control{width:100%;}
+.area-control:after{content:''; display:block; clear:both;}
+.area-control .left-area{float:left; width:39%;  margin-right:1%;}
+.area-control .right-area{float:right; width:59%; margin-left:1%;}
+.dls-tb {width:100%; text-align:center;}
+.dls-tb th{border-bottom:1px solid #DBDAD4; padding:12px; font-size:14px;}
+.dls-tb.rw th{height:93px;}
+.dls-tb th.bb{border-bottom:1px solid #DBDAD4;}
+.dls-tb td{border-bottom: 1px solid #DBDAD4; padding: 12px;}
+
+@media (max-width: 767px){
+ .area-control .left-area{float:none; width:100%; margin-right:0;}
+ .area-control .right-area{float:none; width:100%; margin-left:0; margin-top:24px;}
+ .dls-tb.rw th{padding:12px; height:auto;}
+}
+
+
+/* 간편계산기 테이블 추가 20160315 */
+
+table.redponsive.tcs3col {
+    table-layout: fixed;
+    /*max-width: 700px;*/
+    width: 100%;
+}
+
+/*
+table.responsive.tcs3col thead th:nth-of-type(1), table.responsive.tcs3col tbody td:nth-of-type(1){
+	width: 100px;
+    font-weight: bold;
+}
+*/
+
+table.responsive.tcs3col thead th:first-child {
+	width: 100px;
+    font-weight: bold;
+}
+
+table.responsive.tcs3col thead th:last-of-type, table.responsive.tcs3col tbody td:nth-of-type{
+	width: 100px;
+}
+
+@media (max-width: 767px;) {
+
+table.responsive.tcs3col thead th:nth-of-type(1), table.responsive.tcs3col tbody td:nth-of-type(1){
+	width: 70px;
+	}
+
+table.responsive.tcs3col thead th:last-of-type, table.responsive.tcs3col tbody td:nth-of-type{
+	width: 70px;
+	}
+}
+
+table.responsive.tcs3col thead {
+				border-top: solid #DBDAD4 2px;
+}
+table.responsive.tcs3col th {
+                padding: 12px 8px 8px;
+                border-top: solid #DBDAD4 1px;
+}
+table.responsive.tcs3col td {
+                padding:8px;
+}
+table.responsive.tcs3col.tb-b{border-bottom:1px solid #DBDAD4;}
+
+@media (max-width: 767px){
+    table.responsive.tcs3col td {
+         padding: 12px 0px 8px;
+    }
+}
+
+/* 팀 테이블 디자인 */
+
+table.responsive.tcs3col tbody {
+                border-bottom: solid #DBDAD4 1px;
+}
+table.responsive.tcs3col tbody tr {
+                border-top: solid #DBDAD4 1px;
+}
+table.responsive.tcs3col tbody td {
+                vertical-align: top;
+}
+table.responsive.tcs3col tbody td {
+                text-align: center;
+}

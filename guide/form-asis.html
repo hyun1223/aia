@@ -1,0 +1,557 @@
+﻿<!doctype html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://www.aia.co.kr/favicon.ico">
+        <meta name="loginpath" content="https://www.aia.co.kr/content/kr/ko/my-aia/login-select.html">
+        <meta name="loginapi" content="null">
+        <meta name="logoutapi" content="null">
+        <meta name="serviceapi" content="https://cyberservice.aia.co.kr">
+        <meta name="country" content="kr">
+        <link rel="stylesheet" href="/aia/asis/header.css" type="text/css">
+        <link rel="stylesheet" href="/aia/asis/head.css" type="text/css">
+        <link rel="stylesheet" href="/aia/asis/ko.css" type="text/css">
+        <link rel="stylesheet" href="/aia/asis/noto.css" type="text/css">
+        <link rel="stylesheet" href="/aia/asis/table_design.css" type="text/css">
+        <link rel="stylesheet" href="/aia/asis/transkey.css" type="text/css">
+        <link rel="stylesheet" href="/aia/css/svg.css" type="text/css"> 
+        <link rel="stylesheet" href="/aia/css/form.css" type="text/css"> 
+        <link rel="stylesheet" href="/aia/css/form-asis.css" type="text/css"> 
+        <link rel="stylesheet" href="/aia/css/popup.css" type="text/css"> 
+        <script type="text/javascript" src="/aia/asis/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="/aia/asis/aia-header-v2.min.js"></script>
+        <script type="text/javascript" src="/aia/asis/aia-footer-v2.min.js"></script>
+        <script type="text/javascript" src="/aia/js/form.js"></script>
+        <script type="text/javascript" src="/aia/js/tab.js"></script>
+        <title>asis-common</title>
+        <style>
+          .ex-guide-tit {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 18px;
+            text-align: left;
+            color: #fff;
+            background-color: #B8123E;
+          }
+          .ex-guide-tit02 {
+            display: block;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+            color: #0A6E93;
+          }
+          .ex-guide-tit02::before {
+            content: '';
+            margin: 4px;
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background: #0A6E93;
+          }
+        </style>
+    </head>
+    <body>
+
+      <!-- container -->
+      <div class="container input-container">
+        <h3>title</h3>
+        <strong class="ex-guide-tit">h3</strong> 
+        <h3>고객 정보 변경</h3>
+        <strong class="ex-guide-tit">h4</strong> 
+        <h4>연락처</h4>
+      </div>
+      <strong class="ex-guide-tit">2줄</strong>
+      <div class="container tit-cont-container">
+        <h3>자동이체 신청/변경</h3>
+        <p class="info-tit-txt">자동이체 신청/변경을 원하는 계약을 선택하세요.</p>
+      </div>
+      <hr>
+      <div class="container input-container">
+        <h3>form</h3>
+        <!-- form -->
+        <div class="form-box-asis">
+          <form>
+            <strong class="ex-guide-tit02">input</strong> 
+            <div class="int-box">
+              <!-- item -->
+              <div class="int">
+                <label for="tel01">휴대폰</label>
+                <input type="tel" placeholder="-없이 입력" id="tel01">
+                <p class="txt-error">입력해 주세요.</p>
+              </div>
+              <!-- //item -->
+            </div>
+            <strong class="ex-guide-tit02">disabled</strong> 
+            <div class="int-box">
+              <!-- item -->
+              <div class="int">
+                <label for="pass02">새로운 비밀번호</label>
+                <input type="password" placeholder="영문+숫자+특수문자 (8자리 이상)" id="pass02" disabled>
+              </div>
+              <!-- //item -->
+            </div>
+            <strong class="ex-guide-tit02">input -오류</strong> 
+            <div class="int-box error-int">
+              <!-- item -->
+              <div class="int">
+                <label for="tel01">휴대폰</label>
+                <input type="tel" placeholder="-없이 입력" id="tel01">
+                <p class="txt-error">입력해 주세요.</p>
+              </div>
+              <!-- //item -->
+            </div>
+            <strong class="ex-guide-tit02">주소</strong> 
+            <div class="int-box">
+              <!-- item -->
+              <div class="int">
+                <label for="add01_01">자택 주소</label>
+                <input type="text" placeholder="주소 검색" id="add01_01" disabled>
+                <p class="txt-error">자택주소를 입력해 주세요.</p>
+              </div>
+              <!-- //item -->
+              <!-- item -->
+              <div class="int int-btn">
+                <div class="int-type">
+                  <input type="text" placeholder="상세주소 입력" id="add01_02" disabled>
+                </div>
+                <div class="btn-type">
+                  <button type="button" class="pop-btn btn-open01">검색</button>
+                </div>
+              </div>
+              <!-- //item -->
+            </div>
+            <div class="int-box">
+              <strong class="ex-guide-tit02">input + button(2글자)</strong> 
+              <!-- item -->
+              <div class="int int-btn">
+                <div class="int-type">
+                  <input type="text" placeholder="상세주소 입력" id="add01_02">
+                </div>
+                <div class="btn-type">
+                  <button type="button" class="pop-btn btn-open01">검색</button>
+                </div>
+              </div>
+              <!-- //item -->
+             <strong class="ex-guide-tit02">select,input + button(4글자)</strong> 
+              <!-- item -->
+              <div class="int int-btn type02">
+                <div class="int-type">
+                  <select name="" id="">
+                      <option value="">010-00**-00**</option>
+                  </select>
+                </div>
+                <div class="btn-type">
+                  <button>인증 요청</button>
+                </div>
+              </div>
+              <!-- //item -->
+             <strong class="ex-guide-tit02">select,input + button(6글자)</strong> 
+             <!-- item -->
+             <div class="int int-btn type03">
+               <div class="int-type">
+                 <input type="text" placeholder=" " value="이체일 20일" title="카드결제일" disabled>
+               </div>
+               <div class="btn-type">
+                 <button>신용카드 확인</button>
+               </div>
+             </div>
+             <!-- //item -->
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr>
+      <div class="container input-container">
+        <h3>list</h3>
+        <strong class="ex-guide-tit02">info-list</strong> 
+        <ul class="info-list">
+          <li>
+            <strong class="dp-r16">서비스 이용 시간</strong>평일 9:00 ~ 21:30 (토/일/공휴일 제외)
+          </li>
+          <li>
+            출금이 불가능한 계좌 (적금 및 해지(해약), 은행CMA 등)는 자동이체 승인이 불가합니다.<br>
+            확인 후 등록하시기 바랍니다.
+          </li>
+        </ul>
+        <strong class="ex-guide-tit02">point-list</strong> 
+        <p class="point-list">귀하는 아래의 동의들을 거부할 수 있습니다. 다만, 동의를 거부할 경우 바이탈리티 1.1 서비스 가입이 거절 혹은 이용이 제한되거나 회비 관련 업무 처리가 제한될 수 있습니다.</p>
+        <strong class="ex-guide-tit02">blit-list</strong> 
+        <ul class="blit-list">
+          <li>보험계약대출이 있는 계약은 가입증서번호가 중복 표시됩니다.</li>
+          <li>계약자 명의의 계좌, 카드로 신청/변경 가능합니다. (타인 계좌.카드 등록 불가)</li>
+          <li>보험 계약에 따라, 카드 자동이체 신청이 불가할 수 있습니다.</li>
+          <li>여러 건을 동시 변경하는 경우 카드 자동이체 신청 불가 계약이 포함되어 있으면 계좌 자동이체 신청만 가능합니다.</li>
+          <li>보험계약대출이자는 카드 납입이 불가합니다.</li>
+          <li><strong>납입 방법을 자동이체에서 카드로 변경, 혹은 신용카드 변경을 원하시는 경우</strong> 1588-9898(평일 오전 9:00 ~ 오후 18:00)로 문의 주시면 친절히 안내 드리겠습니다.</li>
+        </ul>
+        <strong class="ex-guide-tit02">blit-list : red</strong> 
+        <ul class="blit-list col-red">
+          <li>회원정보 및 서비스 이용기록 즉시 삭제</li>
+          <li>AIA생명 서비스 및 혜택 이용 불가</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="container input-container">
+        <h3>tooltip, radio, checkbox</h3>
+        <div class="int-box int-radio">
+          <!-- item -->
+          <div class="int">
+            <strong class="ex-guide-tit02">tooltip</strong> 
+            <strong class="int-tit">
+              <span>휴대폰 알림 수신 여부</span>
+              <span class="tip-box tip01">
+                <button type="button" class="btn-question">?</button>
+                <div class="balloon-box">
+                  <div class="tip-txt">
+                    보험자료 외 알림을 문자메시지 및 카카오 알림톡을 통해 전송
+                  </div>                        
+                </div>
+              </span>
+            </strong>
+            <strong class="ex-guide-tit02">radio - typ01</strong> 
+            <!-- check-box -->
+            <div class="check-box-full">
+              <div>
+                <input type="radio" name="dd" id="dd01_01">
+                <label for="dd01_01">수신</label>
+              </div>
+              <div>
+                <input type="radio" name="dd" id="dd01_02">
+                <label for="dd01_02">거부</label>
+              </div>
+            </div>
+            <!-- //check-box -->
+          </div>
+          <!-- //item -->
+        </div>
+        <strong class="ex-guide-tit02">radio - typ02</strong> 
+        <div class="int-box int-radio">
+          <!-- item -->
+          <div class="int">
+            <!-- check-box -->
+            <div class="check-box-full type02">
+              <div>
+                <input type="radio" name="dd" id="dd01_01">
+                <label for="dd01_01">휴대전화</label>
+              </div>
+              <div>
+                <input type="radio" name="dd" id="dd01_02">
+                <label for="dd01_02">ARS전화</label>
+              </div>
+            </div>
+            <!-- //check-box -->
+          </div>
+          <!-- //item -->
+        </div>
+        <strong class="ex-guide-tit02">checkbox - full</strong> 
+        <div class="int-box int-radio">
+          <!-- item -->
+          <div class="int">
+            <!-- check-box -->
+            <div class="check-box-full type02">
+              <div>
+                <input type="checkbox" name="dd04" id="dd04_01">
+                <label for="dd04_01">전화</label>
+              </div>
+              <div>
+                <input type="checkbox" name="dd04" id="dd04_02">
+                <label for="dd04_02">문자</label>
+              </div>
+              <div>
+                <input type="checkbox" name="dd04" id="dd04_03">
+                <label for="dd04_03">이메일</label>
+              </div>
+            </div>
+            <!-- //check-box -->
+          </div>
+          <!-- //item -->
+        </div>
+        <strong class="ex-guide-tit02">checkbox - pink</strong> 
+        <div class="pink-check">
+          <div>
+            <input type="checkbox" name="" id="debit_check03" />
+            <label for="debit_check03">동의함</label>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="container input-container">
+        <h3>button & popup</h3>
+        <strong class="ex-guide-tit02">1개 - left</strong> 
+        <div class="grp-button-asis">
+          <div>
+            <BUtton type="button" class="btn-primary pop-btn btn-open01">popup - fullScroll</BUtton>
+          </div>
+        </div>
+        <strong class="ex-guide-tit02">1개 - center</strong> 
+        <div class="grp-button-asis type02">
+          <div>
+            <BUtton type="button" class="btn-primary pop-btn btn-open01">popup - fullScroll</BUtton>
+          </div>
+        </div>
+        <strong class="ex-guide-tit02">1개 - content 상세</strong>
+        <button type="button" class="btn-ditail">상세 내용</button>
+        <strong class="ex-guide-tit02">2개</strong>
+        <div class="grp-button-asis type04">
+          <div>
+            <BUtton type="button" class="btn-primary pop-btn btn-open02">popup - alret</BUtton>
+          </div>
+            <div>
+            <BUtton type="button" class="btn-secondary pop-btn btn-open03">popup - full(이미지 상세)</BUtton>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="container input-container">
+        <h3>tab</h3>
+        <div class="tab-wrap">
+          <ul class="tab-nav" data-tab="tab01" role="tablist">
+            <li><a href="javascript:void(0);" role="tab"><span>계좌</span></a></li>
+            <li><a href="javascript:void(0);" role="tab"><span>신용카드</span></a></li>
+            <li><a href="javascript:void(0);" role="tab"><span>휴대폰소액결제</span></a></li>
+          </ul>
+        </div>
+        <div class="tab-content" data-tab="tab01" role="tabpanel">
+          1
+        </div>
+        <div class="tab-content" data-tab="tab01" role="tabpanel">
+          2
+        </div>
+        <div class="tab-content" data-tab="tab01" role="tabpanel">
+          3
+        </div>
+      </div>
+      <hr>
+      <div class="container input-container">
+        <h3>toogle</h3>
+        <strong class="ex-guide-tit02">정보동의</strong>
+        <div class="toogle-info type02 toggle-action">
+          <ul class="toggle-list type02">
+            <li>
+              <dl>
+                <dt>
+                  소비자 권익보호에 관한 사항             
+                  <button type="button" class="btn_toggle">상세내용 닫기</button>
+                </dt>
+                <dd>
+                  <ul>
+                    <li>동의거부권 및 유의사항 : 보험계약과 관련한 기타 부가서비스 및 신상품 안내 등을 제공받고자 하시는 경우 동의해주시기 바랍니다.</li>
+                    <li>개인(신용)정보 제공동의 철회 : 개인(신용)정보 제공 및 이용에 동의한 이후에도 전화 (고객센터 1588-9898), 서면 등을 통해 개인(신용)정보의 제공 동의를 철회할 수 있습니다.</li>
+                    <li>상품권유 중지청구(Do-Not Call) : 개인(신용)정보 제공 및 이용에 동의한 이후에도 전화 (고객센터 1588-9898), 서면 등을 통해 마케팅활동에 대한 중지를 요청할 수 있습니다.</li>
+                  </ul>
+                  <p>
+                    위 권리 행사에 대한 구체적인 사항은 약관에 첨부된 ‘고객권리안내문'을 참고하시기 바랍니다.
+                  </p>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </div>  
+        <strong class="ex-guide-tit02">VITALITY 동의</strong>
+        <div class="toogle-info type02 no-action">
+          <ul class="toggle-list type02">
+            <li class="active">
+              <dl>
+                <dt>
+                  [개인(신용) 정보 수집·이용 동의]          
+                </dt>
+                <dd>
+                  <ol>
+                    <li>
+                      1. 수집·이용 목적 : 바이탈리티1.1 체결, 유지, 관리 및 회비, 부가세 관련 업무 처리
+                    </li>
+                    <li>
+                      2. 수집·이용 정보 : 예금주/ 카드소유주의 성명, 생년월일, 은행명, 계좌번호, 카드사명, 카드번호, 카드 유효기간, 바이탈리티1.1 체결, 유지, 관리 관련 필요 정보
+                    </li>
+                    <li>
+                      3. 보유·이용 기간 : <strong>수집·이용 동의일로부터 수집·이용 목적을 달성 시까지</strong>
+                    </li>
+                  </ol>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+        <strong class="ex-guide-tit02">안내사항</strong>
+      </div>
+      <div class="toogle-info type03">
+        <div class="container toggle-action">
+          <ul class="toggle-list type03">
+            <li>
+              <dl>
+                <dt>
+                  안내사항
+                  <button type="button" class="btn_toggle">상세내용 닫기</button>
+                </dt>
+                <dd>
+                  <ul class="blit-list">
+                    <li>보험계약대출이 있는 계약은 가입증서번호가 중복 표시됩니다.</li>
+                    <li>계약자 명의의 계좌, 카드로 신청/변경 가능합니다. (타인 계좌.카드 등록 불가)</li>
+                    <li>보험 계약에 따라, 카드 자동이체 신청이 불가할 수 있습니다.</li>
+                    <li>여러 건을 동시 변경하는 경우 카드 자동이체 신청 불가 계약이 포함되어 있으면 계좌 자동이체 신청만 가능합니다.</li>
+                    <li>보험계약대출이자는 카드 납입이 불가합니다.</li>
+                    <li><strong>납입 방법을 자동이체에서 카드로 변경, 혹은 신용카드 변경을 원하시는 경우</strong> 1588-9898(평일 오전 9:00 ~ 오후 18:00)로 문의 주시면 친절히 안내 드리겠습니다.</li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </div>  
+			<!-- fullScroll 팝업 -->
+			<article class="layer-popup type01 pop-open01">
+				<!-- popup -->
+				<div class="wrap-popup">
+          <div class="popup">
+            <div class="pop-head">
+              <h1>본인 확인</h1>
+            </div>
+            <div class="pop-cont">              
+              <div>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+              </div>
+              <div class="grp-button-asis">
+                <div>
+                  <button type="button" class="btn btn-default btn-primary">확인</button>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn-close close-btn01">닫기</button>
+          </div>
+				</div>
+				<!-- // popup  -->
+			</article>
+			<!-- //fullScroll 팝업  -->
+			<!-- alret 팝업 -->
+			<article class="layer-popup type02 pop-open02">
+				<!-- popup -->
+				<div class="wrap-popup">
+          <div class="popup">
+            <div class="pop-head">
+              <h1>본인 확인</h1>
+            </div>
+            <div class="pop-cont">  
+              <div class="alt-cont">
+                <strong>제목</strong>
+                <p>
+                  컨텐츠<br>
+                  컨텐츠<br>
+                  컨텐츠
+                </p>
+              </div> 
+              <div class="grp-button-asis">
+                <div>
+                  <button type="button" class="btn btn-default btn-primary" data-target="_self">확인</button>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn-close close-btn02">닫기</button>
+          </div>
+				</div>
+				<!-- // popup  -->
+			</article>
+			<!-- //alret 팝업  -->
+			<!-- full-고정 팝업 -->
+			<article class="layer-popup type03 pop-open03">
+				<!-- popup -->
+				<div class="wrap-popup">
+          <div class="popup">
+            <div class="pop-head">
+              <h1>본인 확인</h1>
+            </div>
+            <div class="pop-cont">  
+              <div class="img-box">
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+                컨텐츠<br>
+              </div> 
+              <div class="grp-button-asis type04">
+                <div>
+                  <button type="button" class="btn btn-default btn-primary" data-target="_self">확인</button>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-default btn-secondary" data-target="_self">취소</button>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn-close close-btn03">닫기</button>
+          </div>
+				</div>
+				<!-- // popup  -->
+			</article>
+			<!-- //full 팝업  -->
+			<!-- 안내 팝업 -->
+			<article class="layer-popup pop-sel">
+				<!-- popup -->
+				<div class="wrap-popup">
+          <div class="popup">
+            <ul>
+            </ul>
+          </div>
+				</div>
+				<!-- // popup  -->
+			</article>
+			<!-- //안내 팝업  -->
+    </body>
+</html>
