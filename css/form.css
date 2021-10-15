@@ -1,3 +1,6 @@
+body {
+    word-break: keep-all;
+}
 input::-ms-clear,
 input::-ms-reveal {
     display: none;
@@ -508,8 +511,8 @@ p.icon-error + .grp-button {
 }
 .ipt-box + p.icon-error,
 .ipt-box02 > p.icon-error,
-.phone-num .ipt input:focus ~ label span,
-.phone-num .ipt input:not(:placeholder-shown) ~ label span,
+.ipt input:focus ~ label span,
+.ipt input:not(:placeholder-shown) ~ label span,
 .ipt-box .ipt i.finish-check,
 .ipt-pass .ipt i {
     display: none;  
@@ -692,7 +695,7 @@ p.icon-error + .grp-button {
 .grp-button.type03.btn-right {
     margin-left: 12px;
     margin-top: 0;
-    width: 94px;
+    width: 96px;
 }
 .grp-button.type03.btn-right button {
     padding: 16px 24px 14px;
