@@ -1,0 +1,1771 @@
+﻿<!doctype html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://www.aia.co.kr/favicon.ico">
+        <meta name="loginpath" content="https://www.aia.co.kr/content/kr/ko/my-aia/login-select.html">
+        <meta name="loginapi" content="null">
+        <meta name="logoutapi" content="null">
+        <meta name="serviceapi" content="https://cyberservice.aia.co.kr">
+        <meta name="country" content="kr">
+        <link rel="stylesheet" href="../asis/header.css" type="text/css">
+        <link rel="stylesheet" href="../asis/head.css" type="text/css">
+        <link rel="stylesheet" href="../asis/ko.css" type="text/css">
+        <link rel="stylesheet" href="../asis/noto.css" type="text/css">
+        <link rel="stylesheet" href="../asis/table_design.css" type="text/css">
+        <link rel="stylesheet" href="../asis/transkey.css" type="text/css">
+        <link rel="stylesheet" href="../css/popup.css" type="text/css"> 
+        <link rel="stylesheet" href="../css/form.css" type="text/css"> 
+        <script type="text/javascript" src="../asis/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="../asis/aia-header-v2.min.js"></script>
+        <script type="text/javascript" src="../asis/aia-footer-v2.min.js"></script>
+        <script type="text/javascript" src="../js/form.js"></script>
+        <title>약관동의 및 본인인증</title>      
+    </head>
+    <body>
+      <!-- header -->
+      <a id="gotocontent" href="javascript:;" class="lk2 gotocontent" tabindex="1">본문 바로가기</a>
+      <div class="topnav global-nav parbase">
+        <div class="navmenu-backdrop"></div>
+        <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
+          <ul id="navmenu-login" class="nav navmenu-nav-justified">
+            <li><a class="h5 loggedout" href="javascript:;">로그인</a></li>
+            <li><a class="h5 loggedout" href="javascript:;">회원가입</a></li>
+          </ul>
+          
+          <div id="navmenu-profile" class="navmenu-profile loggedin hide">
+            <span class="h4 w"></span>
+            <a href="javascript:;" data-logout="" class="logout pull-right">
+              <svg class="icon-s hide-on-fallback" role="img" title="signout-menu" focusable="false">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#signout-menu"></use>
+                <image class="icon-fallback" src="https://www.aia.co.kr/content/dam/aia/icons/navigation/signout-menu.png" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" alt=""></image>
+              </svg>
+            </a>
+          </div>
+          <ul class="nav navmenu-nav navmenu-search-button border-bottom-dark border-top-dark">
+            <li>
+              <a href="javascript:;" class="clearfix">
+                <svg class="icon-xs hide-on-fallback" role="img" title="icon-search-nav" focusable="false">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#search-nav"></use>
+                  <image class="icon icon-xs " src="https://www.aia.co.kr/content/dam/aia/icons/navigation/search-nav.png" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" alt=""></image>
+                </svg>
+                <span class="h5 w">Search</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav navmenu-nav" data-user-menu="individual">
+              <li>
+                <a class="clearfix" href="javascript:;">
+                  <svg class="icon icon-xs hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#home-menu"></use><image class="icon icon-xs " src="https://www.aia.co.kr/content/dam/aia/icons/menu/home-menu.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                  <span class="h5 w">메인페이지</span>
+                </a>
+              </li>
+              <li class="dropdown">
+                <div class="mobile-firstlevel">
+                    <a class="" href="javascript:;"><svg class="icon icon-xs hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#life-menu"></use><image class="icon icon-xs " src="https://www.aia.co.kr/content/dam/aia/icons/menu/life-menu.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>  <span>보험상품</span>
+                    </a>
+                    <a class="dropdown-toggle pull-right" data-toggle="dropdown"><svg class="icon icon-xs hide-on-fallback pull-right closed-show" role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#open-2ndg"></use><image class="icon icon-xs pull-right closed-show" src="https://www.aia.co.kr/content/dam/aia/icons/secondary/open-2ndg.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                      <svg class="icon icon-xs hide-on-fallback pull-right closed-hide" role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#close-2ndg"></use><image class="icon icon-xs pull-right closed-hide" src="https://www.aia.co.kr/content/dam/aia/icons/secondary/close-2ndg.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg></a>
+                </div>
+                <ul class="dropdown-menu navmenu-nav navmenu-dropdown-menu" role="menu">
+                  <li><a class="h6 b5" href="javascript:;">사망보장</a></li>
+                  <li><a class="h6 b5" href="javascript:;">중대질병보장</a></li>
+                  <li><a class="h6 b5" href="javascript:;">건강·상해보장</a></li>
+                  <li><a class="h6 b5" href="javascript:;">저축·투자연계보장</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <div class="mobile-firstlevel">
+                    <a class="" href="javascript:;"><svg class="icon icon-xs hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#myclaims-menu"></use><image class="icon icon-xs " src="https://www.aia.co.kr/content/dam/aia/icons/menu/myclaims-menu.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>  <span>AIA 라운지</span>
+                    </a>
+                    <a class="dropdown-toggle pull-right" data-toggle="dropdown"><svg class="icon icon-xs hide-on-fallback pull-right closed-show" role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#open-2ndg"></use><image class="icon icon-xs pull-right closed-show" src="https://www.aia.co.kr/content/dam/aia/icons/secondary/open-2ndg.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                      <svg class="icon icon-xs hide-on-fallback pull-right closed-hide" role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#close-2ndg"></use><image class="icon icon-xs pull-right closed-hide" src="https://www.aia.co.kr/content/dam/aia/icons/secondary/close-2ndg.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg></a>
+                </div>
+                <ul class="dropdown-menu navmenu-nav navmenu-dropdown-menu" role="menu">
+                  <li><a class="h6 b5" href="javascript:;">더 건강하게(Healthier) </a></li>
+                  <li><a class="h6 b5" href="javascript:;">더 오랫동안(Longer)</a></li>
+                  <li><a class="h6 b5" href="javascript:;">더 나은삶(Better Lives)</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <div class="mobile-firstlevel">
+                    <a class="" href="javascript:;"><svg class="icon icon-xs hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#gethelp-menu"></use><image class="icon icon-xs " src="https://www.aia.co.kr/content/dam/aia/icons/menu/gethelp-menu.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>  <span>고객센터</span>
+                    </a>
+                    <a class="dropdown-toggle pull-right" data-toggle="dropdown"><svg class="icon icon-xs hide-on-fallback pull-right closed-show" role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#open-2ndg"></use><image class="icon icon-xs pull-right closed-show" src="https://www.aia.co.kr/content/dam/aia/icons/secondary/open-2ndg.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                      <svg class="icon icon-xs hide-on-fallback pull-right closed-hide" role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#close-2ndg"></use><image class="icon icon-xs pull-right closed-hide" src="https://www.aia.co.kr/content/dam/aia/icons/secondary/close-2ndg.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg></a>
+                </div>
+                <ul class="dropdown-menu navmenu-nav navmenu-dropdown-menu" role="menu">
+                  <li><a class="h6 b5" href="javascript:;">인공지능 로봇</a></li>
+                  <li><a class="h6 b5" href="javascript:;">전화상담</a></li>
+                  <li><a class="h6 b5" href="javascript:;">1:1 고객문의</a></li>
+                  <li><a class="h6 b5" href="javascript:;"> 위치찾기</a></li>
+                  <li><a class="h6 b5" href="javascript:;">컨설턴트 찾기</a></li>
+                  <li><a class="h6 b5" href="javascript:;">자주하는 질문</a></li>
+                  <li><a class="h6 b5" href="javascript:;">서식자료실</a></li>
+                  <li><a class="h6 b5" href="javascript:;">보험가입 및 보험금 청구</a></li>
+                  <li><a class="h6 b5" href="javascript:;">소비자보호 안내</a></li>
+                  <li><a class="h6 b5" href="javascript:;">보험범죄 신고센터</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <div class="mobile-firstlevel">
+                    <a class="" href="javascript:;"><svg class="icon icon-xs hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#aia-menu"></use><image class="icon icon-xs " src="https://www.aia.co.kr/content/dam/aia/icons/menu/aia-menu.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>  <span>AIA소개</span>
+                    </a>
+                    <a class="dropdown-toggle pull-right" data-toggle="dropdown"><svg class="icon icon-xs hide-on-fallback pull-right closed-show" role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#open-2ndg"></use><image class="icon icon-xs pull-right closed-show" src="https://www.aia.co.kr/content/dam/aia/icons/secondary/open-2ndg.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                      <svg class="icon icon-xs hide-on-fallback pull-right closed-hide" role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#close-2ndg"></use><image class="icon icon-xs pull-right closed-hide" src="https://www.aia.co.kr/content/dam/aia/icons/secondary/close-2ndg.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg></a>
+                </div>
+                <ul class="dropdown-menu navmenu-nav navmenu-dropdown-menu" role="menu">
+                  <li><a class="h6 b5" href="javascript:;">AIA생명 경영</a></li>
+                  <li><a class="h6 b5" href="javascript:;">미디어센터</a></li>
+                  <li><a class="h6 b5" href="javascript:;">AIA생명 리더십</a></li>
+                  <li><a class="h6 b5" href="javascript:;">인재채용</a></li>
+                  <li><a class="h6 b5" href="javascript:;">AIACentennial</a></li>
+                </ul>
+              </li>
+              <li class="dropdown myaia-mobile-section">
+                <div class="mobile-firstlevel">
+                    <a class="" href="javascript:;"><svg class="icon icon-xs hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#myinsurance-menu"></use><image class="icon icon-xs " src="https://www.aia.co.kr/content/dam/aia/icons/menu/myinsurance-menu.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>  <span>MY AIA</span>
+                    </a>
+                    <a class="dropdown-toggle pull-right" data-toggle="dropdown"><svg class="icon icon-xs hide-on-fallback pull-right closed-show" role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#open-2ndg"></use><image class="icon icon-xs pull-right closed-show" src="https://www.aia.co.kr/content/dam/aia/icons/secondary/open-2ndg.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                    <svg class="icon icon-xs hide-on-fallback pull-right closed-hide" role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#close-2ndg"></use><image class="icon icon-xs pull-right closed-hide" src="https://www.aia.co.kr/content/dam/aia/icons/secondary/close-2ndg.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg></a>
+                </div>
+                <ul class="dropdown-menu navmenu-nav navmenu-dropdown-menu" role="menu">
+                  <li class="loggedout ">
+                    <a class="h6 b5" href="javascript:;" target="_self">로그인</a>
+                  </li>
+                  <li class="loggedout ">
+                    <a class="h6 b5" href="javascript:;" target="_self">회원가입</a>
+                  </li>
+                  <li class="loggedout hide">
+                    <a class="h6 b5" href="javascript:;" target="_self">내 보험정보</a>
+                  </li>
+                  <li class="loggedout hide">
+                    <a class="h6 b5" href="javascript:;" target="_self">주소∙연락처∙계좌 관리</a>
+                  </li>
+                  <li class="loggedout hide">
+                    <a class="h6 b5" href="javascript:;" target="_self">입금서비스</a>
+                  </li>
+                  <li class="loggedout hide">
+                    <a class="h6 b5" href="javascript:;" target="_self">출금서비스</a>
+                  </li>
+                  <li class="loggedout hide">
+                    <a class="h6 b5" href="javascript:;" target="_self">보험금 청구</a>
+                  </li>
+                  <li class="loggedout hide">
+                    <a class="h6 b5" href="javascript:;" target="_self">계약변경</a>
+                  </li>
+                  <li class="loggedout hide">
+                    <a class="h6 b5" href="javascript:;" target="_self">증명서 신청</a>
+                  </li>
+                  <li class="loggedout hide">
+                    <a class="h6 b5" href="javascript:;" target="_self">이용안내</a>
+                  </li>
+                </ul>
+              </li>
+          </ul>
+          <ul class="nav promomenu-nav">
+            <li>
+                <a href="javascript:;">
+                  <div class="h5 w">공시실</div>
+                  <div class="b5 bt5"></div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                  <div class="h5 w">사고보험금 청구</div>
+                  <div class="b5 bt5"></div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                  <div class="h5 w">사회공헌</div>
+                  <div class="b5 bt5"></div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                  <div class="h5 w">소비자 보호</div>
+                  <div class="b5 bt5"></div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                  <div class="h5 w">1:1 문의</div>
+                  <div class="b5 bt5"></div>
+                </a>
+            </li>
+          </ul>
+        </div>
+          
+              
+          
+        <div class="navbar navbar-default navbar-fixed">
+          <div class="navbar-slim"><div class="navbar-title-slim">AIA</div></div>
+          <div class="navbar-one">
+            <button type="button" class="navbar-btn hide-sd-up" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+              <svg class="icon icon-xs hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#menu-nav"></use><image class="icon icon-xs " src="https://www.aia.co.kr/content/dam/aia/icons/navigation/menu-nav.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+            </button>
+            <a class="navbar-brand" href="javascript:;" tabindex="99">
+              <svg title="AIA생명" class="icon icon-s hide-on-fallback visible-xs-inline-block" role="img" alt="AIA생명" focusable="false"><g><title>AIA생명</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#aiawhite-logo"></use><image class="icon icon-s visible-xs-inline-block" src="https://www.aia.co.kr/content/dam/aia/logos/aiawhite-logo.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+              <img class="navbar-brand-img hidden-xs" src="https://www.aia.co.kr/content/dam/aia/logos/aiawhite-logo.png" alt="">
+            </a>
+            <ul class="nav navbar-nav" data-user-menu="individual">
+              <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle h6" data-hover="dropdown" data-delay="100" data-hover-delay="300" style="width:128px" tabindex="100">
+                    보험상품
+                </a>
+                <div class="dropdown-menu">
+                  <div class="container-fluid margin-bottom-xxl">
+                    <div class="row">
+                      <div class="col-sm-3 margin-top-3xl">    
+                        <h4 class="p1 margin-bottom-m">보험상품</h4>
+                        <p class="bt3 p3 margin-bottom-xxl">AIA생명은 새로운 상품과 솔루션으로 고객님의 성공적인 재무관리를 위하여 노력하고 있습니다.</p>
+                        <a class="lk1" href="javascript:;" tabindex="101">보험상품 바로 가기</a>
+                        <div class="link-arrow"></div>
+                      </div>
+                      <div class="col-sm-9 border-left margin-top-4xl">
+                        <div class="row">
+                                                      
+                        <div class="col-sm-4">
+                            <ul class="list-unstyled">
+                                <li class="list-ele" style="height:84px">
+                                    <a href="javascript:;" tabindex="110">
+                                        <div class="thumbnail">
+                                            <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#death-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/death-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="p3">사망보장</h6>
+                                            <p class="p3 bt5">갑작스러운 가장의 부재에도 소중한 가족의 일상이 지속 될 수 있도록 AIA생명이 함께하겠습니다.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-ele" style="height:84px">
+                                    <a href="javascript:;" tabindex="111">
+                                        <div class="thumbnail">
+                                            <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#criticalillnesspro-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/criticalillnesspro-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="p3">중대질병보장</h6>
+                                            <p class="p3 bt5">암, 뇌혈관 및 심장질환과 같은 중대한 질병을 대비하는 것은 나와 가족의 미래를 위해 반드시 필요합니다.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                          
+                        <div class="col-sm-4">
+                            <ul class="list-unstyled">
+                                <li class="list-ele" style="height:84px">
+                                    <a href="javascript:;" tabindex="140">
+                                        <div class="thumbnail">
+                                            <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#accidentpro-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/accidentpro-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                        </div>
+                                        <div class="content">
+                                    <h6 class="p3">건강·상해보장</h6>
+                                    <p class="p3 bt5">만일의 사고와 다양한 질병의 위험으로부터 AIA생명이 빈틈없이 든든하게 지켜드리겠습니다.</p>
+                                </div>
+                                                        </a>
+                                </li>
+                                <li class="list-ele" style="height:84px">
+                                    <a href="javascript:;" tabindex="141">
+                                        <div class="thumbnail">
+                                            <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#saving_investment-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/saving_investment-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="p3">저축·투자연계보장</h6>
+                                            <p class="p3 bt5">긴 인생,  체계적인 평생 재무설계를 책임지는 AIA생명과 함께 하세요.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-glyph close-nav-dropdown-btn" data-dismiss="navbar-dropdown" tabindex="199">
+                    <svg title="닫기" class="icon icon-xs hide-on-fallback " role="img" focusable="false"><g><title>닫기</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#closedark-glyph"></use><image class="icon icon-xs " src="https://www.aia.co.kr/content/dam/aia/icons/glyph/closedark-glyph.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                  </button>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle h6" data-hover="dropdown" data-delay="100" data-hover-delay="300" style="width:128px" tabindex="200" aria-expanded="false">
+                    AIA 라운지
+                </a>
+                <div class="dropdown-menu">
+                  <div class="container-fluid margin-bottom-xxl">
+                    <div class="row">
+                      <div class="col-sm-3 margin-top-3xl">    
+                          <h4 class="p1 margin-bottom-m">AIA 라운지</h4>
+                          <p class="bt3 p3 margin-bottom-xxl">AIA생명은 고객님의  Healthier Longer Better Lives(더  건강하게 더 오래 더 나은삶) 을 살 수 있도록 유용한 건강,금융,이벤트 관련 소식을 나누고 소통하고자 합니다.</p>
+                          <a class="lk1" href="javascript:;" tabindex="201">AIA 라운지 바로가기</a>
+                          <div class="link-arrow"></div>
+                      </div>
+                      <div class="col-sm-9 border-left margin-top-4xl">
+                        <div class="row">          
+                            <div class="col-sm-4">
+                                <ul class="list-unstyled">
+                                    <li class="list-ele" style="height:84px">
+                                        <a href="https://www.aia.co.kr/ko/lounge/Healthier.html" tabindex="210">
+                                        <div class="thumbnail">
+                                            <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#medicalcare-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/medicalcare-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="p3">더 건강하게(Healthier) </h6>
+                                            <p class="p3 bt5">고객님이 아프지 않고 더 건강한 삶을 살 수 있도록 건강 관련 유용한 정보와 팁을 모았습니다</p>
+                                        </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="list-unstyled">
+                                    <li class="list-ele" style="height:84px">
+                                        <a href="https://www.aia.co.kr/ko/lounge/Longer.html" tabindex="240">
+                                        <div class="thumbnail">
+                                            <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#savings-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/savings-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="p3">더 오랫동안(Longer)</h6>
+                                            <p class="p3 bt5">더 오래 풍요로운 삶을 살기 위한 필수요소인 금융과 재테크, 상품 컨텐츠를 만나보세요.</p>
+                                        </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="list-unstyled">
+                                    <li class="list-ele" style="height:84px">
+                                        <a href="https://www.aia.co.kr/ko/lounge/BetterLives.html" tabindex="270">
+                                        <div class="thumbnail">
+                                            <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#bonus-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/bonus-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="p3">더 나은삶(Better Lives)</h6>
+                                            <p class="p3 bt5">개인과 사회의 더 나은 삶을 위한 AIA의 사회공헌활동, 캠페인, 그리고 혜택이 가득한 상시 진행 이벤트를 만나보세요 </p>
+                                        </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-glyph close-nav-dropdown-btn" data-dismiss="navbar-dropdown" tabindex="299">
+                    <svg title="닫기" class="icon icon-xs hide-on-fallback " role="img" focusable="false"><g><title>닫기</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#closedark-glyph"></use><image class="icon icon-xs " src="https://www.aia.co.kr/content/dam/aia/icons/glyph/closedark-glyph.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                  </button>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle h6" data-hover="dropdown" data-delay="100" data-hover-delay="300" style="width:128px" tabindex="300" aria-expanded="false">
+                    고객센터
+                </a>
+                <div class="dropdown-menu">
+                  <div class="container-fluid margin-bottom-xxl">
+                    <div class="row">
+                      <div class="col-sm-3 margin-top-3xl">    
+                        <h4 class="p1 margin-bottom-m">고객센터</h4>
+                        <p class="bt3 p3 margin-bottom-xxl">고객님의 궁금한 사항을 친절하고 정확하게 해결해 드립니다.</p>
+                        <a class="lk1" href="javascript:;" tabindex="301">고객센터 바로가기</a><div class="link-arrow"></div>
+                      </div>
+                      <div class="col-sm-9 border-left margin-top-4xl">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <ul class="list-unstyled">
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;"  tabindex="310">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#aia_on-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/aia_on-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3">인공지능 로봇</h6>
+                                    <p class="p3 bt5">간단한 문의사항은 AIA ON과의 채팅 상담으로 빠르게 확인해 보세요.</p>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;" tabindex="311">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#talkingyou-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/talkingyou-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3">전화상담</h6>
+                                    <p class="p3 bt5">상품이나 서비스 관련 자세한 문의는 전문상담원과 통화해보세요.</p>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;" tabindex="312">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#chatonline-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/chatonline-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3">1:1 고객문의</h6>
+                                    <p class="p3 bt5">궁금하신 내용 또는 개선의견을 남겨 주세요. 신속히 답변 드리겠습니다.</p>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;" tabindex="313">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#locate_us-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/locate_us-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3"> 위치찾기</h6>
+                                    <p class="p3 bt5">AIA생명의 전국 지점의 위치 정보를&nbsp;확인하실 수 있습니다.</p>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-4">
+                            <ul class="list-unstyled">
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;"  tabindex="340">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#agent-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/agent-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3">컨설턴트 찾기</h6>
+                                    <p class="p3 bt5">상담 조건에 맞는 AIA생명 컨설턴트를 찾아보세요.</p>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;" tabindex="341">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#question_mark-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/question_mark-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3">자주하는 질문</h6>
+                                    <p class="p3 bt5">AIA생명보험에 대해 궁금한 내용을 검색해 보세요.</p>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;" tabindex="342">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#pdf-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/pdf-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3">서식자료실</h6>
+                                    <p class="p3 bt5">보험상품 및 보험금 청구 등에 필요한 각종 문서양식을 다운받으실 수 있습니다.</p>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;" tabindex="343">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#mypolicies-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/mypolicies-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3">보험가입 및 보험금 청구</h6>
+                                    <p class="p3 bt5">보험가입 안내, 보험금 청구, 실손보험금 청구서류 접수대행 서비스 등의 자세한 정보를 확인하실 수 있습니다.</p>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-4">
+                            <ul class="list-unstyled">
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;"  tabindex="370">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#customer_protection-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/customer_protection-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3">소비자보호 안내</h6>
+                                    <p class="p3 bt5">AIA생명은 소비자 권익보호 및 제도개선을 위해 노력하고 있습니다.</p>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;" tabindex="371">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#terminatepolicy-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/terminatepolicy-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3">보험범죄 신고센터</h6>
+                                    <p class="p3 bt5">보험계약 사기 및 허위 ∙ 고의 사고에 대하여 신고접수를 하실 수 있습니다.</p>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-glyph close-nav-dropdown-btn" data-dismiss="navbar-dropdown" tabindex="399">
+                    <svg title="닫기" class="icon icon-xs hide-on-fallback " role="img" focusable="false"><g><title>닫기</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#closedark-glyph"></use><image class="icon icon-xs " src="https://www.aia.co.kr/content/dam/aia/icons/glyph/closedark-glyph.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                  </button>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle h6" data-hover="dropdown" data-delay="100" data-hover-delay="300" style="width:128px" tabindex="400" aria-expanded="false">
+                    AIA소개
+                </a>
+                <div class="dropdown-menu">
+                  <div class="container-fluid margin-bottom-xxl">
+                    <div class="row">
+                      <div class="col-sm-3 margin-top-3xl">    
+                        <h4 class="p1 margin-bottom-m">AIA소개</h4>
+                        <p class="bt3 p3 margin-bottom-xxl">AIA생명은 약 100여년의 역사를 자랑하는 세계 최대 규모의 독립 상장 보험기업 AIA그룹의 한국법인입니다. AIA생명은 탄탄한 재무구조를 자랑하며, 아태지역 전역에 진출해 있는 AIA그룹의 18개 지사 및 지점 중에서도 혁신적인 금융 상품 및 서비스로 크게 주목 받고 있습니다.</p>
+                        <a class="lk1" href="javascript:;" tabindex="401">AIA소개 바로가기</a>
+                        <div class="link-arrow"></div>
+                      </div>
+                      <div class="col-sm-9 border-left margin-top-4xl">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <ul class="list-unstyled">
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;"  tabindex="410">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#aboutus_ourcommiment-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/aboutus_ourcommiment-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3">AIA생명 경영</h6>
+                                    <p class="p3 bt5">우리는 고객과의 신뢰관계를 유지하며, 장기적으로 지속가능한 성장을 위해 노력합니다. </p>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;" tabindex="411">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#aboutus_mediacenter-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/aboutus_mediacenter-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3">미디어센터</h6>
+                                    <p class="p3 bt5">AIA생명의 최신 소식과 다양한 광고를 만나실 수 있습니다. </p>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-4">
+                            <ul class="list-unstyled">
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;"  tabindex="440">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#aboutus_leadership-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/aboutus_leadership-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3">AIA생명 리더십</h6>
+                                    <p class="p3 bt5">AIA생명을 이끌어 가는 리더들입니다.</p>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;" tabindex="441">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#aboutus_careers-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/aboutus_careers-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3">인재채용</h6>
+                                    <p class="p3 bt5">AIA생명에서는 직원들이 경력에 대한 포부를 실현할 수 있는 환경을 제공합니다.</p>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-4">
+                            <ul class="list-unstyled">
+                              <li class="list-ele" style="height:84px">
+                                <a href="javascript:;" tabindex="470">
+                                  <div class="thumbnail">
+                                    <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#aia_centennial-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/aia_centennial-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                                  </div>
+                                  <div class="content">
+                                    <h6 class="p3">AIACentennial</h6>
+                                    <p class="p3 bt5">각국의 AIA생명에서 진행된 숫자 ‘100’을 테마로 한 다양한 100주년 행사를 만나볼 수 있습니다.</p>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-glyph close-nav-dropdown-btn" data-dismiss="navbar-dropdown" tabindex="499">
+                    <svg title="닫기" class="icon icon-xs hide-on-fallback " role="img" focusable="false"><g><title>닫기</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#closedark-glyph"></use><image class="icon icon-xs " src="https://www.aia.co.kr/content/dam/aia/icons/glyph/closedark-glyph.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                  </button>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="javascript:;" tabindex="9600" class="dropdown-toggle h6" data-hover="dropdown" data-delay="100" data-hover-delay="300" style="width:128px" aria-expanded="false">
+                    MY AIA
+                </a>
+                <div class="dropdown-menu">
+                  <div class="container-fluid margin-bottom-xxl">
+                    <div class="row loggedout">
+                      <!-- myaia 로그인 전 -->
+                    <div class="loggedout2"> 
+                      <!-- GNB 메뉴 -->
+                      <div class="container-fluid margin-bottom-xxl"> 
+                        <!-- 20160115 수정 -->
+                        <div class="row"> 
+                          <!-- 왼쪽영역 -->
+                          <div class="col-sm-3 border-right margin-top-3xl">
+                            <h4 class="p1 margin-bottom-m">MY AIA</h4>
+                            <p class="bt3 p3 margin-bottom-xxl">계약정보, 보험금 청구, 계약 심사 조회를 이용하실 수 있습니다.
+                          </div>
+                          <!-- //왼쪽영역 --> 
+                          <!-- 오른쪽 영역 -->
+                          <div class="col-sm-9 margin-top-4xl">
+                            <div class="row">
+                              <div class="col-sm-4">
+                                <ul class="list-unstyled">
+                                  <li>
+                                    <h5 class="p3">로그인</h5>
+                                    <p class="p3 bt5 margin-top-xxs">간편인증으로 로그인이 <br>가능합니다.</p>
+                                    <div class="submit parent-width margin-top-xxl">
+                                      <button class="btn btn-secondary" tabindex="9602" type="button">로그인</button>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="col-sm-4">
+                                <ul class="list-unstyled">
+                                  <li>
+                                    <h5 class="p3">회원가입</h5>
+                                    <p class="p3 bt5 margin-top-xxs">회원가입을 하시면 다음 방문 시<br> 빠른 로그인이 가능합니다.</p>
+                                    <div class="submit parent-width margin-top-xxl">
+                                      <button class="btn btn-secondary" tabindex="9603" type="button">회원가입</button>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- //오른쪽 영역 --> 
+                        </div>
+                        <!-- //20160115 수정 --> 
+                      </div>
+                      <!-- //GNB 메뉴 --> 
+                    </div>
+                    <!-- //myaia 로그인 전 --> 
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <ul class="nav navbar-tools pull-right">
+              <li class="dropdown navbar-search-btn hidden-below-sd" tabindex="9800" role="button">
+                <div class="dropdown-toggle" data-toggle="dropdown">
+                  <div class="navbar-tool-label">        
+                    <svg title="검색하기" class="icon icon-xs hide-on-fallback " role="img" alt="검색하기" focusable="false"><g><title>검색하기</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/dam/aia/icons/icons.svg#search-nav"></use><image class="icon icon-xs " src="/content/dam/aia/icons/navigation/search-nav.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                  </div>
+                </div>
+                <ul class="dropdown-menu search-dropdown-menu">
+                  <li class="search-bar">
+                    <form class="search-form" id="search-form1">
+                      <input type="hidden" name="searchExecutor" value="/ko/search" id="searchExecutor">
+                      <input type="hidden" name="type" value="123" id="search_type">
+                      <!--*/ end, by Ocean Lan */-->
+                      <div class="search-col-left">
+                        <input name="keyword" data-id="search-input" class="search-input" type="search" placeholder="검색하실 내용을 입력하세요." tabindex="9801" data-search-options="{&quot;hideAllFilter&quot;:false,&quot;hideProductsFilter&quot;:false,&quot;hideArticlesFilter&quot;:false,&quot;hideFormsFilter&quot;:false}" title="검색어를 입력해 주세요." autocomplete="off">
+                      </div>
+                      <div class="search-col-right">
+                        <button class="btn btn-primary go-btn" tabindex="9802">확인</button>
+                        <button class="btn dismiss-search-btn" tabindex="9803">
+                          <svg title="닫기" class="icon icon-xs hide-on-fallback " role="img" focusable="false"><g><title>닫기</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/dam/aia/icons/icons.svg#closewhite-glyph"></use><image class="icon icon-xs " src="/content/dam/aia/icons/glyph/closewhite-glyph.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
+                        </button>
+                      </div>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown hidden-below-sd" tabindex="9900" data-contact="" role="button">
+                <div class="dropdown-toggle" data-toggle="dropdown">
+                  <div class="navbar-tool-label">        
+                    <svg title="연락하기" class="icon icon-xs hide-on-fallback " role="img" alt="연락하기" focusable="false"><g><title>연락하기</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/dam/aia/icons/icons.svg#contact-nav"></use><image class="icon icon-xs " src="/content/dam/aia/icons/navigation/contact-nav.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>          
+                  </div>
+                </div>
+                <ul class="dropdown-menu contact-dropdown-menu">
+                  <li>        
+                    <a href="javascript:;" target="_self" tabindex="9901">      
+                      <h6 class="p3">인공지능 챗봇 상담</h6>
+                      <p class="p3 bt5"></p>
+                    </a>
+                  </li>        
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href="tel:1588-9898" target="_self" tabindex="9902">
+                      <h6 class="p3">고객센터 연결</h6>
+                      <p class="p3 bt5"></p>
+                    </a>
+                  </li>        
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href="javascript:;" target="_self" tabindex="9903">
+                      <h6 class="p3">1:1 문의</h6>
+                      <p class="p3 bt5"></p>
+                    </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href="javascript:;" target="_self" tabindex="9904">
+                      <h6 class="p3">× 닫기</h6>
+                      <p class="p3 bt5"></p>
+                    </a>                    
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="search-suggest-box" data-id="search-suggest-box1">
+          </div>
+        </div>
+        <div class="navbar-fixed-spacer"></div>
+        <div class="navbar-sub-spacer"></div>
+      </div>
+      <!-- //header -->
+
+
+
+
+
+      <!-- container -->
+      <div class="container input-container">
+        <div class="join-aia">
+          <h3>본인 확인 후 회원가입을 <br>진행해주세요.</h3>
+          <dl class="agr-toggle">
+            <dt class="agr-check all">
+              <div>
+                <input type="checkbox" id="allCheck">
+                <label for="allCheck">약관 전체 동의</label>
+              </div>
+            </dt>
+            <dd class="agr-list toggle-action">
+              <ul class="toggle-list">
+                <li>
+                  <dl>
+                    <dt class="agr-check">
+                      <div>
+                        <input type="checkbox" id="check01">
+                        <label for="check01">
+                          (필수) 휴대폰 본인확인 서비스 동의
+                        </label>
+                      </div>
+                      <button type="button" class="btn_toggle">상세내용 닫기</button>
+                    </dt>
+                    <dd>
+                      <ul class="agr-check02">
+                        <li>
+                          <div>
+                            <input type="checkbox" id="check01_01">
+                            <label for="check01_01">
+                              개인정보 이용동의
+                            </label>
+                          </div>
+                          <button type="button" class="btn-agr02 pop-btn btn-pop01" title="레이어팝업 열기">상세보기</button>
+                        </li>
+                        <li>
+                          <div>
+                            <input type="checkbox" id="check01_02">
+                            <label for="check01_02">
+                              고유식별정보처리 동의
+                            </label>
+                          </div>
+                          <button type="button" class="btn-agr02 pop-btn btn-pop02" title="레이어팝업 열기">상세보기</button>
+                        </li>
+                        <li>
+                          <div>
+                            <input type="checkbox" id="check01_03">
+                            <label for="check01_03">
+                              서비스 이용약관 동의
+                            </label>
+                          </div>
+                          <button type="button" class="btn-agr02 pop-btn btn-pop03" title="레이어팝업 열기">상세보기</button>
+                        </li>
+                        <li>
+                          <div>
+                            <input type="checkbox" id="check01_04">
+                            <label for="check01_04">
+                              통신사 이용약관 동의
+                            </label>
+                          </div>
+                          <button type="button" class="btn-agr02 pop-btn btn-pop04" title="레이어팝업 열기">상세보기</button>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </li>
+                <li class="agr-check">
+                  <div>
+                    <input type="checkbox" id="check02">
+                    <label for="check02">
+                      (필수) 홈페이지 이용약관 동의
+                    </label>
+                  </div>
+                  <button type="button" class="btn-agr pop-btn btn-pop05" title="레이어팝업 열기">상세보기</button>
+                </li>
+                <li class="agr-check">
+                  <div>
+                    <input type="checkbox" id="check03">
+                    <label for="check03">
+                      (필수) 개인정보 수집, 이용에 관한 동의
+                    </label>
+                  </div>
+                  <button type="button" class="btn-agr pop-btn btn-pop06" title="레이어팝업 열기">상세보기</button>
+                </li>
+                <li class="agr-check">
+                  <div>
+                    <input type="checkbox" id="check04">
+                    <label for="check04">
+                      (필수) 마케팅을 위한 개인정보 <span>수집&middot;이용에 관한 동의</span>
+                    </label>
+                  </div>
+                  <button type="button" class="btn-agr pop-btn btn-pop07" title="레이어팝업 열기">상세보기</button>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+
+          <!-- form -->
+          <div class="form-box02">
+            <form>
+              <!-- item -->
+              <div class="ipt-box"><!-- 오류시 class="err-sel" 추가 -->
+                <div class="ipt">
+                  <input type="text" placeholder=" " id="id">
+                  <label for="id">이름</label>
+                </div>
+              </div>
+              <p class="icon-error">이름을 입력하세요.</p>
+              <!-- //item -->
+              <!-- item -->
+              <div class="ipt-box02"><!-- 오류시 class="err-sel" 추가 -->
+                <div class="ipt-idnum">
+                  <input type="tel" maxlength="6" title="주민번호 앞자리" placeholder="000000 " class="mun01">
+                  <i>ㅡ</i>
+                  <input type="tel" maxlength="1" title="주민번호 뒷자리" placeholder="0" class="mun02" >
+                  <label>주민등록번호</label>
+                  <span>●●●●●●</span>
+                </div>
+                <p class="icon-error">주민등록번호를 정확하게 입력해주세요.</p>
+              </div>
+              <p class="info-txt">14세 이상 가입 가능</p>
+              <!-- //item -->
+              <!-- item -->
+              <div class="ipt-box phone-num">
+                <div class="ipt-sel">
+                  <button type="button" class="btn-sel">
+                    통신사 선택
+                  </button>
+                  <select title="통신사 선택">
+                    <option value="SKT">SKT</option>
+                    <option value="KT">KT</option>
+                    <option value="LG U+">LG U+</option>
+                    <option value="SKT 알뜰폰">SKT 알뜰폰</option>
+                    <option value="KT 알뜰폰">KT 알뜰폰</option>
+                    <option value="LG U+ 알뜰폰">LG U+ 알뜰폰</option>
+                  </select>
+                </div>
+                <div class="ipt">
+                  <input type="tel" placeholder=" " id="tel01">
+                  <label for="tel01">휴대폰번호</label>
+                </div>
+              </div>
+              <div class="ipt-box phone-num type02">
+                <div class="ipt">
+                  <input type="tel" maxlength="6" placeholder=" " id="tel02">
+                  <label for="tel02">인증번호 <span>6자리 입력</span></label>
+                  <div class="time">
+                    <span>3:00</span>
+                  </div>
+                </div>
+                <div class="grp-button type03 btn-right">
+                  <BUtton type="button" class="btnL">재요청</BUtton>
+                </div>
+              </div>
+              <div class="grp-button btn-fix">
+                <BUtton type="button" class="btnL pop-btn btn-open99">인증번호 요청</BUtton>
+              </div>
+            </form>
+          </div>
+          <!-- //form -->  
+        </div>
+      </div>
+      <!-- // container -->
+
+			<!-- select 팝업 -->
+			<article class="layer-popup pop-sel">
+				<!-- popup -->
+				<div class="wrap-popup">
+          <div class="popup">
+            <div class="sel-head">
+              <h1>선택</h1>
+            </div>
+            <div class="sel-cont">
+              <ul>
+              </ul>
+            </div>
+            <button type="button" class="btn-close close-sel">닫기</button>
+          </div>
+				</div>
+				<!-- // popup  -->
+			</article>
+			<!-- //select 팝업  -->
+			<!-- 안내 팝업 -->
+			<article class="layer-popup alert type02 pop-open99">
+				<!-- popup -->
+				<div class="wrap-popup">
+          <div class="popup">
+            <div class="pop-cont">
+              <div class="alt-cont">
+                <strong>휴대폰으로 인증번호가 전송되었습니다.</strong>
+              </div>
+              <div class="grp-button-asis">
+                <div>
+                  <BUtton type="button" class="btn btn-default btn-primary close-btn99">확인</BUtton>
+                </div>
+              </div>
+            </div>
+          </div>
+				</div>
+				<!-- // popup  -->
+			</article>
+			<!-- //안내 팝업  -->
+			<!-- 개인정보 수집 및 이용 동의 팝업 -->
+			<article class="layer-popup type01 pop-white pop-open01">
+				<!-- popup -->
+				<div class="wrap-popup">
+          <div class="popup">
+            <div class="pop-head">
+              <h1>개인정보 수집 및 이용 동의</h1>
+            </div>
+            <div class="pop-cont">
+              <div class="agr-page">
+                <div class="con-box">
+                  <h2>SKT(알뜰폰)</h2>
+                  <dl>
+                    <dt>[SK텔레콤 귀중]</dt>
+                    <dd>
+                      본인은 SK텔레콤(주)(이하 ‘회사’라 합니다)가 제공하는 본인확인서비스(이하 ‘서비스’라 합니다)를 이용하기 위해, 다음과 같이 ‘회사’가 본인의 개인정보를 수집/이용하고, 개인정보의 취급을 위탁하는 것에 동의합니다.
+                    </dd>
+                  </dl>
+                  <ol>
+                    <li>
+                      1. 수집항목
+                      <ul>
+                        <li>이용자의 성명, 이동전화번호, 가입한 이동전화 회사, 생년월일, 성별</li>
+                        <li>연계정보(CI), 중복가입확인정보(DI)</li>
+                        <li>이용자가 이용하는 웹사이트 또는 Application 정보, 이용일시</li>
+                        <li>내외국인 여부</li>
+                        <li>가입한 이동전화회사 및 이동전화브랜드</li>
+                      </ul>
+                    </li>
+                    <li>
+                      2. 이용목적
+                      <ul>
+                        <li>이용자가 웹사이트 또는 Application에 입력한 본인확인 정보의 정확성 여부 확인(본인확인서비스 제공)</li>
+                        <li>해당 웹사이트 또는 Application에 연계정보(CI)/중복가입확인정보(DI) 전송</li>
+                        <li>서비스 관련 상담 및 불만 처리 등</li>
+                        <li>이용 웹사이트/Application 정보 등에 대한 분석 및 세분화를 통한, 이용자의 서비스 이용 선호도 분석</li>
+                      </ul>
+                    </li>
+                    <li>
+                      3. 개인정보의 보유기간 및 이용기간
+                      <ul class="ft-b">
+                        <li>이용자가 서비스를 이용하는 기간에 한하여 보유 및 이용. 다만, 아래의 경우는 제외</li>
+                        <li>법령에서 정하는 경우 해당 기간까지 보유(상세 사항은 회 사의 개인정보처리방침에 기재된 바에 따름)</li>
+                      </ul>
+                    </li>
+                    <li>
+                      4. 본인확인서비스 제공을 위한 개인정보의 취급위탁
+                      <ul>
+                        <li>수탁자 : NICE평가정보(주), (주)다날, (주)드림시큐리티, SCI평가정보(주), NHN한국사이버결제(주), (주)KG모빌리언스, 코리아크레딧뷰로(주), 한국모바일인증(주)</li>
+                        <li>취급위탁 업무 : 본인확인정보의 정확성 여부 확인(본인확인서비스 제공), 연계정보(CI)/중복가입확인정보(DI) 생성 및 전송, 서비스 관련 상담 및 불만 처리, 휴대폰인증보호 서비스, 이용자의 서비스 이용 선호도 분석정보 제공관련 시스템 구축·광고매체 연동 및 위탁영업 등</li>
+                      </ul>
+                      <p>※ 수탁자의 상세 개인정보 취급 위탁 내용은 각 수탁자가 정하는 절차와 방법에 따라 수탁자 홈페이지 등에 게시된 수탁자의 개인정보 처리방침 및 제3자 제공 동의 방침 등에 따릅니다.</p>
+                    </li>
+                    <li>
+                      5. 위 개인정보 수집·이용 및 취급위탁에 동의하지 않으실 경우, 서비스를 이용하실 수 없습니다.
+                      <p>※ 회사가 제공하는 서비스와 관련된 개인정보의 취급과 관련된 사항은, 회사의 개인정보처리방침(회사 홈페이지 <a href="http://www.sktelecom.com" target="_blank" rel="noopener noreferrer">www.sktelecom.com</a> )에 따릅니다.</p>
+                    </li>
+                  </ol>
+                  <dl>
+                    <dt>[NICE평가정보(주) 귀중]</dt>
+                    <dd>NICE평가정보(주)(이하 ‘회사’)는 SK텔레콤(주)의 업무를 대행하여 휴대폰본인확인서비스를 제공함에 있어 고객으로부터 개인정보를 수집하고 이용하기 위해 ‘정보통신망 이용촉진 및 정보보호에 관한 법률’에 따라서 다음과 같이 본인의 동의를 받습니다.</dd>
+                  </dl>
+                  <ol>
+                    <li>
+                      1. 개인정보의 내용
+                      <ol>
+                        <li>
+                          가. 정보항목
+                          <ul>
+                            <li>생년월일, 성명, 성별, 내/외국인 구분, 휴대폰번호, 가입한 이동통신사, IP주소</li>
+                          </ul>
+                        </li>
+                        <li>
+                          나. 수집방법
+                          <ul>
+                            <li>본인인증 요청시 회원사 서비스 페이지 또는 본인인증 팝업창 페이지에서 이용자가 직접 입력</li>
+                            <li>본인인증 과정에서 시스템에서 생성되는 정보 수집(Ex. IP주소)</li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      2. 개인정보의 이용목적과 제공정보
+                      <ol>
+                        <li>
+                          가. 이용 목적
+                          <ul class="ft-b">
+                            <li>고객의 회원가입, ID/PW찾기, 거래동의 등을 위한 휴대폰 본인확인 결과</li>
+                            <li>휴대폰 소지 확인을 위한 SMS 인증번호 전송</li>
+                            <li>부정 이용 방지 및 수사의뢰</li>
+                            <li>휴대폰번호보호서비스 해제(서비스 가입자에 한함)</li>
+                            <li>기타 법률에서 정한 목적</li>
+                          </ul>
+                        </li>
+                        <li>
+                          나. 제공하는 개인정보
+                          <ul>
+                            <li>성명, 성별, 생년월일, 내/외국인, 휴대폰번호, 이동통신사, IP주소, CI, DI <strong>[제공사 : 서비스회원사(업체별 선택 및 이용방식에 따라 전부 또는 일부를 제공)]</strong></li>
+                            <li>성명, 성별, 생년월일, 휴대폰번호, 이동통신사 <strong>[제공사 : SKT, KT, LGU+]</strong></li>
+                            <li>휴대폰번호 <strong>[제공사 : SKT, KT, LGU+]</strong></li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      3. 개인정보의 보유 및 이용기간
+                      <p class="ft-b">
+                        이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면 지체없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명기한 기간 동안 보유합니다.
+                      </p>
+                      <ol>
+                        <li>
+                          가. 회사 내부 방침에 의한 정보보유 사유
+                          <ul>
+                            <li>
+                              본인확인 발생 및 차단기록, 휴대폰번호
+                              <ul>
+                                <li>보유 이유 : 부정 이용 방지 및 민원 처리</li>
+                                <li>보유 기간 : <strong>1년</strong></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          나. 관계법령에 의한 정보보유 사유
+                          <ul>
+                            <li>
+                              이용자 불만 또는 분쟁 처리에 관한 기록
+                              <ul>
+                                <li>보유 이유 : 전자상거래 등에서의 소비자보호에 관한 법률</li>
+                                <li>보유 기간 : <strong>3년</strong></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </div>
+                <div class="con-box">
+                  <h2>KT(알뜰폰)</h2>
+                  <dl>
+                    <dt>[(주)케이티 귀중]</dt>
+                    <dd>(주)케이티(이하 ‘회사’라 함)가 제공하는 본인확인서비스를 이용하기 위해, 다음과 같이 ‘회사’가 본인의 개인정보를 수집 및 이용하고, 개인정보의 취급을 위탁하는 것에 동의합니다.</dd>
+                  </dl>
+                  <ol>
+                    <li>
+                      1. 수집항목
+                      <ul>
+                        <li>이용자가 가입한 이동통신사, 휴대폰번호, 성명, 성별, 생년월일, 내/외국인 구분</li>
+                        <li>연계정보(CI), 중복가입확인정보(DI)</li>
+                        <li>이용자가 본인확인을 요청한 서비스명 및 URL정보, 본인확인 이용일시, IP 주소</li>
+                      </ul>
+                    </li>
+                    <li>
+                      2. 이용목적
+                      <ul>
+                        <li>인터넷사업자의 서비스(회원가입, ID/PW찾기 등) 이용에 필요한 이용자 본인확인 여부 및 정보 전달<br>(※ 이용자가 본인확인을 요청한 인터넷사업자에 한합니다.)</li>
+                        <li>(주)케이티 등 이동통신사에 이용자 정보를 전송하여 본인확인 및 휴대폰 정보의 일치 여부 확인</li>
+                        <li>휴대폰 사용자 확인을 위한 SMS 인증번호 전송</li>
+                        <li>부정 이용 방지 및 수사의뢰</li>
+                        <li>이용자 본인 요청에 의한 본인확인 이력정보 제공</li>
+                        <li>휴대폰번호보호서비스 가입여부 확인(서비스 가입자에 한함)</li>
+                      </ul>
+                    </li>
+                    <li>
+                      3.개인정보의 보유 및 이용기간
+                      <p class="ft-b">"회사"는 이용자의 개인정보를 이용목적이 달성되거나 보유 및 보존기간이 종료하면 해당 정보를 지체없이 파기 하며 별도의 보관을 하지 않습니다. 단, 관련 법령 및 회사방침에 따라 보존하는 목적과 기간은 아래와 같습니다.</p>
+                      <ul>
+                        <li>소비자의 불만 또는 분쟁처리에 관한 기록 : <strong>3년(전자상거래등에서의 소비자보호에 관한 법률)</strong></li>
+                      </ul>
+                    </li>
+                    <li>
+                      4.본인확인서비스 제공을 위한 개인정보의 취급 위탁
+                      <ul>
+                        <li>수탁자 : NICE평가정보</li>
+                        <li>취급위탁 업무 : 본인확인정보의 정확성 여부 확인, 연계정보(CI) 및 중복가입확인정보(DI) 전송, 서비스 관련 상담 및 불만 처리 등</li>
+                      </ul>
+                    </li>
+                    <li>
+                      5. 상기 개인정보 수집 및 이용과 취급위탁에 동의하지 않는 경우, 서비스를 이용할 수 없습니다.
+                      <p>‘회사’가 제공하는 서비스의 개인정보 취급과 관련된 사항은 아래의 ‘회사’ 홈페이지에 기재된 개인정보처리방침에 따릅니다.</p>
+                      <ul>
+                        <li>(주)케이티 : <a href="http://www.kt.com" target="_blank" rel="noopener noreferrer">www.kt.com</a> </li>
+                      </ul>
+                    </li>
+                  </ol>
+                  <p>본인은 상기 내용을 숙지하였으며 이에 동의합니다.</p>
+                  <dl>
+                    <dt>[NICE평가정보(주) 귀중]</dt>
+                    <dd>NICE평가정보(주)(이하 ‘회사’)는 SK텔레콤(주)의 업무를 대행하여 휴대폰본인확인서비스를 제공함에 있어 고객으로부터 개인정보를 수집하고 이용하기 위해 ‘정보통신망 이용촉진 및 정보보호에 관한 법률’에 따라서 다음과 같이 본인의 동의를 받습니다.</dd>
+                  </dl>
+                  <ol>
+                    <li>
+                      1. 개인정보의 내용
+                      <ol>
+                        <li>
+                          가. 정보항목
+                          <ul>
+                            <li>생년월일, 성명, 성별, 내/외국인 구분, 휴대폰번호, 가입한 이동통신사, IP주소</li>
+                          </ul>
+                        </li>
+                        <li>
+                          나. 수집방법
+                          <ul>
+                            <li>본인인증 요청시 회원사 서비스 페이지 또는 본인인증 팝업창 페이지에서 이용자가 직접 입력</li>
+                            <li>본인인증 과정에서 시스템에서 생성되는 정보 수집(Ex. IP주소)</li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      2. 개인정보의 이용목적과 제공정보
+                      <ol>
+                        <li>
+                          가. 이용 목적
+                          <ul class="ft-b">
+                            <li>고객의 회원가입, ID/PW찾기, 거래동의 등을 위한 휴대폰 본인확인 결과</li>
+                            <li>휴대폰 소지 확인을 위한 SMS 인증번호 전송</li>
+                            <li>부정 이용 방지 및 수사의뢰</li>
+                            <li>휴대폰번호보호서비스 해제(서비스 가입자에 한함)</li>
+                            <li>기타 법률에서 정한 목적</li>
+                          </ul>
+                        </li>
+                        <li>
+                          나. 제공하는 개인정보
+                          <ul>
+                            <li>성명, 성별, 생년월일, 내/외국인, 휴대폰번호, 이동통신사, IP주소, CI, DI <strong>[제공사 : 서비스회원사(업체별 선택 및 이용방식에 따라 전부 또는 일부를 제공)]</strong></li>
+                            <li>성명, 성별, 생년월일, 휴대폰번호, 이동통신사 <strong>[제공사 : SKT, KT, LGU+]</strong></li>
+                            <li>휴대폰번호 <strong>[제공사 : SKT, KT, LGU+]</strong></li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      3. 개인정보의 보유 및 이용기간
+                      <p class="ft-b">
+                        이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면 지체없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명기한 기간 동안 보유합니다.
+                      </p>
+                      <ol>
+                        <li>
+                          가. 회사 내부 방침에 의한 정보보유 사유
+                          <ul>
+                            <li>
+                              본인확인 발생 및 차단기록, 휴대폰번호
+                              <ul>
+                                <li>보유 이유 : 부정 이용 방지 및 민원 처리</li>
+                                <li>보유 기간 : <strong>1년</strong></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          나. 관계법령에 의한 정보보유 사유
+                          <ul>
+                            <li>
+                              이용자 불만 또는 분쟁 처리에 관한 기록
+                              <ul>
+                                <li>보유 이유 : 전자상거래 등에서의 소비자보호에 관한 법률</li>
+                                <li>보유 기간 : <strong>3년</strong></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </div>
+                <div class="con-box">
+                  <h2>LGU+(알뜰폰)</h2>
+                  <dl>
+                    <dt>[LG유플러스(주) 귀중]</dt>
+                    <dd>LG유플러스(주) (이하 ‘회사’라 함)가 제공하는 본인확인서비스를 이용하기 위해, 다음과 같이 ‘회사’가 본인의 개인정보를 수집 및 이용하고, 개인정보의 취급을 위탁하는 것에 동의합니다.</dd>
+                  </dl>
+                  <ol>
+                    <li>
+                      1. 수집항목
+                      <ul>
+                        <li>고객의 생년월일, 이동전화번호, 성명, 성별, 내/외국인 구분</li>
+                        <li>연계정보(CI), 중복가입확인정보(DI)</li>
+                        <li>고객이 이용하는 웹사이트 등</li>
+                      </ul>
+                    </li>
+                    <li>
+                      2. 이용목적
+                      <ul>
+                        <li>고객이 웹사이트 또는 Application 등에 입력한 본인확인정보의 정확성 여부 확인</li>
+                        <li>해당 웹사이트 또는 Application 등에 연계정보(CI)와 중복가입확인정보)DI) 전송</li>
+                        <li>서비스 관련 상담 및 불만 처리</li>
+                        <li>기타 법룰에서 정한 목적</li>
+                      </ul>
+                    </li>
+                    <li>
+                      3.개인정보의 보유 및 이용기간
+                      <ul class="ft-b">
+                        <li>고객이 서비스를 이용하는 기간에 한하여 보유 및 이용을 원칙으로 하되, 법률에서 정하는 경우 해당 기간까지 보유 및 이용(세부사항은 ‘회사’의 개인정보처리방침에 따름)</li>
+                      </ul>
+                    </li>
+                    <li>
+                      4. 본인확인서비스 제공을 위한 개인정보의 취급 위탁
+                      <table class="tbl01">
+	                      <caption>수탁자와 위탁업무내용 내용을 알려주는 표</caption>
+	                      <colgroup>
+	                        <col width="50%">
+	                        <col width="50%">
+	                      </colgroup>
+	                      <thead>
+	                        <tr>
+	                          <th scope="col">수탁자</th>
+	                          <th scope="col">위탁업무내용</th>
+	                        </tr>
+	                      </thead>
+	                      <tbody>
+	                        <tr>
+	                          <th>NICE평가정보(주)</th>
+	                          <td>본인확인 서비스 <br>중계 업무 제공</td>
+	                        </tr>
+	                        <tr>
+	                          <th>CS리더, LB휴넷, <br>아이알링크 주식회사, <br>(주)씨에스원파트너</th>
+	                          <td>고객센터 운영</td>
+	                        </tr>
+	                        <tr>
+	                          <th>미디어로그</th>
+	                          <td>PASS 어플리케이션 및 <br>웹사이트 운영/관리</td>
+	                        </tr>
+	                        <tr>
+	                          <th>아톤</th>
+	                          <td>PASS 서비스 장애 및 <br>VOC 처리</td>
+	                        </tr>
+	                      </tbody>
+	                    </table>
+                    </li>
+                    <li>
+                      5. 상기 개인정보 수집 및 이용과 취급위탁에 동의하지 않는 경우, 서비스를 이용할 수 없습니다.
+                      <p>‘회사’가 제공하는 서비스의 개인정보 취급과 관련된 사항은 아래의 ‘회사’ 홈페이지에 기재된 개인정보처리방침에 따릅니다.</p>
+                      <ul>
+                        <li>LG유플러스(주) : <a href="http://lguplus.co.kr" target="_blank" rel="noopener noreferrer">www.lguplus.co.kr</a></li>
+                      </ul>
+                    </li>
+                  </ol>
+                  <p>본인은 상기 내용을 숙지하였으며 이에 동의합니다.</p>
+                  <dl>
+                    <dt>[NICE평가정보(주) 귀중]</dt>
+                    <dd>NICE평가정보(주)(이하 ‘회사’)는 SK텔레콤(주)의 업무를 대행하여 휴대폰본인확인서비스를 제공함에 있어 고객으로부터 개인정보를 수집하고 이용하기 위해 ‘정보통신망 이용촉진 및 정보보호에 관한 법률’에 따라서 다음과 같이 본인의 동의를 받습니다.</dd>
+                  </dl>
+                  <ol>
+                    <li>
+                      1. 개인정보의 내용
+                      <ol>
+                        <li>
+                          가. 정보항목
+                          <ul>
+                            <li>생년월일, 성명, 성별, 내/외국인 구분, 휴대폰번호, 가입한 이동통신사, IP주소</li>
+                          </ul>
+                        </li>
+                        <li>
+                          나. 수집방법
+                          <ul>
+                            <li>본인인증 요청시 회원사 서비스 페이지 또는 본인인증 팝업창 페이지에서 이용자가 직접 입력</li>
+                            <li>본인인증 과정에서 시스템에서 생성되는 정보 수집(Ex. IP주소)</li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      2. 개인정보의 이용목적과 제공정보
+                      <ol>
+                        <li>
+                          가. 이용 목적
+                          <ul class="ft-b">
+                            <li>고객의 회원가입, ID/PW찾기, 거래동의 등을 위한 휴대폰 본인확인 결과</li>
+                            <li>휴대폰 소지 확인을 위한 SMS 인증번호 전송</li>
+                            <li>부정 이용 방지 및 수사의뢰</li>
+                            <li>휴대폰번호보호서비스 해제(서비스 가입자에 한함)</li>
+                            <li>기타 법률에서 정한 목적</li>
+                          </ul>
+                        </li>
+                        <li>
+                          나. 제공하는 개인정보
+                          <ul>
+                            <li>성명, 성별, 생년월일, 내/외국인, 휴대폰번호, 이동통신사, IP주소, CI, DI <strong>[제공사 : 서비스회원사(업체별 선택 및 이용방식에 따라 전부 또는 일부를 제공)]</strong></li>
+                            <li>성명, 성별, 생년월일, 휴대폰번호, 이동통신사 <strong>[제공사 : SKT, KT, LGU+]</strong></li>
+                            <li>휴대폰번호 <strong>[제공사 : SKT, KT, LGU+]</strong></li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      3. 개인정보의 보유 및 이용기간
+                      <p class="ft-b">
+                        이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면 지체없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명기한 기간 동안 보유합니다.
+                      </p>
+                      <ol>
+                        <li>
+                          가. 회사 내부 방침에 의한 정보보유 사유
+                          <ul>
+                            <li>
+                              본인확인 발생 및 차단기록, 휴대폰번호
+                              <ul>
+                                <li>보유 이유 : 부정 이용 방지 및 민원 처리</li>
+                                <li>보유 기간 : <strong>1년</strong></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          나. 관계법령에 의한 정보보유 사유
+                          <ul>
+                            <li>
+                              이용자 불만 또는 분쟁 처리에 관한 기록
+                              <ul>
+                                <li>보유 이유 : 전자상거래 등에서의 소비자보호에 관한 법률</li>
+                                <li>보유 기간 : <strong>3년</strong></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <div class="grp-button">
+                <BUtton type="button" class="btnL close-btn01">확인</BUtton>
+              </div>
+            </div>
+            <button type="button" class="btn-close close-btn01">닫기</button>
+          </div>
+				</div>
+				<!-- // popup  -->
+			</article>
+			<!-- //개인정보 수집 및 이용 동의 팝업  -->
+			<!-- 개인정보 수집 및 이용 동의 팝업 -->
+			<article class="layer-popup type01 pop-white pop-open02">
+				<!-- popup -->
+				<div class="wrap-popup">
+          <div class="popup">
+            <div class="pop-head">
+              <h1>개인정보 수집 및 이용 동의</h1>
+            </div>
+            <div class="pop-cont">
+              <div class="agr-page">
+                <div class="con-box">
+                  <h2>SKT(알뜰폰)</h2>
+                  <dl>
+                    <dt></dt>
+                    <dd></dd>
+                  </dl>
+                  <ol>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+                <div class="con-box">
+                  <h2>KT(알뜰폰)</h2>
+                  <dl>
+                    <dt></dt>
+                    <dd></dd>
+                  </dl>
+                  <ol>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+                <div class="con-box">
+                  <h2>LGU+(알뜰폰)</h2>
+                  <dl>
+                    <dt></dt>
+                    <dd></dd>
+                  </dl>
+                  <ol>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <div class="grp-button">
+                <BUtton type="button" class="btnM  close-btn02">확인</BUtton>
+              </div>
+            </div>
+            <button type="button" class="btn-close close-btn02">닫기</button>
+          </div>
+				</div>
+				<!-- // popup  -->
+			</article>
+			<!-- //개인정보 수집 및 이용 동의 팝업  -->
+
+      <!-- footer -->
+      <div class="footer global-footer parbase">
+        <footer class="footer">
+          <div class="container bg-b8 footer-main">
+            <div class="row margin-bottom-xxl">
+              <div class="col-md-3 hidden-xs hidden-sm">
+                <h5 class="h5 text-left b5 margin-bottom-md-l margin-bottom-sm-l">AIA생명보험 주식회사</h5>
+                <div class="text parbase">
+                  <div class="aia-text    w bt6 margin-bottom-md-l margin-bottom-sm-l margin-bottom-l" data-emptytext="Text">
+                    <p style="color: #b3b1a8;"><b>1588 9898</b></p>
+                  </div>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text  text-left p4 bt3 margin-bottom-md-l margin-bottom-sm-l margin-bottom-l" data-emptytext="Text">
+                    <div class="bt5 margin-bottom-s margin-bottom-sm-s b5">
+                      <b>바이탈리티 관련 문의 1566 8777</b>
+                      <br> 
+                    </div> 
+                    <div class="bt5 margin-bottom-s margin-bottom-sm-s b5">
+                      해외 82 2 3707 4800
+                    </div> 
+                    <div class="bt5 margin-bottom-s margin-bottom-sm-s b5">
+                      서울시 중구 통일로 2길 16 (순화동 216)
+                      <br> AIA타워
+                      <br> (우)04511
+                    </div> 
+                    <div class="bt5 margin-bottom-s margin-bottom-sm-s b5">
+                      대표이사 피터 정
+                      <br> 사업자등록번호 : 711-87-00663
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 hidden-sd hidden-md hidden-lg text-center">
+                <h6 class="h6 text-center b5 margin-bottom-md-s margin-bottom-sm-s">AIA 한국</h6>        
+                <div class="sub-title">
+                  <h3 class="h3   w margin-bottom-md-l margin-bottom-sm-l margin-top-l margin-bottom-l">1588 9898</h3>
+                </div>
+                <div class="sub-title">
+                  <h6 class="h6   w margin-bottom-md-l margin-bottom-sm-l margin-top-l margin-bottom-l">바이탈리티 관련 문의 1566 8777</h6>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text  text-center w bt3 margin-top-md-0 margin-bottom-md-l margin-top-sm-0 margin-bottom-sm-l margin-top-xs margin-bottom-l" data-emptytext="Text">
+                    <div class="bt5 margin-bottom-s margin-bottom-sm-s b5">
+                      서울시 중구 통일로 2길 16 (순화동 216)&nbsp;
+                      <br> AIA타워&nbsp;
+                      <br> (우)04511
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- xs viewport -->
+              <div class="col-xs-12 visible-xs margin-bottom-xxl margin-bottom-sm-xxl">
+                <div class="sub-title">
+                  <h6 class="h6 text-center b5 margin-bottom-md-l margin-bottom-sm-l margin-bottom-l">AIA 그룹</h6>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text    p4 bt3 margin-bottom-md-l margin-bottom-sm-l margin-bottom-l" data-emptytext="Text">
+                    <h3 class="text-center margin-bottom-xxl margin-bottom-sm-xxl"><a href="http://www.aia.com/en/">AIA.com</a><br> </h3>
+                  </div>
+                </div>
+                <div class="col-xs-offset-1 col-xs-5">
+                </div>
+                <div class="col-xs-5">
+                </div>
+              </div>
+              <!-- sm and md viewport -->
+              <div class="col-md-3 col-sm-4 hidden-xs">
+                <h5 class="h5 text-left b5 margin-bottom-md-l margin-bottom-sm-l">고객권리안내</h5>
+                <div class="text parbase">
+                  <div class="aia-text    w bt3 margin-bottom-xxs" data-emptytext="Text">
+                    <p><a href="/ko/index/service-provision.html">서비스이용약관</a></p>
+                  </div>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text    w bt3 margin-bottom-xxs" data-emptytext="Text">
+                    <p><a href="/ko/index/pi-processing.html"><b>개인정보처리방침</b></a></p>
+                  </div>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text    w bt3 margin-bottom-xxs" data-emptytext="Text">
+                    <p><a href="/ko/index/ci-utilization.html">신용정보 활용체제</a></p>
+                  </div>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text    w bt3 margin-bottom-xxs" data-emptytext="Text">
+                    <p><a href="/ko/index/customer-rights.html">고객권리안내문</a></p>
+                  </div>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text    w bt3 margin-bottom-xxs" data-emptytext="Text">
+                    <p><a href="/ko/index/inquiry.html">개인(신용)정보이용제공조회</a></p>
+                  </div>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text    w bt3 margin-bottom-xxs" data-emptytext="Text">
+                    <p><a href="/ko/index/electronic-finacial-provision.html">전자금융이용약관</a></p>
+                  </div>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text    w bt3 margin-bottom-xxs" data-emptytext="Text">
+                    <p><a href="/ko/about-aia/media-center/notification/2018/notification_2018_11_12.html">전자금융거래 안전수칙</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-4 hidden-xs">
+                <h5 class="h5 text-left b5 margin-bottom-md-l margin-bottom-sm-l">신고정보</h5>
+                <div class="text parbase">
+                  <div class="aia-text    w bt3 margin-bottom-xxs" data-emptytext="Text">
+                    <p><a title="보험범죄 신고센터[AIA생명]" href="/ko/help-support/insurance-claim-reporting-center.html" target="_blank">보험범죄 신고센터[AIA생명]</a></p>
+                  </div>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text    w bt3 margin-bottom-xxs" data-emptytext="Text">
+                    <p><a href="http://insucop.fss.or.kr/fss/insucop/main.jsp" target="_blank" title="보험범죄 신고센터[금융감독원]">보험범죄 신고센터[금융감독원]</a></p>
+                  </div>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text    w bt3 margin-bottom-xxs" data-emptytext="Text">
+                      <p><a href="/ko/help-support/portal/civil-service.html" title="전자민원접수">전자민원접수</a></p>
+                  </div>
+                </div>
+                <div class="sub-title">        
+                  <h5 class="h5 text-left b5 margin-top-md-xxl margin-bottom-md-l margin-top-sm-xl margin-bottom-sm-l margin-top-l">유의사항</h5>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text    w bt3 margin-bottom-xxs" data-emptytext="Text">
+                      <p><a href="/ko/disclosure/our-products/insurance-product-list.html" target="_blank" title="보호금융상품등록부_새창열기">보호금융상품등록부</a></p>
+                  </div>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text    w bt3 margin-bottom-md-xxs margin-bottom-sm-xxs margin-bottom-xxs" data-emptytext="Text">
+                      <p><a title="새창열기" href="https://cont.insure.or.kr/cont_web/intro.do" target="_blank">휴면보험금조회</a><br> </p>
+                  </div>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text    w bt3 margin-bottom-xxs" data-emptytext="Text">
+                      <p><a href="http://www.fss.or.kr/s1332/index.jsp" target="_blank" title="서민금융1332서비스_새창열기">서민금융1332서비스</a></p>
+                  </div>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text    w bt3 margin-bottom-xxs" data-emptytext="Text">
+                    <p><a title="금융소비자정보포털파인_새창열기" href="http://fine.fss.or.kr/main/index.jsp" target="_blank">금융소비자정보포털 파인</a><br> </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-4 hidden-xs">
+                <h5 class="h5 text-left b5 margin-bottom-md-l margin-bottom-sm-l">AIA 그룹</h5>
+                <div class="text parbase">
+                  <div class="aia-text  text-left w bt4 margin-bottom-md-l margin-bottom-sm-l margin-bottom-l" data-emptytext="Text">
+                    <div>
+                      <a href="http://www.aia.com/en/" target="_blank" title="AIA.COM">AIA.COM</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="text parbase">
+                  <div class="aia-text cq-text-placeholder-ipe   p4 bt3 margin-bottom-md-l margin-bottom-sm-l margin-bottom-l" data-emptytext="Text">
+                  </div>
+                </div>
+              </div>          
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <hr class="bg-b7 margin-bottom-l">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 text-center">
+                <a href="https://www.facebook.com/Korea.AIA" target="_blank"><svg title="페이스북_새창이동" class="icon icon-s hide-on-fallback " role="img" alt="페이스북_새창이동" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/dam/aia/icons/icons.svg#facebook-2ndg"></use><image class="icon icon-s " src="/content/dam/aia/icons/secondary/facebook-2ndg.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg></a>
+                <a href="http://www.aiablog.co.kr" target="_blank"><svg title="소셜블로그_새창이동" class="icon icon-s hide-on-fallback " role="img" alt="소셜블로그_새창이동" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/dam/aia/icons/icons.svg#blog-2ndg"></use><image class="icon icon-s " src="/content/dam/aia/icons/secondary/blog-2ndg.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg></a>
+                <a href="http://www.youtube.com/AIAcommunity" target="_blank"><svg title="유튜브_새창이동" class="icon icon-s hide-on-fallback " role="img" alt="유튜브_새창이동" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/dam/aia/icons/icons.svg#youtube-2ndg"></use><image class="icon icon-s " src="/content/dam/aia/icons/secondary/youtube-2ndg.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg></a>
+              </div>
+            </div>
+            
+            <div class="row hidden-sm hidden-xs margin-bottom-m"></div>
+            <div class="row hidden-md hidden-lg margin-bottom-m margin-bottom-sm-s"></div>
+            <div class="row">
+              <div class="col-xs-12 text-center bt5 b5">
+                Copyright © 2016, AIA Group Limited and its subsidiaries. All rights reserved.
+              </div>
+            </div>
+            <div class="row hidden-sm hidden-xs margin-bottom-xl"></div>
+            <div class="row hidden-md hidden-lg margin-bottom-xxl margin-bottom-sm-xl"></div>
+          </div>
+          <div class="container bg-b9">
+            <div class="row">
+              <div class="col-xs-12 margin-bottom-l margin-bottom-sm-l"></div>
+              <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 text-center margin-bottom-l margin-bottom-sm-l">
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- //footer -->
+      <script>
+        $(window).resize(function () {
+          if($(window).width() > 767) {
+            $('.footer').css('display', 'block');
+          } else {
+            $('.footer').css('display', 'none');
+          }
+        });
+        // 전체동의
+        checkAll();
+        /**
+        * 전체동의
+        */
+        function checkAll(allBtn, inputName){
+          var $agreeAll = $('.agr-check.all input[type="checkbox"]');
+          $agreeAll.change(function (){
+            var checked = $(this).prop('checked');
+            var $itemBox = $(this).parent().parent().siblings('.agr-list');
+            if(checked) {
+              $itemBox.slideUp(400); 
+            } else { 
+              $itemBox.slideDown(400);
+            }
+          });
+        }
+      </script>
+    </body>
+</html>

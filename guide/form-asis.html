@@ -19,7 +19,6 @@
         <link rel="stylesheet" href="/aia/asis/table_design.css" type="text/css">
         <link rel="stylesheet" href="/aia/asis/transkey.css" type="text/css">
         <link rel="stylesheet" href="/aia/css/svg.css" type="text/css"> 
-        <link rel="stylesheet" href="/aia/css/form.css" type="text/css"> 
         <link rel="stylesheet" href="/aia/css/form-asis.css" type="text/css"> 
         <link rel="stylesheet" href="/aia/css/popup.css" type="text/css"> 
         <script type="text/javascript" src="/aia/asis/jquery-3.1.1.min.js"></script>
@@ -64,6 +63,10 @@
         <h3>고객 정보 변경</h3>
         <strong class="ex-guide-tit">h4</strong> 
         <h4>연락처</h4>
+        <strong class="ex-guide-tit">.tit-line h3</strong> 
+        <div class="tit-line">
+          <h3>[필수] 보험금 청구 정보 <span class="m-bp-b">제공에 동의해주세요.</span></h3>
+        </div>
       </div>
       <strong class="ex-guide-tit">2줄</strong>
       <div class="container tit-cont-container">
@@ -291,7 +294,7 @@
         <strong class="ex-guide-tit02">1개 - center</strong> 
         <div class="grp-button-asis type02">
           <div>
-            <BUtton type="button" class="btn-primary pop-btn btn-open01">popup - fullScroll</BUtton>
+            <BUtton type="button" class="btn-primary pop-btn btn-open03">popup - full(이미지 상세)</BUtton>
           </div>
         </div>
         <strong class="ex-guide-tit02">1개 - content 상세</strong>
@@ -299,10 +302,10 @@
         <strong class="ex-guide-tit02">2개</strong>
         <div class="grp-button-asis type04">
           <div>
-            <BUtton type="button" class="btn-primary pop-btn btn-open02">popup - alret</BUtton>
+            <BUtton type="button" class="btn-primary pop-btn btn-open02">popup - alert</BUtton>
           </div>
             <div>
-            <BUtton type="button" class="btn-secondary pop-btn btn-open03">popup - full(이미지 상세)</BUtton>
+            <BUtton type="button" class="btn-secondary pop-btn btn-open99">popup - alert(head X)</BUtton>
           </div>
         </div>
       </div>
@@ -403,50 +406,633 @@
           </ul>
         </div>
       </div>  
-			<!-- fullScroll 팝업 -->
-			<article class="layer-popup type01 pop-open01">
+
+
+      <!-- container -->
+      <div class="container step-info-container">
+        <div class="demand-pay">
+          <dl class="demand-pay-agr pink-check">
+            <dd class="toggle-action">
+              <ul class="agr-list">
+                <li>
+                  <dl>
+                    <dt class="agr-check">
+                      <div>
+                        <input type="checkbox" id="check01">
+                        <label for="check01">
+                          전체동의
+                        </label>
+                      </div>
+                      <button type="button" class="btn_toggle">상세내용 닫기</button>
+                    </dt>
+                    <dd>
+                      <ul class="agr-list02">
+                        <li>
+                          <button type="button" class="btn-agr pop-btn btn-pop01" title="레이어팝업 열기">고유식별정보 수집&middot;이용 동의 </button>
+                        </li>
+                        <li>
+                          <button type="button" class="btn-agr" title="레이어팝업 열기">민감정보 수집&middot;이용 동의</button>
+                        </li>
+                        <li>
+                          <button type="button" class="btn-agr" title="레이어팝업 열기">개인신용정보 수집&middot;이용 동의 </button>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt class="agr-check">
+                      <div>
+                        <input type="checkbox" id="check02">
+                        <label for="check02">
+                          <em>필수</em>제공에 관한 사항
+                        </label>
+                      </div>
+                      <button type="button" class="btn_toggle">상세내용 닫기</button>
+                    </dt>
+                    <dd>
+                      <ul class="agr-list02">
+                        <li>
+                          <button type="button" class="btn-agr pop-btn btn-pop01" title="레이어팝업 열기">고유식별정보 수집&middot;이용 동의 </button>
+                        </li>
+                        <li>
+                          <button type="button" class="btn-agr" title="레이어팝업 열기">민감정보 수집&middot;이용 동의</button>
+                        </li>
+                        <li>
+                          <button type="button" class="btn-agr" title="레이어팝업 열기">개인신용정보 수집&middot;이용 동의 </button>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt class="agr-check">
+                      <div>
+                        <input type="checkbox" id="check03">
+                        <label for="check03">
+                          <em>필수</em>국외 제3자 제공에 관한 사항
+                        </label>
+                      </div>
+                      <button type="button" class="btn_toggle">상세내용 닫기</button>
+                    </dt>
+                    <dd>
+                      <ul class="agr-list02">
+                        <li>
+                          <button type="button" class="btn-agr" title="레이어팝업 열기">민감정보 수집&middot;이용 동의</button>
+                        </li>
+                        <li>
+                          <button type="button" class="btn-agr" title="레이어팝업 열기">개인신용정보 수집&middot;이용 동의 </button>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt class="agr-check">
+                      <div>
+                        <input type="checkbox" id="check04">
+                        <label for="check04">
+                          <em>필수</em>조회에 관한 사항
+                        </label>
+                      </div>
+                      <button type="button" class="btn_toggle">상세내용 닫기</button>
+                    </dt>
+                    <dd>
+                      <ul class="agr-list02">
+                        <li>
+                          <button type="button" class="btn-agr pop-btn btn-pop01" title="레이어팝업 열기">고유식별정보 수집&middot;이용 동의 </button>
+                        </li>
+                        <li>
+                          <button type="button" class="btn-agr" title="레이어팝업 열기">민감정보 수집&middot;이용 동의</button>
+                        </li>
+                        <li>
+                          <button type="button" class="btn-agr" title="레이어팝업 열기">개인신용정보 수집&middot;이용 동의 </button>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <!-- // container -->
+			<!-- full 팝업 -->
+			<article class="layer-popup fix pop-open01">
 				<!-- popup -->
 				<div class="wrap-popup">
           <div class="popup">
             <div class="pop-head">
-              <h1>본인 확인</h1>
+              <h1>개인(신용)정보 처리동의</h1>
             </div>
-            <div class="pop-cont">              
-              <div>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
+            <div class="pop-cont">
+              <div class="agr-page02">
+                <div class="gray-agr type02">
+                  <div class="tit">
+                    수집·이용에 관한 사항
+                  </div>
+                  <div class="pink-check">
+                    <div>
+                      <input type="radio" name="pop_check01" id="pop_check01_01">
+                      <label for="pop_check01_01">
+                        동의하지않음
+                      </label>
+                    </div>
+                    <div>
+                      <input type="radio" name="pop_check01" id="pop_check01_02">
+                      <label for="pop_check01_02">
+                        동의함
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="agr-list-cont">
+                  <dl>
+                    <dt>수집·이용 목적</dt>
+                    <dd>
+                      <ol>
+                        <li>1) 보험사고·보험사기 조사 및 보험금지급·심사 (손해사정 또는 의료자문 포함)</li>
+                        <li>2) 보험금청구서류 접수대행 서비스 및 교통사고 처리내역 발급 간소화 서비스</li>
+                        <li>3) 민원처리 및 분쟁대응, 금융거래 관련 업무
+                        </li>
+                      </ol>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>보유 및 이용기간</dt>
+                    <dd>
+                      <p><span class="ft-b">동의일로부터 거래 종료 후 5년까지</span><span>(단, 다른 관련 법령에 해당하는 경우 해당 법령상의 보존기간을 따름)</span></p>
+                      <p>※ 위 보유 기간에서의 거래 종료일이란 “①보험계약 만기, 해지, 취소, 철회일 또는 소멸일, ②보험금 청구권 소멸시효 완성일(상법 제662조), ③채권·채무 관계 소멸일 중 가장 나중에 도래한 사유를 기준으로 판단한 날”을 말한다.</p>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>수집·이용 항목</dt>
+                    <dd>
+                      <ol>
+                        <li>
+                          <em>1) 고유식별정보</em>
+                          <ul>
+                            <li class="ft-b">주민등록번호, 외국인등록번호, 여권번호, 운전면허번호</li>
+                          </ul>
+                          <p>위 <em>고유식별정보 수집·이용</em>에 동의하십니까?</p>
+                          <div class="gray-agr">
+                            <div class="tit">
+                              고유식별정보 수집·이용 동의
+                            </div>
+                            <div class="pink-check">
+                              <div>
+                                <input type="radio" name="pop_check01_01" id="pop_check01_01_01">
+                                <label for="pop_check01_01_01">
+                                  동의하지않음
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="pop_check01_01" id="pop_check01_01_02">
+                                <label for="pop_check01_01_02">
+                                  동의함
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <em>2) 민감정보</em>
+                          <p class="ft-b">피보험자의 질병·상해에 관한 정보(진료기록, 상병명 등), 보험사고 조사 (보험사기 포함) 및 손해사정 업무 수행과 관련하여 취득한 정보 (경찰, 공공·국가기관, 의료기관 등으로부터 본인의 위임을 받아 취득한 각종 조사서, 증명서, 진료기록 등에 포함된 개인(신용)정보 포함)</p>
+                          <p>위 <em>민감정보 수집·이용</em>에 동의하십니까?</p>
+                          <div class="gray-agr">
+                            <div class="tit">
+                              민감정보 수집·이용 동의
+                            </div>
+                            <div class="pink-check">
+                              <div>
+                                <input type="radio" name="pop_check01_02" id="pop_check01_02_01">
+                                <label for="pop_check01_02_01">
+                                  동의하지않음
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="pop_check01_02" id="pop_check01_02_02">
+                                <label for="pop_check01_02_02">
+                                  동의함
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <em>3) 개인(신용)정보</em>
+                          <strong>일반개인정보</strong>
+                          <ul>
+                            <li>성명, 주소, 생년월일, 이메일, 유·무선 전화번호, 성별, 국적, 직업, 피보험자와 수익자의 관계, 국내거소신고번호</li>
+                          </ul>
+                          <strong>신용거래정보</strong>
+                          <ul>
+                            <li>금융거래 업무 관련 정보(보험금 지급계좌 등), 보험청약 및 계약정보(상품종류, 기간, 보험가입금액 등), 보험금정보(보험금 지급사유, 지급금액 등)</li>
+                          </ul>
+                          <p>위 <em>개인신용정보 수집·이용</em>에 동의하십니까?</p>
+                          <div class="gray-agr">
+                            <div class="tit">
+                              개인신용정보 수집·이용 동의
+                            </div>
+                            <div class="pink-check">
+                              <div>
+                                <input type="radio" name="pop_check01_03" id="pop_check01_03_01">
+                                <label for="pop_check01_03_01">
+                                  동의하지않음
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="pop_check01_03" id="pop_check01_03_02">
+                                <label for="pop_check01_03_02">
+                                  동의함
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ol>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="gray-agr type02">
+                  <div class="tit">
+                    제공에 관한 사항
+                  </div>
+                  <div class="pink-check">
+                    <div>
+                      <input type="radio" name="pop_check02" id="pop_check02_01">
+                      <label for="pop_check02_01">
+                        동의하지않음
+                      </label>
+                    </div>
+                    <div>
+                      <input type="radio" name="pop_check02" id="pop_check02_02">
+                      <label for="pop_check02_02">
+                        동의함
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="agr-list-cont">
+                  <dl>
+                    <dt>제공받는 자</dt>
+                    <dd>
+                      <ol>
+                        <li>1) 국가기관 등: 법원, 검찰, 경찰, 국세청, 국토부, 금융위원회, 금융감독원, 보험요율산출기관 등 법령상 업무수행 기관 (위탁사업자 포함)</li>
+                        <li>2) 종합신용정보집중기관: 한국신용정보원</li>
+                        <li>3) 보험회사 등: 생명·손해보험회사, 국내 재보험사, 공제사업자, 체신관서(우체국보험)</li>
+                        <li>4) 금융거래기관: 계좌개설 금융기관, 금융결제원</li>
+                        <li>5) 보험계약관계자: 계약자, 피보험자, 수익자 등</li>
+                        <li>6) 보험협회: 생명·손해보험협회</li>
+                      </ol>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>제공받는자의 이용목적</dt>
+                    <dd>
+                      <ul>
+                        <li>1) 국가기관 등: 법령에 따른 업무수행 (위탁업무 포함)</li>
+                        <li>2) 종합신용정보집중기관: 개인(신용)정보 조회, 신용정보의 집중관리 및 활용 등 법령에서 정한 종합신용정보집중기관의 업무 수행,교통사고처리내역발급간소화 서비스</li>
+                        <li>3) 보험회사 등: 중복보험 확인 및 비례보상, 재보험금 지급·심사, 보험사고·보험사기 조사</li>
+                        <li>4) 금융거래기관: 금융거래 업무</li>
+                        <li>5) 보험계약관계자: 손해사정내용 관련 정보 제공</li>
+                        <li>6) 보험협회: 보험금 지급·심사관련 업무지원(보험금청구서류 접수대행서비스 등)</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>보유 및 이용기간</dt>
+                    <dd>
+                      <p class="ft-b">제공받는 자의 이용목적을 달성할 때까지(관련 법령상 보존기간을 따름)</p>
+                      <p>* 외국 재보험사의 국내지점이 재보험금 청구 등 지원 업무를 위탁하기 위한 경우 별도의 동의 없이 외국 소재 본점에 귀하의 정보를 이전할 수 있습니다.</p>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>제공 항목</dt>
+                    <dd>
+                      <ol>
+                        <li>
+                          <em>1) 고유식별정보</em>
+                          <ul>
+                            <li class="ft-b">주민등록번호, 외국인등록번호, 여권번호, 운전면허번호</li>
+                          </ul>
+                          <p>위 <em>고유식별정보 제공</em>에 동의하십니까?</p>
+                          <div class="gray-agr">
+                            <div class="tit">
+                              고유식별정보 제공 동의
+                            </div>
+                            <div class="pink-check">
+                              <div>
+                                <input type="radio" name="pop_check02_01" id="pop_check02_01_01">
+                                <label for="pop_check02_01_01">
+                                  동의하지않음
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="pop_check02_01" id="pop_check02_01_02">
+                                <label for="pop_check02_01_02">
+                                  동의함
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <em>2) 민감정보</em>
+                          <p class="ft-b">피보험자의 질병•상해에 관한 정보(진료기록, 상병명 등), 보험사고 조사 (보험사기 포함) 및 손해사정 업무 수행과 관련하여 취득한 정보 (경찰, 공공•국가기관, 의료기관 등으로부터 본인의 위임을 받아 취득한 각종 조사서, 증명서, 진료기록 등에 포함된 개인(신용)정보 포함)</p>
+                          <p>위 <em>민감정보 제공</em>에 동의하십니까?</p>
+                          <div class="gray-agr">
+                            <div class="tit">
+                              민감정보 제공 동의
+                            </div>
+                            <div class="pink-check">
+                              <div>
+                                <input type="radio" name="pop_check02_02" id="pop_check02_02_01">
+                                <label for="pop_check02_02_01">
+                                  동의하지않음
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="pop_check02_02" id="pop_check02_02_02">
+                                <label for="pop_check02_02_02">
+                                  동의함
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <em>3) 개인(신용)정보</em>
+                          <strong>일반개인정보</strong>
+                          <ul>
+                            <li>성명, 주소, 생년월일, 이메일, 유·무선 전화번호, 성별, 국적, 직업, 피보험자와 수익자의 관계, 국내거소신고번호</li>
+                          </ul>
+                          <strong>신용거래정보</strong>
+                          <ul>
+                            <li>금융거래 업무 관련 정보(보험금 지급계좌 등), 보험청약 및 계약정보(상품종류, 기간, 보험가입금액 등), 보험금정보(보험금 지급사유, 지급금액 등)</li>
+                          </ul>
+                          <p>위 <em>개인신용정보 제공</em>에 동의하십니까?</p>
+                          <div class="gray-agr">
+                            <div class="tit">
+                              개인신용정보 제공 동의
+                            </div>
+                            <div class="pink-check">
+                              <div>
+                                <input type="radio" name="pop_check02_03" id="pop_check02_03_01">
+                                <label for="pop_check02_03_01">
+                                  동의하지않음
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="pop_check02_03" id="pop_check02_03_02">
+                                <label for="pop_check02_03_02">
+                                  동의함
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ol>
+                    </dd>
+                  </dl>
+                  <p>* 업무위탁을 목적으로 개인(신용)정보 처리하는 경우 별도의 동의 없이 업무 수탁자에게 귀하의 정보를 제공할 수 있습니다. <br>
+                  (홈페이지 <a href="http://www.aia.co.kr" target="_blank" rel="noopener noreferrer">www.aia.co.kr</a>에서 확인 가능)</p>
+                </div>
+                <div class="gray-agr type02">
+                  <div class="tit">
+                    국외 제3자 제공에 관한 사항
+                  </div>
+                  <div class="pink-check">
+                    <div>
+                      <input type="radio" name="pop_check03" id="pop_check03_01">
+                      <label for="pop_check03_01">
+                        동의하지않음
+                      </label>
+                    </div>
+                    <div>
+                      <input type="radio" name="pop_check03" id="pop_check03_02">
+                      <label for="pop_check03_02">
+                        동의함
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="agr-list-cont">
+                  <dl>
+                    <dt>제공받는 자</dt>
+                    <dd>
+                      <p>국외 재보험사</p>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>제공받는자의 이용목적</dt>
+                    <dd>
+                      <p>재보험금 지급·심사</p>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>보유 및 이용기간</dt>
+                    <dd>
+                      <p>제공받는 자의 이용목적을 달성할 때까지(관련 법령상 보존기간을 따름)</p>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>제공 항목</dt>
+                    <dd>
+                      <ol>
+                        <li>
+                          <em>1) 민감정보</em>
+                          <p class="ft-b">피보험자의 질병·상해에 관한 정보(진료기록, 상병명 등), 보험사고 조사 (보험사기 포함) 및 손해사정 업무 수행과 관련하여 취득한 정보 (경찰, 공공·국가기관, 의료기관 등으로부터 본인의 위임을 받아 취득한 각종 조사서, 증명서, 진료기록 등에 포함된 개인(신용)정보 포함)</p>
+                          <p>위 <em>민감정보 제공</em>에 동의하십니까?</p>
+                          <div class="gray-agr">
+                            <div class="tit">
+                              민감정보 제공 동의
+                            </div>
+                            <div class="pink-check">
+                              <div>
+                                <input type="radio" name="pop_check03_01" id="pop_check03_01_01">
+                                <label for="pop_check03_01_01">
+                                  동의하지않음
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="pop_check03_01" id="pop_check03_01_02">
+                                <label for="pop_check03_01_02">
+                                  동의함
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <em>2) 개인(신용)정보</em>
+                          <strong>일반개인정보</strong>
+                          <ul>
+                            <li>성명, 주소, 생년월일, 이메일, 유·무선 전화번호, 성별, 국적, 직업, 피보험자와 수익자의 관계, 국내거소신고번호</li>
+                          </ul>
+                          <strong>신용거래정보</strong>
+                          <ul>
+                            <li>금융거래 업무 관련 정보(보험금 지급계좌 등), 보험청약 및 계약정보(상품종류, 기간, 보험가입금액 등), 보험금정보(보험금 지급사유, 지급금액 등)</li>
+                          </ul>
+                          <p>위 <em>개인신용정보 제공</em>에 동의하십니까?</p>
+                          <div class="gray-agr">
+                            <div class="tit">
+                              개인신용정보 제공 동의
+                            </div>
+                            <div class="pink-check">
+                              <div>
+                                <input type="radio" name="pop_check03_02" id="pop_check03_02_01">
+                                <label for="pop_check03_02_01">
+                                  동의하지않음
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="pop_check03_02" id="pop_check03_02_02">
+                                <label for="pop_check03_02_02">
+                                  동의함
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ol>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="gray-agr type02">
+                  <div class="tit">
+                    조회에 관한 사항
+                  </div>
+                  <div class="pink-check">
+                    <div>
+                      <input type="radio" name="pop_check04" id="pop_check04_01">
+                      <label for="pop_check04_01">
+                        동의하지않음
+                      </label>
+                    </div>
+                    <div>
+                      <input type="radio" name="pop_check04" id="pop_check04_02">
+                      <label for="pop_check04_02">
+                        동의함
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="agr-list-cont">
+                  <dl>
+                    <dt>조회 대상 기관</dt>
+                    <dd>
+                      <p>종합신용정보집중기관, 보험요율산출기관, 보험회사(공제업자, 체신관서 포함), 생명·손해보험협회</p>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>조회 목적</dt>
+                    <dd>
+                      <ul>
+                        <li>1) 종합신용정보집중기관: 보험사고·보험사기 조사 및 보험금지급·심사, 교통사고 처리내역 발급 간소화 서비스</li>
+                        <li>2) 보험요율산출기관: 보험사고·보험사기 조사 및 보험금지급·심사, 법령에 의한 업무수행 등</li>
+                        <li>3) 보험회사(공제업자, 체신관서 포함): 보험사고•보험사기 조사</li>
+                        <li>4) 생명•손해보험협회: 보험금 청구서류 접수대행 서비스</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>조회 항목</dt>
+                    <dd>
+                      <ol>
+                        <li>
+                          <em>1) 고유식별정보</em>
+                          <ul>
+                            <li class="ft-b">주민등록번호, 외국인등록번호, 여권번호, 운전면허번호</li>
+                          </ul>
+                          <p>위 <em>고유식별정보 조회</em>에 동의하십니까?</p>
+                          <div class="gray-agr">
+                            <div class="tit">
+                              고유식별정보 조회 동의
+                            </div>
+                            <div class="pink-check">
+                              <div>
+                                <input type="radio" name="pop_check04_01" id="pop_check04_01_01">
+                                <label for="pop_check04_01_01">
+                                  동의하지않음
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="pop_check04_01" id="pop_check04_01_02">
+                                <label for="pop_check04_01_02">
+                                  동의함
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <em>2) 민감정보</em>
+                          <p class="ft-b">피보험자의 질병•상해에 관한 정보(진료기록, 상병명 등) </p>
+                          <p>위 <em>민감정보 조회</em>에 동의하십니까?</p>
+                          <div class="gray-agr">
+                            <div class="tit">
+                              민감정보 조회 동의
+                            </div>
+                            <div class="pink-check">
+                              <div>
+                                <input type="radio" name="pop_check04_02" id="pop_check04_02_01">
+                                <label for="pop_check04_02_01">
+                                  동의하지않음
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="pop_check04_02" id="pop_check04_02_02">
+                                <label for="pop_check02_02_02">
+                                  동의함
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <em>3) 개인(신용)정보</em>
+                          <strong>일반개인정보</strong>
+                          <ul>
+                            <li>성명, 국내거소신고번호</li>
+                          </ul>
+                          <strong>신용거래정보</strong>
+                          <ul>
+                            <li>금보험청약 및 계약정보(상품종류, 기간, 보험가입금액 등), 보험금정보(보험금 지급사유, 지급금액 등)</li>
+                          </ul>
+                          <p>위 <em>개인신용정보 조회</em>에 동의하십니까?</p>
+                          <div class="gray-agr">
+                            <div class="tit">
+                              개인신용정보 조회 동의
+                            </div>
+                            <div class="pink-check">
+                              <div>
+                                <input type="radio" name="pop_check04_03" id="pop_check04_03_01">
+                                <label for="pop_check04_03_01">
+                                  동의하지않음
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="pop_check04_03" id="pop_check04_03_02">
+                                <label for="pop_check04_03_02">
+                                  동의함
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ol>
+                    </dd>
+                  </dl>
+                </div>
               </div>
-              <div class="grp-button-asis">
+              <div class="grp-button-asis pop-fix">
                 <div>
-                  <button type="button" class="btn btn-default btn-primary">확인</button>
+                  <button type="button" class="btn btn-default btn-primary pop-btn btn-open02" data-target="_self">확인</button>
                 </div>
               </div>
             </div>
@@ -455,9 +1041,9 @@
 				</div>
 				<!-- // popup  -->
 			</article>
-			<!-- //fullScroll 팝업  -->
-			<!-- alret 팝업 -->
-			<article class="layer-popup type02 pop-open02">
+			<!-- // full 팝업  -->
+			<!-- alert 팝업 -->
+			<article class="layer-popup alert pop-open02">
 				<!-- popup -->
 				<div class="wrap-popup">
           <div class="popup">
@@ -484,54 +1070,74 @@
 				</div>
 				<!-- // popup  -->
 			</article>
-			<!-- //alret 팝업  -->
-			<!-- full-고정 팝업 -->
+			<!-- //alert 팝업  -->
+			<!-- alert 팝업 -->
+			<article class="layer-popup alert type02 pop-open99">
+				<!-- popup -->
+				<div class="wrap-popup">
+          <div class="popup">
+            <div class="pop-cont">  
+              <div class="alt-cont">
+                <strong>제목</strong>
+                <p>
+                  컨텐츠<br>
+                  컨텐츠<br>
+                  컨텐츠
+                </p>
+              </div> 
+              <div class="grp-button-asis">
+                <div>
+                  <BUtton type="button" class="btn btn-default btn-primary close-btn99">확인</BUtton>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn-close close-btn99">닫기</button>
+          </div>
+				</div>
+				<!-- // popup  -->
+			</article>
+			<!-- //alert 팝업  -->
+			
+			<!-- full 팝업 -->
 			<article class="layer-popup type03 pop-open03">
 				<!-- popup -->
 				<div class="wrap-popup">
           <div class="popup">
             <div class="pop-head">
-              <h1>본인 확인</h1>
+              <h1>개인(신용)정보 처리동의</h1>
             </div>
-            <div class="pop-cont">  
-              <div class="img-box">
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-              </div> 
+            <div class="pop-cont">
+              <div class="pop-img-box">
+                <img src="../img/img_ex.png" alt="">
+              </div>
               <div class="grp-button-asis type04">
                 <div>
-                  <button type="button" class="btn btn-default btn-primary" data-target="_self">확인</button>
+                  <button type="button" class="btn btn-default btn-white" data-target="_self">
+                    <span class="rotate">
+                      회전
+                    </span>
+                  </button>
                 </div>
                 <div>
-                  <button type="button" class="btn btn-default btn-secondary" data-target="_self">취소</button>
+                  <button type="button" class="btn btn-default btn-primary" data-target="_self">
+                    <span class="next">
+                      다음
+                    </span>
+                  </button>
+                </div>
+                <div class="dp_n">
+                  <button type="button" class="btn btn-default btn-white" data-target="_self">
+                    <span class="cancel">
+                      취소
+                    </span>
+                  </button>
+                </div>
+                <div class="dp_n">
+                  <button type="button" class="btn btn-default btn-primary" data-target="_self">
+                    <span class="submit">
+                      제출
+                    </span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -540,7 +1146,7 @@
 				</div>
 				<!-- // popup  -->
 			</article>
-			<!-- //full 팝업  -->
+			<!-- // full 팝업  -->
 			<!-- 안내 팝업 -->
 			<article class="layer-popup pop-sel">
 				<!-- popup -->
