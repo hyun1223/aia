@@ -1,4 +1,5 @@
-﻿<html lang="ko">
+﻿<!doctype html>
+<html lang="ko">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="keywords" content="">
@@ -21,7 +22,7 @@
         <link rel="stylesheet" href="../css/popup.css" type="text/css"> 
         <link rel="stylesheet" href="../css/form.css" type="text/css"> 
         <script type="text/javascript" src="../asis/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="../asis/aia-header-v2.min.js"></script>
+        <!-- <script type="text/javascript" src="../asis/aia-header-v2.min.js"></script> -->
         <script type="text/javascript" src="../asis/aia-footer-v2.min.js"></script>
         <script type="text/javascript" src="../js/form.js"></script>
         <title>아이디 로그인</title>
@@ -743,7 +744,7 @@
               <div class="ipt-box err-sel"><!-- 오류시 class="err-sel" 추가 -->
                 <div class="ipt">
                   <input type="text" placeholder=" " id="id01">
-                  <label for="id01">AIA 아이디 입력</label>
+                  <label for="id01">아이디<span> 입력</span></label>
                 </div>
               </div>
               <p class="icon-error">아이디를 입력하세요.</p>
@@ -752,7 +753,7 @@
               <div class="ipt-box ipt-pass">
                 <div class="ipt">
                   <input type="password" placeholder=" "  id="id02">
-                  <label for="id02">비밀번호 입력</label>
+                  <label for="id02">비밀번호<span> 입력</span></label>
                   <i class="icon-eye"></i>
                 </div>
               </div>
@@ -781,7 +782,7 @@
               <BUtton type="button" class="btn-line-text col-dark-gray">비밀번호 찾기</BUtton>
             </div>
           </div>
-          <div class="err-txt-box">
+          <div class="err-txt-box"><!-- 에러 문구 활성화시 class 에 opa-b 추가  2차 수정-->
             <i></i>
             <p>
               입력하신 정보를 다시 확인하시기 바랍니다.<br>
@@ -799,30 +800,38 @@
         </div>
       </div>
       <!-- // container -->  
-      
+        
+      <!-- 2차 수정 -->
 			<!-- 안내 팝업 -->
-			<article class="layer-popup type02 pop-open01">
+			<article class="layer-popup alert type02 pop-open99">
 				<!-- popup -->
 				<div class="wrap-popup">
           <div class="popup">
-            <div class="pop-head">
-              <h1>아이디 로그인</h1>
-            </div>
             <div class="pop-cont">
               <div class="alt-cont">
-                <strong>비밀번호 오류 횟수 초과로 잠긴 계정입니다.</strong>
-                <p>본인 확인을 위하여 임시비밀번호를 발급하여 로그인하여 주시기 바랍니다.</p>
+                <strong>비밀번호 오류횟수 초과로 잠긴 계정입니다.</strong>
+                <p>
+                  본인확인을 위하여 임시 비밀번호가<br>
+                  가입시 등록하신 휴대폰으로<br>
+                  발송되었습니다.
+                </p>
+                <p>
+                  발급받은 임시비밀번호로<br>
+                  다시 로그인하여 주시기 바랍니다.
+                </p>
               </div>
               <div class="grp-button">
-                <BUtton type="button" class="btnM">확인</BUtton>
+                <div>
+                  <BUtton type="button" class="btnL close-btn99">확인</BUtton>
+                </div>
               </div>
             </div>
-            <button type="button" class="btn-close close-btn01">닫기</button>
           </div>
 				</div>
 				<!-- // popup  -->
 			</article>
 			<!-- //안내 팝업  -->
+      <!-- //2차 수정 -->
 
 
 

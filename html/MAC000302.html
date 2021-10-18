@@ -773,7 +773,7 @@
                   <BUtton type="button" class="btn-line-text col-dark-gray">비밀번호 찾기</BUtton>
                 </div>
               </div>
-              <div class="err-txt-box type02 opa-b"><!-- 에러 문구 활성화시 class 에 opa-b 추가 -->
+              <div class="err-txt-box"><!-- 에러 문구 활성화시 class 에 opa-b 추가 --> <!-- 20211018 수정-->
                 <i></i>
                 <p>
                   입력하신 정보를 다시 확인하시기 바랍니다.<br>
@@ -798,9 +798,9 @@
                   본인확인을 위하여 비밀번호 찾기를 통해 임시비밀번호를 발급받아 다시 로그인하여 주시기 바랍니다.
                 </p>
               </div>
-              <div class="grp-button-asis">
+              <div class="grp-button"><!-- 20211018 수정-->
                 <div>
-                  <BUtton type="button" class="btn btn-default btn-primary close-btn99">확인</BUtton>
+                  <BUtton type="button" class="btnL close-btn99">확인</BUtton><!-- 20211018 수정-->
                 </div>
               </div>
             </div>
@@ -1005,23 +1005,17 @@
       </div>
       <!-- //footer -->
       <script>
-        // 전체동의
-        checkAll();
-        /**
-        * 전체동의
-        */
-        function checkAll(allBtn, inputName){
-          var $agreeAll = $('.agr-check.all input[type="checkbox"]');
-          $agreeAll.change(function (){
-            var checked = $(this).prop('checked');
-            var $itemBox = $(this).parent().parent().siblings('.agr-list');
-            if(checked) {
-              $itemBox.slideUp(400); 
-            } else { 
-              $itemBox.slideDown(400);
-            }
-          });
+        /* 20211018 추가 */
+        if($(window).width() < 767) {
+          $('.join-aia').css('min-height', ($(window).height() - $('.topnav.global-nav').height() - 63) + 'px');
         }
+        $(window).resize(function () {
+          if($(window).width() > 767) {
+            $('.footer').css('display', 'block');
+          } else {
+            $('.footer').css('display', 'none');
+          }
+        });
       </script>
     </body>
 </html>

@@ -992,23 +992,6 @@
       </div>
       <!-- //footer -->
       <script>
-        // 전체동의
-        checkAll();
-        /**
-        * 전체동의
-        */
-        function checkAll(allBtn, inputName){
-          var $agreeAll = $('.agr-check.all input[type="checkbox"]');
-          $agreeAll.change(function (){
-            var checked = $(this).prop('checked');
-            var $itemBox = $(this).parent().parent().siblings('.agr-list');
-            if(checked) {
-              $itemBox.slideUp(400); 
-            } else { 
-              $itemBox.slideDown(400);
-            }
-          });
-        }
       </script>
     </body>
 </html>

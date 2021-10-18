@@ -124,25 +124,36 @@
               </div>
               <p class="icon-error">비밀번호를 입력하세요.</p>
               <!-- //item -->
+              <strong class="ex-guide-tit02">주민번호</strong> 
               <!-- item -->
-              <div class="ipt-box ipt-sel">
-                <div class="ipt">
+              <div class="ipt-box02"><!-- 오류시 class="err-sel" 추가 -->
+                <div class="ipt-idnum">
+                  <input type="tel" maxlength="6" title="주민번호 앞자리" placeholder="000000 " class="mun01">
+                  <i>ㅡ</i>
+                  <input type="tel" maxlength="1" title="주민번호 뒷자리" placeholder="0" class="mun02" >
+                  <label>주민등록번호</label>
+                  <span>●●●●●●</span>
+                </div>
+                <p class="icon-error">주민등록번호를 정확하게 입력해주세요.</p>
+              </div>
+              <!-- //item -->
+              <strong class="ex-guide-tit02">select</strong> 
+              <!-- item -->
+              <div class="ipt-box phone-num">
+                <div class="ipt-sel">
                   <button type="button" class="btn-sel">
-                    선택
+                    통신사 선택
                   </button>
-                  <select name="" id="" title="통신사 선택">
-                    <option>통신사 선택</option>
-                    <option value="1">010</option>
-                    <option value="2">011</option>
-                    <option value="3">016</option>
-                    <option value="4">017</option>
-                    <option value="5">018</option>
-                    <option value="6">019</option>
+                  <select title="통신사 선택">
+                    <option value="SKT">SKT</option>
+                    <option value="KT">KT</option>
+                    <option value="LG U+">LG U+</option>
+                    <option value="SKT 알뜰폰">SKT 알뜰폰</option>
+                    <option value="KT 알뜰폰">KT 알뜰폰</option>
+                    <option value="LG U+ 알뜰폰">LG U+ 알뜰폰</option>
                   </select>
                 </div>
               </div>
-              <p class="icon-error">비밀번호를 입력하세요.</p>
-              <!-- //item -->
               <strong class="ex-guide-tit02">input - checkbox, input - radio</strong> 
               <!-- check-box -->
               <div class="check-box">
@@ -365,17 +376,23 @@
 				<!-- // popup  -->
 			</article>
 			<!-- //안내 팝업  -->
-			<!-- 안내 팝업 -->
+			<!-- select 팝업 -->
 			<article class="layer-popup pop-sel">
 				<!-- popup -->
 				<div class="wrap-popup">
           <div class="popup">
-            <ul>
-            </ul>
+            <div class="sel-head">
+              <h1>선택</h1>
+            </div>
+            <div class="sel-cont">
+              <ul>
+              </ul>
+            </div>
+            <button type="button" class="btn-close close-sel">닫기</button>
           </div>
 				</div>
 				<!-- // popup  -->
 			</article>
-			<!-- //안내 팝업  -->
+			<!-- //select 팝업  -->
     </body>
 </html>

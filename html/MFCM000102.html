@@ -734,23 +734,25 @@
       <!-- container -->
       <div class="container login-container">
         <div class="login-my-aia pd0">
-          <div class="login-tit type02">
+          <div class="login-tit type04"><!-- 2차 수정 -->
             <h3>서비스 이용불가 안내</h3>
           </div>
+          <!-- 2차 수정 -->
           <div class="white-shadow-box">
+            <strong>AIA생명의 보험계약이 <span class="m-bp-b">존재하지 않습니다.</span></strong>
             <p>
-              AIA생명의 보험계약이 존재하지 않습니다.<br>
-              모바일 창구 서비스를 이용하실 수 없습니다.
+              사이버 서비스를 이용하실 수 없습니다.
             </p>
           </div>
         </div>
         <div class="btn-bot-box">
-          <div class="grp-button type02">
+          <div class="grp-button">
             <BUtton type="button" class="btnL">고객센터</BUtton>
           </div>
-          <div class="grp-button">
+          <div class="grp-button type02">
             <BUtton type="button" class="btnL">홈으로</BUtton>
           </div>
+          <!-- //2차 수정 -->
         </div>
       </div>
       <!-- // container -->
@@ -953,7 +955,7 @@
 
       <script>
         if($(window).width() < 767) {
-          $('.login-my-aia').css('min-height', ($(window).height() - $('.topnav.global-nav').height() - $('.btn-bot-box').height() - 146) + 'px');
+          $('.login-my-aia').css('min-height', ($(window).height() - $('.topnav.global-nav').height() - $('.btn-bot-box').height() - 96) + 'px');//2차 수정
         }
         $(window).resize(function () {
           if($(window).width() > 767) {

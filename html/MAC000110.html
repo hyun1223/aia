@@ -24,7 +24,7 @@
         <script type="text/javascript" src="../asis/aia-header-v2.min.js"></script>
         <script type="text/javascript" src="../asis/aia-footer-v2.min.js"></script>
         <script type="text/javascript" src="../js/form.js"></script>
-        <title>약관동의 및 본인인증</title>      
+        <title>휴대폰 문자 인증 로그인</title>      
     </head>
     <body>
       <!-- header -->
@@ -733,95 +733,60 @@
       <!-- container -->
       <div class="container input-container">
         <div class="join-aia">
-          <h3>본인 확인 후 회원가입을 <br>진행해주세요.</h3>
+          <h3 class="tac">휴대폰 문자 인증 로그인</h3>
           <dl class="agr-toggle">
             <dt class="agr-check all">
               <div>
                 <input type="checkbox" id="allCheck">
-                <label for="allCheck">전체 동의</label><!-- 20211018 수정 -->
+                <label for="allCheck">전체 동의</label>
               </div>
             </dt>
             <dd class="agr-list toggle-action">
               <ul class="toggle-list">
-                <li>
-                  <dl>
-                    <dt class="agr-check">
-                      <div>
-                        <input type="checkbox" id="check01">
-                        <label for="check01">
-                          (필수) 휴대폰 본인확인 서비스 동의
-                        </label>
-                      </div>
-                      <button type="button" class="btn_toggle">상세내용 닫기</button>
-                    </dt>
-                    <dd>
-                      <ul class="agr-check02">
-                        <li>
-                          <div>
-                            <input type="checkbox" id="check01_01">
-                            <label for="check01_01">
-                              개인정보 이용동의
-                            </label>
-                          </div>
-                          <button type="button" class="btn-agr02 pop-btn btn-pop01" title="레이어팝업 열기">상세보기</button>
-                        </li>
-                        <li>
-                          <div>
-                            <input type="checkbox" id="check01_02">
-                            <label for="check01_02">
-                              고유식별정보처리 동의
-                            </label>
-                          </div>
-                          <button type="button" class="btn-agr02 pop-btn btn-pop02" title="레이어팝업 열기">상세보기</button>
-                        </li>
-                        <li>
-                          <div>
-                            <input type="checkbox" id="check01_03">
-                            <label for="check01_03">
-                              서비스 이용약관 동의
-                            </label>
-                          </div>
-                          <button type="button" class="btn-agr02 pop-btn btn-pop03" title="레이어팝업 열기">상세보기</button>
-                        </li>
-                        <li>
-                          <div>
-                            <input type="checkbox" id="check01_04">
-                            <label for="check01_04">
-                              통신사 이용약관 동의
-                            </label>
-                          </div>
-                          <button type="button" class="btn-agr02 pop-btn btn-pop04" title="레이어팝업 열기">상세보기</button>
-                        </li>
-                      </ul>
-                    </dd>
-                  </dl>
+                <li class="agr-check">
+                  <div>
+                    <input type="checkbox" id="check01">
+                    <label for="check01">
+                      (필수) 개인정보 수집 및 이용 동의
+                    </label>
+                  </div>
+                  <button type="button" class="btn-agr" title="팝업 열기">상세보기</button>
                 </li>
                 <li class="agr-check">
                   <div>
                     <input type="checkbox" id="check02">
                     <label for="check02">
-                      (필수) 홈페이지 이용약관 동의
+                      (필수) 고유식별정보 처리 동의
                     </label>
                   </div>
-                  <button type="button" class="btn-agr pop-btn btn-pop05" title="레이어팝업 열기">상세보기</button>
+                  <button type="button" class="btn-agr" title="팝업 열기">상세보기</button>
                 </li>
                 <li class="agr-check">
                   <div>
                     <input type="checkbox" id="check03">
                     <label for="check03">
-                      (필수) 개인정보 수집, 이용에 관한 동의
+                      (필수) 통신사 이용약관 동의
                     </label>
                   </div>
-                  <button type="button" class="btn-agr pop-btn btn-pop06" title="레이어팝업 열기">상세보기</button>
+                  <button type="button" class="btn-agr" title="팝업 열기">상세보기</button>
                 </li>
                 <li class="agr-check">
                   <div>
                     <input type="checkbox" id="check04">
                     <label for="check04">
-                      (필수) 마케팅을 위한 개인정보 <span>수집&middot;이용에 관한 동의</span>
+                      (필수) 서비스 이용약관 동의
                     </label>
                   </div>
-                  <button type="button" class="btn-agr pop-btn btn-pop07" title="레이어팝업 열기">상세보기</button>
+                  <button type="button" class="btn-agr" title="팝업 열기">상세보기</button>
+                </li>
+                <li class="agr-check">
+                  <div>
+                    <input type="checkbox" id="check05">
+                    <label for="check05">
+                      (필수) 개인정보 제3자 제공 동의
+                    </label>
+                  </div>
+                  <button type="button" class="btn-agr" title="팝업 열기">상세보기</button>
                 </li>
               </ul>
             </dd>
@@ -850,7 +815,6 @@
                 </div>
                 <p class="icon-error">주민등록번호를 정확하게 입력해주세요.</p>
               </div>
-              <p class="info-txt">14세 이상 가입 가능</p>
               <!-- //item -->
               <!-- item -->
               <div class="ipt-box phone-num">

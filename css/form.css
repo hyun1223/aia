@@ -1,5 +1,6 @@
 body {
     word-break: keep-all;
+    color: #333D47;
 }
 input::-ms-clear,
 input::-ms-reveal {
@@ -37,6 +38,9 @@ dd {
 }
 .ft-b {
     font-weight: 700;
+}
+.rela {
+    position: relative;
 }
 /* -------------------------------------------------------------------------------
 	checkbox, radio
@@ -320,6 +324,13 @@ p.icon-error + .grp-button {
 .grp-button.type03 button:disabled:active {
 	opacity: 0.5;
 }
+
+.form-box02 .grp-button.type03 button {
+    padding: 16px 24px 14px;
+    width: 100% !important;
+	font-size: 16px;
+}
+
 .btn-line-text {
     display: inline-block;
     font-size: 16px;
@@ -697,11 +708,6 @@ p.icon-error + .grp-button {
     margin-top: 0;
     width: 96px;
 }
-.grp-button.type03.btn-right button {
-    padding: 16px 24px 14px;
-    width: 100% !important;
-	font-size: 16px;
-}
 
 .info-txt {
     margin: 8px 0 0 16px;
@@ -713,15 +719,17 @@ p.icon-error + .grp-button {
     display: none;
 }
 .err-txt-box {
-    margin-top: 60px;
     position: relative;
+    margin-top: 40px;
     padding: 15px;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 18px;
     color: #BA0361;
 	background: #F8E6EF;
     -webkit-border-radius: 8px;
     border-radius: 8px;
+    height: 0;
+    opacity: 0;
 }
 .err-txt-box p {
     margin-left: 33px;
@@ -738,7 +746,10 @@ p.icon-error + .grp-button {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%); 
 }
-
+.err-txt-box.opa-b {
+    height: auto;
+    opacity: 1;
+}
 
 /* -------------------------------------------------------------------------------
 	table
@@ -819,7 +830,7 @@ p.icon-error + .grp-button {
 }
 .login-my-aia.type03 {
     padding-top: 20px;
-    padding-bottom: 200px;
+    /* padding-bottom: 200px; */
 }
 .login-tit {
     padding: 48px 0;
@@ -1039,13 +1050,6 @@ p.icon-error + .grp-button {
     display: none;
 }
 
-.id-pass-box + .err-txt-box.type02 {
-    margin: 100px 0 0;
-    opacity: 0;
-}
-.id-pass-box + .err-txt-box.type02.opa-b {
-    opacity: 1;
-}
 .white-shadow-box {
     padding: 40px 30px;
     text-align: center;
@@ -1056,6 +1060,7 @@ p.icon-error + .grp-button {
     word-break: keep-all;
     font-size: 20px;
     line-height: 30px;
+    color: #333D47;
 }
 .white-shadow-box strong {
     margin-bottom: 24px;
@@ -1104,6 +1109,7 @@ p.icon-error + .grp-button {
 }
 .join-aia h3 {
     margin: 45px 0 37px;
+    color: #333D47;
 }
 .agr-toggle {
     background: #FFFFFF;
@@ -1219,6 +1225,7 @@ p.icon-error + .grp-button {
 .ok-check {
     font-size: 16px;
     line-height: 24px;
+    color: #333D47;
 }
 .ok-check i {
     margin: 80px auto 24px;
@@ -1260,6 +1267,9 @@ p.icon-error + .grp-button {
 	media
  ------------------------------------------------------------------------------- */ 
 @media all and (max-width:767px){
+    .m-bp-b {
+        display: block;
+    }
     .ft-drop {
         position: fixed;
         top: auto;
@@ -1330,9 +1340,6 @@ p.icon-error + .grp-button {
     .ft-drop .ft-drop-box .ft-cont {
         display: none;
         padding: 40px 16px 0;
-    }
-    .id-pass-box + .err-txt-box.type02 {
-        margin: 72px 0 0;
     }
     .btn-login-sel + .join-info .grp-button {
         margin-top: 24px;
@@ -1516,15 +1523,9 @@ p.icon-error + .grp-button {
         margin-top: 100px;
     }
     .err-txt-box {
-        margin-top: 90px;
-    }
-    .join-aia .id-pass-box + .err-txt-box.type02 {
-        margin: 70px 0 0;
-        height: 0px;
-    }
-    .join-aia .id-pass-box + .err-txt-box.type02.opa-b {
         margin: 100px 0 0;
-        height: auto;
+        font-size: 14px;
+        line-height: 20px;
     }
     .login-my-aia.type04 .login-sel .call {
         display: none;

@@ -733,93 +733,96 @@
 
       <!-- container -->
       <div class="container input-container">
-        <div class="login-my-aia type02">
-          <div class="login-tit type02">
-            <h3>카카오페이 인증 로그인</h3>
-          </div>
+        <div class="join-aia">
+          <h3 class="tac">카카오페이 인증 로그인</h3>
+          <dl class="agr-toggle">
+            <dt class="agr-check all">
+              <div>
+                <input type="checkbox" id="allCheck">
+                <label for="allCheck">전체 동의</label>
+              </div>
+            </dt>
+            <dd class="agr-list">
+              <ul>
+                <li class="agr-check">
+                  <div>
+                    <input type="checkbox" id="check02">
+                    <label for="check02">
+                      (필수) 개인정보 수집 및 이용 동의
+                    </label>
+                  </div>
+                  <button type="button" class="btn-agr pop-btn btn-pop05" title="레이어팝업 열기">상세보기</button>
+                </li>
+                <li class="agr-check">
+                  <div>
+                    <input type="checkbox" id="check03">
+                    <label for="check03">
+                      (필수) 고유식별정보 처리 동의
+                    </label>
+                  </div>
+                  <button type="button" class="btn-agr pop-btn btn-pop06" title="레이어팝업 열기">상세보기</button>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+
           <!-- form -->
-          <div class="form-box">
+          <div class="form-box02">
             <form>
               <!-- item -->
-              <div class="ipt-box err-sel"><!-- 오류시 class="err-sel" 추가 -->
+              <div class="ipt-box"><!-- 오류시 class="err-sel" 추가 -->
                 <div class="ipt">
                   <input type="text" placeholder=" " id="id01">
-                  <label for="id01">AIA 아이디 입력 </label>
+                  <label for="id01">이름</label>
                 </div>
               </div>
-              <p class="icon-error">등록되지 않은 아이디입니다.</p>
+              <p class="icon-error">이름을 입력하세요.</p>
+              <!-- //item -->
+              <!-- item -->
+              <div class="ipt-box02 err-sel">
+                <div class="ipt-idnum">
+                  <input type="tel" maxlength="6" title="주민번호 앞자리" placeholder="000000" class="mun01">
+                  <i>ㅡ</i>
+                  <input type="password" maxlength="7" title="주민번호 뒷자리" placeholder="0000000" class="mun03" >
+                  <label>주민등록번호</label>
+                </div>
+              </div>
+              <p class="icon-error">주민등록번호를 정확하게 입력해주세요.</p>
               <!-- //item -->
               <!-- item -->
               <div class="ipt-box">
                 <div class="ipt">
-                  <input type="text" placeholder=" "  id="id02">
-                  <label for="id02">휴대폰 번호 뒤 4자리</label>
+                  <input type="tel" placeholder="-없이 입력" id="tel">
+                  <label for="tel">휴대폰 번호</label>
                 </div>
               </div>
-              <p class="icon-error">휴대폰 번호 뒤 4자리를 입력하세요.</p>
-              <!-- //item -->
-              <!-- check-box -->
-              <div class="check-box">
-                <div>
-                  <input type="checkbox" name="" id="id-save">
-                  <label for="id-save">아이디 저장</label>
-                </div>
-              </div>
-              <!-- //check-box -->
-                
-              <div class="grp-button">
-                <BUtton type="button" class="btnL pop-btn btn-open01">로그인</BUtton>
+              <p class="icon-error">휴대폰 번호를 입력하세요.</p>
+              <div class="grp-button btn-fix">
+                <BUtton type="button" class="btnL pop-btn btn-open99">다음</BUtton>
               </div>
             </form>
           </div>
           <!-- //form -->  
-          <div class="id-pass-box">
-            <div>
-              <BUtton type="button" class="btn-line-text col-dark-gray">아이디 찾기</BUtton>
-            </div>
-          </div>          
-        </div>
-        <div class="join-info">
-          <div class="grp-button type03">
-            <button type="button" class="btnL btn">
-              회원가입
-            </button>
-          </div>
-            <p>첫 방문일 경우 회원가입 후 이용해주세요.</p>
         </div>
       </div>
-      <!-- // container -->  
-      
+      <!-- // container -->
+
 			<!-- 안내 팝업 -->
-			<article class="layer-popup type02 pop-open01">
+			<article class="layer-popup alert type02 pop-open99">
 				<!-- popup -->
 				<div class="wrap-popup">
           <div class="popup">
-            <div class="pop-head">
-              <h1>카카오페이 인증 로그인</h1>
-            </div>
             <div class="pop-cont">
               <div class="alt-cont">
                 <strong>입력하신 휴대전화번호 뒤 4자리가 등록된 휴대전화번호와 일치하지 않습니다.</strong>
                 <p>다시 입력해주세요.</p>
               </div>
               <div class="grp-button">
-                <BUtton type="button" class="btnM">확인</BUtton>
+                <div>
+                  <BUtton type="button" class="btnL close-btn99">확인</BUtton>
+                </div>
               </div>
             </div>
-            <button type="button" class="btn-close close-btn01">닫기</button>
-          </div>
-				</div>
-				<!-- // popup  -->
-			</article>
-			<!-- //안내 팝업  -->
-			<!-- 안내 팝업 -->
-			<article class="layer-popup pop-sel">
-				<!-- popup -->
-				<div class="wrap-popup">
-          <div class="popup">
-            <ul>
-            </ul>
           </div>
 				</div>
 				<!-- // popup  -->
@@ -1033,6 +1036,23 @@
             $('.footer').css('display', 'none');
           }
         });
+        // 전체동의
+        checkAll();
+        /**
+        * 전체동의
+        */
+        function checkAll(allBtn, inputName){
+          var $agreeAll = $('.agr-check.all input[type="checkbox"]');
+          $agreeAll.change(function (){
+            var checked = $(this).prop('checked');
+            var $itemBox = $(this).parent().parent().siblings('.agr-list');
+            if(checked) {
+            $itemBox.slideUp(400); 
+            } else { 
+            $itemBox.slideDown(400);
+            }
+          });
+        }
       </script>
     </body>
 </html>

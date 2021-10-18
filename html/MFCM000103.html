@@ -25,7 +25,7 @@
         <script type="text/javascript" src="../asis/aia-header-v2.min.js"></script>
         <script type="text/javascript" src="../asis/aia-footer-v2.min.js"></script>
         <script type="text/javascript" src="../js/form.js"></script>
-        <title>아이디 로그인</title>
+        <title>본인 확인</title>
     </head>
     <body>
       <!-- header -->
@@ -751,7 +751,7 @@
               <p class="icon-error">생년월일을 입력하세요.</p>
               <!-- //item -->
               <div class="grp-button">
-                <BUtton type="button" class="btnL pop-btn btn-open01">확인</BUtton>
+                <BUtton type="button" class="btnL pop-btn btn-open99">확인</BUtton><!-- 2차 수정 -->
               </div>
             </form>
           </div>
@@ -759,31 +759,29 @@
         </div>
       </div>
       <!-- // container -->  
-      
+      <!-- 2차 수정 -->
 			<!-- 안내 팝업 -->
-			<article class="layer-popup type02 pop-open01">
+			<article class="layer-popup alert type02 pop-open99">
 				<!-- popup -->
 				<div class="wrap-popup">
           <div class="popup">
-            <div class="pop-head">
-              <h1>본인 확인</h1>
-            </div>
             <div class="pop-cont">
               <div class="alt-cont">
                 <strong>생년월일 입력 N회 오류</strong>
                 <p>다시 확인 후 이용해주시기 바랍니다.</p>
               </div>
               <div class="grp-button">
-                <BUtton type="button" class="btnM">확인</BUtton>
+                <div>
+                  <BUtton type="button" class="btnL close-btn99">확인</BUtton>
+                </div>
               </div>
             </div>
-            <button type="button" class="btn-close close-btn01">닫기</button>
           </div>
 				</div>
 				<!-- // popup  -->
 			</article>
 			<!-- //안내 팝업  -->
-
+      <!-- //2차 수정 -->
 
 
 
@@ -981,5 +979,8 @@
         </footer>
       </div>
       <!-- //footer -->
+      <script>
+        $('.login-my-aia').css('min-height', ($(window).height() - $('.topnav.global-nav').height() )); //2차 수정
+      </script>
     </body>
 </html>
