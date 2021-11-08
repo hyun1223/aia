@@ -635,9 +635,9 @@ input[type="date"]:valid:before{
 }
 .check-box-full div input:disabled + label,
 .check-box-full div input:checked:disabled + label {
-    -ms-filter: alpha(opacity = 30);
+    -ms-filter: alpha(opacity=30);
     -moz-opacity: 0.3;
-    filter: alpha(opacity = 30);
+    filter: alpha(opacity=30);
 	opacity: 0.3;
 }
 .pink-check div,
@@ -883,7 +883,7 @@ input[type="date"]:valid:before{
 }
 .tip-box.txt-type .balloon-box {
     top: 28px;
-    left: 70px;
+    left: 30px;
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
 }

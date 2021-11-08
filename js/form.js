@@ -63,6 +63,23 @@ $(document).ready(function(){
 		$(this).parent('.tip-box').removeAttr('tabindex');
 	});
 
+	//휴대폰인증동의내용 팝업 20111108
+	$('.phone-pop01').on('click', function(){
+		window.open('https://cert.vno.co.kr/app/agree/agree_m_01.jsp', '개인정보 수집/이용 동의', 'width=500, height=540');
+	});
+	$('.phone-pop02').on('click', function(){
+		window.open('https://cert.vno.co.kr/app/agree/agree_m_02.jsp', '고유식별정보 처리 동의', 'width=500, height=540');
+	});
+	$('.phone-pop03').on('click', function(){
+		window.open('https://cert.vno.co.kr/app/agree/agree_m_03.jsp', '통신사 이용약관 동의', 'width=500, height=540');
+	});
+	$('.phone-pop04').on('click', function(){
+		window.open('https://cert.vno.co.kr/app/agree/agree_m_04.jsp', '서비스 이용약관 동의', 'width=500, height=540');
+	});
+	$('.phone-pop05').on('click', function(){
+		window.open('https://cert.vno.co.kr/app/agree/agree_m_05.jsp', '개인정보 제 3자 제공 동의(KT, LGU+ 알뜰폰 통합)', 'width=500, height=540');
+	});
+
 });
 
 // popup
