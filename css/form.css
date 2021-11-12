@@ -535,15 +535,19 @@ p.icon-error + .grp-button {
 	border: 1px solid #333D47;
 }
 .ipt input:focus ~ label,
-.ipt input:not(:placeholder-shown) ~ label,
-.ipt-idnum input:focus ~ label,
-.ipt-idnum input:not(:placeholder-shown) ~ label {
+.ipt input:not(:placeholder-shown) ~ label {
+    top: 16px;
+  	font-size: 12px;
+  	color: #5B636B;
+}
+.ipt-box02.active .ipt-idnum input:focus ~ label,
+.ipt-box02.active .ipt-idnum input:not(:placeholder-shown) ~ label {
     top: 16px;
   	font-size: 12px;
   	color: #5B636B;
 }
 .ipt input + label.lab-top,
-.ipt-idnum input + label.lab-top  {
+.ipt-box02.active .lab-top  {
     top: 16px;
   	font-size: 12px;
   	color: #5B636B;
@@ -590,15 +594,33 @@ p.icon-error + .grp-button {
 .ipt-box select:disabled + label {
 	color: #848A90 !important;
 }
-
-.ipt input::placeholder,
+input::-webkit-input-placeholder {
+	color: #8F959A !important;
+    opacity: 0;
+}
+input:-ms-input-placeholder {
+	color: transparent;
+}
+.ipt-box02 .ipt-idnum input:-ms-input-placeholder {
+	color: transparent;
+}
+input::-ms-input-placeholder {
+	color: #8F959A !important;
+}
+input::placeholder {
+	color: #8F959A !important;
+}
 .ipt-idnum input::placeholder {
-	opacity: 0;
+	color: #8F959A !important;
 }
 
-.ipt input:focus::placeholder,
+.ipt input:focus::placeholder {
+	color: #8F959A !important;
+    opacity: 1;
+}
 .ipt-box02.active .ipt-idnum input::placeholder {
-	opacity: 1;
+	color: #8F959A !important;
+    opacity: 1;
 }
 
 .ipt-box02:before {
@@ -639,6 +661,10 @@ p.icon-error + .grp-button {
     outline: none;
     z-index: 1;
 }
+.ipt-idnum input:focus {
+    border: 0;
+    outline: none;
+}
 .ipt-idnum input.mun01 {
     width: 65px;
 }
@@ -648,6 +674,7 @@ p.icon-error + .grp-button {
 .ipt-idnum span {
     position: absolute;
     left: 140px;
+    top: 0;
 	height: 52px;
     padding: 28px 0 9px;
     font-size: 6px;
@@ -672,7 +699,9 @@ p.icon-error + .grp-button {
 	border: 1px solid #333D47;
 }
 .ipt-idnum input:not(:placeholder-shown) ~ i, 
-.ipt-idnum input:not(:placeholder-shown) ~ span, 
+.ipt-idnum input:not(:placeholder-shown) ~ span {
+    opacity: 1;
+}
 .ipt-box02.active .ipt-idnum i,
 .ipt-box02.active .ipt-idnum span {
     opacity: 1;
@@ -1153,6 +1182,7 @@ p.icon-error + .grp-button {
     padding: 20px;
 }
 .agr-toggle > dd {
+    margin: 0;
     padding: 24px 20px;
     border-top: 1px solid #EBECED;
 }
@@ -1180,7 +1210,7 @@ p.icon-error + .grp-button {
     height: 24px;
     background: url("data:image/svg+xml,%3Csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.218044 1.26076L7.99997 9.00003L15.7819 1.26076C16.067 0.978054 16.0734 0.513179 15.7962 0.222431C15.5336 -0.0530139 15.1106 -0.0733636 14.8244 0.165632L14.778 0.207867L7.99997 6.95161L1.2219 0.207865C0.951807 -0.0599595 0.528478 -0.068203 0.248965 0.178885L0.203762 0.22243C-0.058854 0.497875 -0.0669372 0.929601 0.175346 1.21466L0.218044 1.26076Z' fill='%235B636B'/%3E%3C/svg%3E%0A") no-repeat center center;
 }
-.toggle-list li.active .btn_toggle::before {
+.tgl-list li.active .btn_toggle::before {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }

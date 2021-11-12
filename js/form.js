@@ -41,15 +41,15 @@ $(document).ready(function(){
 		}
 	});
 
-	//input
+	//input 주민번호  //20211111
 	$('.ipt-idnum input').focus(function(){
 		$(this).parents('.ipt-box02').addClass('active');
-		$(this).parents('label').addClass('lab-top');
+		$(this).parents().children('label').addClass('lab-top');
 	});
 	$('.ipt-idnum input').blur(function(){
-		$(this).parents('.ipt-box02').removeClass('active');
 		if( $(this).val() == ''){
-			$(this).parents('label').removeClass('lab-top');
+			$(this).parents('.ipt-box02').removeClass('active');
+			$(this).parents().children('label').removeClass('lab-top');
 		}
 	});
 

@@ -98,6 +98,23 @@
 	min-width: 150px;
 	width: 100%;
 }
+
+.layer-popup .wrap-popup .pop-cont .grp-button-asis.type05 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+	justify-content: space-between;
+}
+.layer-popup .wrap-popup .pop-cont .grp-button-asis.type05 div {
+    margin-top: 0;
+	width: calc(50% - 9px);
+}
+.layer-popup .wrap-popup .pop-cont .grp-button-asis.type05 button {
+	min-width: 90px;
+	width: 100%;
+}
 .layer-popup.alert.type02 .wrap-popup,
 .layer-popup.alert.type02 .wrap-popup .pop-cont .grp-button button  {
 	-webkit-border-radius: 8px;
@@ -255,6 +272,16 @@
 
 .layer-popup.fix.pop-white .wrap-popup .pop-cont {
 	padding: 40px 16px 130px;
+}
+
+.layer-popup.alert.asis .wrap-popup .pop-cont.alt-txt strong {
+	font-size: 20px;
+	line-height: 30px;
+}
+.layer-popup.alert.asis .wrap-popup .pop-cont.alt-txt p {
+	margin-top: 24px;
+	font-size: 15px;
+	line-height: 22px;
 }
 
 /* 약관 */
@@ -578,6 +605,13 @@
         padding: 16px 38px;		
 		letter-spacing: -1px;
 	}
+	.layer-popup.alert.asis .wrap-popup .pop-cont {
+		padding: 40px 20px 24px
+
+	}
+	.layer-popup .wrap-popup .pop-cont .grp-button-asis.type05 div {
+		width: calc(50% - 4px);
+	}
 }
 @media all and (min-width:768px){
     .layer-popup.type01 .wrap-popup,
@@ -605,13 +639,15 @@
 		width: 240px;
 	}
 	.layer-popup.alert .wrap-popup,
+	.layer-popup.alert.asis02 .wrap-popup,
 	.layer-popup.pop-sel .wrap-popup {
 		width: 408px;
 	}
 	.layer-popup.alert .wrap-popup .pop-cont {
 		padding: 40px 84px;
 	}
-	.layer-popup.alert.type02 .wrap-popup .pop-cont {
+	.layer-popup.alert.type02 .wrap-popup .pop-cont,
+	.layer-popup.alert.asis02 .wrap-popup .pop-cont {
 		padding: 48px 40px 32px;
 	}
 	.layer-popup.alert .wrap-popup .pop-cont .grp-button-asis div {
@@ -619,6 +655,14 @@
 	}
 	.layer-popup.alert.asis .wrap-popup .pop-cont .grp-button-asis div {
 		padding: 0 240px;
+	}
+	.layer-popup.alert.asis .wrap-popup .pop-cont .grp-button-asis.type05 div {
+		margin-top: 0;
+		padding: 0;
+		width: calc(50% - 8px) !important;
+	}
+	.layer-popup .wrap-popup .pop-cont .grp-button-asis.type05 {
+		padding: 0 110px;
 	}
 	.layer-popup.fix.pop-white .wrap-popup {
 		padding-bottom: 10px;
@@ -683,6 +727,10 @@
 	}
 	.gray-agr .pink-check {
 		justify-content: flex-end;
+	}
+	.layer-popup.alert.asis .wrap-popup .pop-cont.alt-txt strong {
+		font-size: 22px;
+		line-height: 33px;
 	}
 }
 

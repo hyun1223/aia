@@ -24,8 +24,7 @@
         <script type="text/javascript" src="../asis/aia-header-v2.min.js"></script>
         <script type="text/javascript" src="../asis/aia-footer-v2.min.js"></script>
         <script type="text/javascript" src="../js/form.js"></script>
-        <script type="text/javascript" src="../js/tab.js"></script>
-        <title>보험금 청구</title>
+        <title>청구완료</title>      
     </head>
     <body>
       <!-- header -->
@@ -730,311 +729,42 @@
 
 
 
+
       <!-- container -->
-      <div class="container step-info-container">
-        <div class="tab-wrap">
-          <ul class="tab-nav" data-tab="tab01" role="tablist">
-            <li><a href="javascript:void(0);" role="tab"><span>보험금 청구</span></a></li>
-            <li><a href="javascript:void(0);" role="tab"><span>청구 이력</span></a></li>
-            <li><a href="javascript:void(0);" role="tab"><span>임시 저장</span></a></li>
-          </ul>
-        </div>
-        <div class="tab-content tab-cont-box" data-tab="tab01" role="tabpanel">
-          <div class="tit-line">
-            <h3>수령인 정보확인 후 <span class="m-bp-b">보험금을 청구해주세요.</span></h3>
+      <div class="container bg-gray-container">
+        <div class="ct-cont type02">
+          <div class="ok-check">
+            <i></i>
+            <em>보험금 청구가 <span>완료되었습니다.</span></em>
           </div>
-          <!-- form -->
-          <div class="demand-pay-cont form-box-asis">
-            <form>
-              <div class="int-box int-txt type04">
-                <!-- item -->
-                <div class="int">
-                  <strong>이름</strong><!-- 20211111 -->
-                  <p><span>홍길동</span><span class="pd-l20">123456-1*******</span></p><!-- 20211111 -->
-                </div>
-                <!-- //item -->
-                <!-- item -->
-                <div class="int">
-                  <strong>신청자 / 피보험자</strong>
-                  <p><span>홍길동</span> / <span>홍길동</span></p>
-                </div>
-                <!-- //item -->
-              </div>
-              <div class="int-box">
-                <!-- item -->
-                <div class="int">
-                  <label for="tel">전화번호</label>
-                  <input type="tel" placeholder=" " id="tel" value="010-1234-5678">
-                </div>
-                <!-- //item -->
-                <!-- item -->
-                <div class="int add-btn-box">
-                  <label for="address">주소</label>
-                  <input type="text" placeholder=" " id="address" value="대전 유성구 엑스포로 *** ***동 ****호" disabled>
-                  <button type="button" class="btn-blue-arrow02">수정</button>
-                </div>
-                <!-- //item -->
-              </div>
-            </form>
-          </div>
-          <!-- //form --> 
-          <div class="grp-button-asis btn-fix">
-            <div>
-              <button type="button" class="btn btn-default btn-primary" data-target="_self">보험금 청구</button>
-            </div>
-          </div>
-        </div>
-        <div class="tab-content tab-cont-box" data-tab="tab01" role="tabpanel">
-          <div class="demand-history-info">
-            <p><strong>6개월 이전의 청구 이력(지급여부)</strong>은<br> 
-            보험금청구 헬프데스크(<a href="tel:02-2128-1508">02-2128-1508</a>)로 문의 바랍니다.</p>
-          </div>
+            
           <ul class="demand-history">
             <li>
               <dl>
                 <dt>접수일</dt>
                 <dd>2020.01.01</dd>
               </dl>
-              <dl>
-                <dt>접수번호</dt>
-                <dd>
-                  <button type="button" class="btn-line-text pop-btn btn-pop99">202109130006</button><!-- 20211111 -->
-                </dd>
-              </dl>
-              <dl>
-                <dt>피보험자</dt>
-                <dd>홍길동</dd>
-              </dl>
-              <dl>
-                <dt>보험금 청구채널</dt>
-                <dd>
-                  우편 접수<!-- 20211111 -->
-                </dd>
-              </dl>
-              <dl>
-                <dt>진행상황</dt>
-                <dd class="col-pink">심사중</dd>
-              </dl>
             </li>
             <li>
               <dl>
-                <dt>접수일</dt>
-                <dd>2020.01.01</dd>
-              </dl>
-              <dl>
                 <dt>접수번호</dt>
-                <dd>
-                  <button type="button" class="btn-line-text pop-btn btn-pop99">202109130006</button><!-- 20211111 -->
-                </dd>
-              </dl>
-              <dl>
-                <dt>피보험자</dt>
-                <dd>홍길동</dd>
-              </dl>
-              <dl>
-                <dt>보험금 청구채널</dt>
-                <dd>
-                  인터넷 접수<!-- 20211111 -->
-                </dd>
-              </dl>
-              <dl>
-                <dt>진행상황</dt>
-                <dd>
-                  <button type="button" class="btn-line-text">지급</button>
-                </dd>
-              </dl>
-              <button type="button" class="btn-ditail">서류보완</button>
-            </li>
-            <li>
-              <dl>
-                <dt>접수일</dt>
-                <dd>2020.01.01</dd>
-              </dl>
-              <dl>
-                <dt>접수번호</dt>
-                <dd>
-                  202109130006<!-- 20211111 -->
-                </dd>
-              </dl>
-              <dl>
-                <dt>피보험자</dt>
-                <dd>홍길동</dd>
-              </dl>
-              <dl>
-                <dt>보험금 청구채널</dt>
-                <dd>
-                  우편 접수<!-- 20211111 -->
-                </dd>
-              </dl>
-              <dl>
-                <dt>진행상황</dt>
-                <dd class="col-pink">1차 서류심사중</dd>
+                <dd>202109130006</dd>
               </dl>
             </li>
           </ul>
-        </div>
-        <div class="tab-content tab-cont-box" data-tab="tab01" role="tabpanel">
-          <div class="demand-history-info">
-            <p>사고보험금 모바일 창구 청구 중 자동 저장된 임시저장 목록 입니다.</p>
-            <p><strong>최근 3건까지 저장 가능</strong>하며 작성하신 청구내용은 수정이 가능합니다.</p>
+          <p class="txt-info">청구하신 사고내용과 관련하여 당사에 가입된 보험계약에서 보장 가능한 모든 보험금을 지급해 드립니다.</p>
+          <p class="txt-info">추후, 보험금 심사 및 지급을 위한 서류보완 요청을 드릴 수도 있습니다.</p>
+          <div class="grp-button-asis btn-fix">
+            <div>
+              <button type="button" class="btn btn-default btn-white">인터넷 접수증 PDF 다운로드</button>
+            </div>
+            <div>
+              <button type="button" class="btn btn-default btn-primary">청구 완료</button>
+            </div>
           </div>
-          <!-- no-date -->
-          <div class="no-date">
-            현재 온라인 창구에서 사고보험금 청구하신 이력이 없습니다.
-          </div>
-          <!-- //no-date -->
-          <ul class="demand-history type02">
-            <li>
-              <button type="button" class="link-arrow-big">
-                <dl>
-                  <dt>임시번호</dt>
-                  <dd>TS210908009201</dd>
-                </dl>
-                <dl>
-                  <dt>임시저장</dt>
-                  <dd>2021.09.08 17:07:59</dd>
-                </dl>
-              </button>
-            </li>
-            <li>
-              <button type="button" class="link-arrow-big">
-                <dl>
-                  <dt>임시번호</dt>
-                  <dd>TS210908009201</dd>
-                </dl>
-                <dl>
-                  <dt>임시저장</dt>
-                  <dd>2021.09.08 17:07:59</dd>
-                </dl>
-              </button>
-            </li>
-          </ul>
         </div>
       </div>
-      <!-- // container -->      
-      
-
-			<!-- full 팝업 -->
-			<article class="layer-popup type01 pop-open01">
-				<!-- popup -->
-				<div class="wrap-popup">
-          <div class="popup">
-            <div class="pop-head">
-              <h1>계약 상세 조회</h1>
-            </div>
-            <div class="pop-cont">
-              <div>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-              </div>
-              <div class="grp-button-asis type02 mg-t80">
-                <div>
-                  <button type="button" class="btn btn-default btn-primary" data-target="_self">확인</button>
-                </div>
-              </div>
-            </div>
-            <button type="button" class="btn-close close-btn01">닫기</button>
-          </div>
-				</div>
-				<!-- // popup  -->
-			</article>
-			<!-- // full 팝업  -->
-
-			<!-- 청구 내역 팝업 20211111 추가-->
-			<article class="layer-popup alert asis02 pop-open99">
-				<!-- popup -->
-				<div class="wrap-popup">
-          <div class="popup">
-            <div class="pop-head">
-              <h1>청구 내역</h1>
-            </div>
-            <div class="pop-cont">
-              <ul class="reclamation-list">
-                <li>
-                  <dl>
-                    <dt>접수번호</dt>
-                    <dd>2021090060006</dd>
-                  </dl>
-                </li>
-                <li>
-                  <dl>
-                    <dt>접수일</dt>
-                    <dd>2021.01.01</dd>
-                  </dl>
-                </li>
-                <li>
-                  <dl>
-                    <dt>사고유형</dt>
-                    <dd>재해 > 일반재해</dd>
-                  </dl>
-                </li>
-                <li>
-                  <dl>
-                    <dt>청구사유</dt>
-                    <dd>입원, 수술</dd>
-                  </dl>
-                </li>
-              </ul>
-              <div class="grp-button-asis">
-                <div>
-                  <button type="button" class="btn btn-default btn-primary" data-target="_self">확인</button>
-                </div>
-              </div>
-            </div>
-            <button type="button" class="btn-close close-btn99">닫기</button>
-          </div>
-				</div>
-				<!-- // popup  -->
-			</article>
-			<!-- // 청구 내역 팝업  -->
-
+      <!-- // container -->  
 
       <!-- footer -->
       <div class="footer global-footer parbase">
@@ -1231,6 +961,10 @@
       </div>
       <!-- //footer -->
       <script>
+        
+        if($(window).width() > 767) {
+          $('.ct-cont').css('height', ($(window).height() - $('.topnav.global-nav').height() - 180 + 'px'));
+        }
         $(window).resize(function () {
           if($(window).width() > 767) {
             $('.footer').css('display', 'block');
@@ -1238,7 +972,6 @@
             $('.footer').css('display', 'none');
           }
         });
-
       </script>
     </body>
 </html>

@@ -18,14 +18,16 @@
         <link rel="stylesheet" href="../asis/noto.css" type="text/css">
         <link rel="stylesheet" href="../asis/table_design.css" type="text/css">
         <link rel="stylesheet" href="../asis/transkey.css" type="text/css">
+        <link rel="stylesheet" href="../css/jquery-ui.min.css" type="text/css"> 
         <link rel="stylesheet" href="../css/popup.css" type="text/css"> 
         <link rel="stylesheet" href="../css/form-asis.css" type="text/css"> 
         <script type="text/javascript" src="../asis/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="../asis/aia-header-v2.min.js"></script>
         <script type="text/javascript" src="../asis/aia-footer-v2.min.js"></script>
         <script type="text/javascript" src="../js/form.js"></script>
+        <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="../js/tab.js"></script>
-        <title>보험금 청구</title>
+        <title>4단계 청구사유</title>
     </head>
     <body>
       <!-- header -->
@@ -75,8 +77,8 @@
                 <ul class="dropdown-menu navmenu-nav navmenu-dropdown-menu" role="menu">
                   <li><a class="h6 b5" href="javascript:;">사망보장</a></li>
                   <li><a class="h6 b5" href="javascript:;">중대질병보장</a></li>
-                  <li><a class="h6 b5" href="javascript:;">건강·상해보장</a></li>
-                  <li><a class="h6 b5" href="javascript:;">저축·투자연계보장</a></li>
+                  <li><a class="h6 b5" href="javascript:;">건강&middot;상해보장</a></li>
+                  <li><a class="h6 b5" href="javascript:;">저축&middot;투자연계보장</a></li>
                 </ul>
               </li>
               <li class="dropdown">
@@ -266,7 +268,7 @@
                                             <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#accidentpro-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/accidentpro-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
                                         </div>
                                         <div class="content">
-                                    <h6 class="p3">건강·상해보장</h6>
+                                    <h6 class="p3">건강&middot;상해보장</h6>
                                     <p class="p3 bt5">만일의 사고와 다양한 질병의 위험으로부터 AIA생명이 빈틈없이 든든하게 지켜드리겠습니다.</p>
                                 </div>
                                                         </a>
@@ -277,7 +279,7 @@
                                             <svg class="icon icon-s hide-on-fallback " role="img" focusable="false"><g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.aia.co.kr/content/dam/aia/icons/icons.svg#saving_investment-prime1"></use><image class="icon icon-s " src="https://www.aia.co.kr/content/dam/aia/icons/primary/normal/saving_investment-prime1.png" alt="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image></g></svg>
                                         </div>
                                         <div class="content">
-                                            <h6 class="p3">저축·투자연계보장</h6>
+                                            <h6 class="p3">저축&middot;투자연계보장</h6>
                                             <p class="p3 bt5">긴 인생,  체계적인 평생 재무설계를 책임지는 AIA생명과 함께 하세요.</p>
                                         </div>
                                     </a>
@@ -732,183 +734,354 @@
 
       <!-- container -->
       <div class="container step-info-container">
-        <div class="tab-wrap">
-          <ul class="tab-nav" data-tab="tab01" role="tablist">
-            <li><a href="javascript:void(0);" role="tab"><span>보험금 청구</span></a></li>
-            <li><a href="javascript:void(0);" role="tab"><span>청구 이력</span></a></li>
-            <li><a href="javascript:void(0);" role="tab"><span>임시 저장</span></a></li>
+        <div class="demand-pay">
+          <ul class="demand-pay-step">
+            <li class="active">
+              <span>정보동의</span>
+            </li>
+            <li class="active">
+              <span>정보입력</span>
+            </li>
+            <li class="active">
+              <span>서류첨부</span>
+            </li>
+            <li class="active last">
+              <span>청구사유</span>
+            </li>
+            <li>
+              <span>청구내용확인</span>
+            </li>
           </ul>
-        </div>
-        <div class="tab-content tab-cont-box" data-tab="tab01" role="tabpanel">
           <div class="tit-line">
-            <h3>수령인 정보확인 후 <span class="m-bp-b">보험금을 청구해주세요.</span></h3>
+            <h3>청구 사유를 입력해주세요.</h3>
           </div>
-          <!-- form -->
           <div class="demand-pay-cont form-box-asis">
             <form>
-              <div class="int-box int-txt type04">
+              <div class="int-box int-radio">
                 <!-- item -->
-                <div class="int">
-                  <strong>이름</strong><!-- 20211111 -->
-                  <p><span>홍길동</span><span class="pd-l20">123456-1*******</span></p><!-- 20211111 -->
-                </div>
-                <!-- //item -->
-                <!-- item -->
-                <div class="int">
-                  <strong>신청자 / 피보험자</strong>
-                  <p><span>홍길동</span> / <span>홍길동</span></p>
+                <div class="int mg-t0">
+                  <strong class="int-tit type03">
+                    <span class="essential">사고유형(발생원인)</span>
+                    <span class="tip-box tip04">
+                      <button type="button" class="btn-question">?</button>
+                      <div class="balloon-box">
+                        <div class="tip-txt">
+                          <ul>
+                            <li>
+                              질병 : 신체 내부요인으로 몸이 불편한 경우
+                            </li>
+                            <li>
+                              재해 : 급격하고 우연한 외래의 사고로 신체를 다쳤거나, 법정 제 1군 감염병에 감염된 경우
+                              <span>(예시 : 넘어져서 골절, 교통사고로 입원, 코로나19 확진받고 입원한 경우 ‘재해‘ 선택)</span>
+                            </li>
+                          </ul>
+                        </div>                        
+                      </div>
+                    </span>
+                    <span>
+                      <button type="button" class="btn-line-text col-gray-blue  pop-btn btn-pop01">자세히 알아보기</button>
+                    </span>
+                  </strong>
+                  <!-- check-box -->
+                  <div class="check-box-full">
+                    <div>
+                      <input type="radio" name="dd" id="dd01_01" value="01">
+                      <label for="dd01_01">질병</label>
+                    </div>
+                    <div>
+                      <input type="radio" name="dd" id="dd01_02" value="02">
+                      <label for="dd01_02">재해</label>
+                    </div>
+                  </div>
+                  <!-- //check-box -->
                 </div>
                 <!-- //item -->
               </div>
-              <div class="int-box">
-                <!-- item -->
-                <div class="int">
-                  <label for="tel">전화번호</label>
-                  <input type="tel" placeholder=" " id="tel" value="010-1234-5678">
+              <div class="check-pd type01">
+                <div class="int-box int-radio">
+                  <!-- item -->
+                  <div class="int">
+                    <strong class="int-tit">
+                      <span class="essential">청구사유(중복선택가능)</span>
+                    </strong>
+                    <!-- check-box -->
+                    <div class="pink-check check-inline">
+                      <div>
+                        <input type="checkbox" name="dd02" id="dd02_01">
+                        <label for="dd02_01">입원</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="dd02" id="dd02_02">
+                        <label for="dd02_02">수술</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="dd02" id="dd02_03">
+                        <label for="dd02_03">치과치료</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="dd02" id="dd02_04">
+                        <label for="dd02_04">실손</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="dd02" id="dd02_05">
+                        <label for="dd02_05">기타</label>
+                      </div>
+                    </div>
+                    <!-- //check-box -->
+                  </div>
+                  <!-- //item -->
                 </div>
-                <!-- //item -->
-                <!-- item -->
-                <div class="int add-btn-box">
-                  <label for="address">주소</label>
-                  <input type="text" placeholder=" " id="address" value="대전 유성구 엑스포로 *** ***동 ****호" disabled>
-                  <button type="button" class="btn-blue-arrow02">수정</button>
+              </div>
+              <div class="check-pd type02">
+                <!-- 20211021 -->
+                <div class="int-box error-int"><!-- 오류시 class="error-int" 추가 -->
+                  <!-- item -->
+                  <div class="int">
+                    <label for="date01">사고 일자</label>
+                    <!-- <input type="date" date-placeholder="YYYYMMDD" required aria-required="ture" id="date01"> -->
+                    <div class="rela">
+                      <input type="tel" class="date-picker">
+                    </div>
+                    <p class="txt-error">사고 일자를 입력해주세요.</p>
+                  </div>
+                  <!-- //20211021 -->
+                  <!-- //item -->
                 </div>
-                <!-- //item -->
+                <div class="int-box">
+                  <!-- item -->
+                  <div class="int">
+                    <strong class="int-tit normal">사고 유형</strong>
+                    <!-- check-box -->
+                    <div class="check-box-full">
+                      <div>
+                        <input type="radio" name="dd03" id="dd03_01" value="01">
+                        <label for="dd03_01">일반재해</label>
+                      </div>
+                      <div>
+                        <input type="radio" name="dd03" id="dd03_02" value="02">
+                        <label for="dd03_02">교통재해</label>
+                      </div>
+                    </div>
+                    <p class="txt-error">사고 일자를 입력해주세요.</p>
+                    <!-- //check-box -->
+                  </div>
+                  <!-- //item -->
+                </div>
+                <div class="check-pd type03">
+                  <div class="int-box">
+                    <!-- item -->
+                    <div class="int">
+                      <label for="date01">재해 분류</label>
+                      <select name="" id="">
+                        <option value="">선택</option>
+                        <option value="">넘어짐</option>
+                        <option value="">떨어짐(추락)</option>
+                        <option value="">부딪힘</option>
+                        <option value="">폭행</option>
+                        <option value="">기타</option>
+                      </select>
+                    </div>
+                    <!-- //item -->
+                  </div>
+                  <div class="int-box">
+                    <!-- item -->
+                    <div class="int">
+                      <label for="danger02">사고 내용</label>
+                      <textarea name="" id="danger01" cols="30" rows="10" placeholder="직접 입력&#13;&#10;일반재해 예시&#13;&#10;- 미끄러짐, 타인과 부딪힘, 넘어짐"></textarea>
+                      </label>
+                    </div>
+                    <!-- //item -->
+                  </div>
+                </div>
+                <div class="check-pd type04">
+                  <div class="int-box">
+                    <!-- item -->
+                    <div class="int">
+                      <label for="date01">재해 분류</label>
+                      <select name="" id="">
+                        <option value="">선택</option>
+                        <option value="">자동차</option>
+                        <option value="">보행중</option>
+                        <option value="">오토바이</option>
+                        <option value="">자전거</option>
+                        <option value="">기타(열차,항공,배 등)</option>
+                      </select>
+                    </div>
+                    <!-- //item -->
+                  </div>
+                  <div class="int-box">
+                    <!-- item -->
+                    <div class="int">
+                      <label for="danger03">사고 내용</label>
+                        <textarea name="" id="danger01" cols="30" rows="10" placeholder="직접 입력&#13;&#10;교통재해&#13;&#10;- 교통사고로 다친 보행자, 오토바이 운전자"></textarea>
+                      </div>
+                    </div>
+                    <!-- //item -->
+                  </div>
+                </div>
+                <div class="check-pd type05">
+                  <!-- 20211021 -->
+                  <div class="int-box int-radio error-int">
+                    <!-- item -->
+                    <div class="int">
+                      <strong class="int-tit">
+                        <span class="essential">청구사유(중복선택가능)</span>
+                      </strong>
+                      <p class="txt-error">사고 일자를 입력해주세요.</p>
+                  <!-- //20211021 -->
+                      <!-- check-box -->
+                      <div class="pink-check check-inline">
+                        <div>
+                          <input type="checkbox" name="dd10" id="dd10_01">
+                          <label for="dd10_01">입원</label>
+                        </div>
+                        <div>
+                          <input type="checkbox" name="dd10" id="dd10_02">
+                          <label for="dd10_02">수술</label>
+                        </div>
+                        <div>
+                          <input type="checkbox" name="dd10" id="dd10_06">
+                          <label for="dd10_06">골절</label>
+                        </div>
+                        <div>
+                          <input type="checkbox" name="dd10" id="dd10_03">
+                          <label for="dd10_03">치과치료</label>
+                        </div>
+                        <div>
+                          <input type="checkbox" name="dd10" id="dd10_04">
+                          <label for="dd10_04">실손</label>
+                        </div>
+                        <div>
+                          <input type="checkbox" name="dd10" id="dd10_05">
+                          <label for="dd10_05">기타</label>
+                        </div>
+                      </div>
+                      <!-- //check-box -->
+                    </div>
+                    <!-- //item -->
+                  </div>
+                </div>
+              </div>
+              <div class="check-pd type06">
+                <div class="int-box int-radio type03">
+                  <!-- item -->
+                  <div class="int">
+                    <strong class="int-tit">
+                      <span class="tip-box txt-type">
+                        <button type="button" class="btn-line-text col-gray-blue">장애인 대상</button>에 해당하시나요? (선택)
+                        <div class="balloon-box">
+                          <div class="tip-txt">
+                            <strong>[장애인전용보험전환제도 시행 안내]</strong>
+                            <p>
+                              관련법에 의거하여 장애인으로 등록이 되신 경우, 당사에  전환신청을 하시면 특별세액공제를 받으실 수 있습니다.<br>
+                              모든 수익자는 등록된 장애인으로서 각자의 실명으로 수익자 지정되어 있어야 합니다.
+                            </p>
+                          </div>                        
+                        </div>
+                      </span>
+                    </strong>
+                    <!-- check-box -->
+                    <div class="check-box-full type02">
+                      <div>
+                        <input type="radio" name="dd02" id="dd02_01">
+                        <label for="dd02_01">아니오</label>
+                      </div>
+                      <div>
+                        <input type="radio" name="dd02" id="dd02_02">
+                        <label for="dd02_02">예</label>
+                      </div>
+                    </div>
+                    <!-- //check-box -->
+                    <!-- check-box -->
+                    <div class="check-box-full type02">
+                      <div>
+                        <input type="checkbox" name="dd002" id="dd002_01">
+                        <label for="dd002_01">피보험자</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="dd002" id="dd002_02">
+                        <label for="dd002_02">수익자</label>
+                      </div>
+                    </div>
+                    <!-- //check-box -->
+                  </div>
+                  <!-- //item -->
+                  <!-- item -->
+                  <div class="int">
+                    <strong class="int-tit">
+                      <span class="tip-box txt-type">
+                        <button type="button" class="btn-line-text col-gray-blue">의료 수급권자</button>에 해당하시나요? (선택)
+                        <div class="balloon-box">
+                          <div class="tip-txt">
+                            <strong>[의료수급권자 할인제도 안내]</strong>
+                            <p>
+                              의료급여법에 의거하여, 당사에 의료급여수급대상자로 등록하시면 실손보험료를 할인 받을 수 있습니다.
+                              <span>문의 : 고객센터(1588-9898, 평일 09:00~18:00)</span>
+                            </p>
+                          </div>                        
+                        </div>
+                      </span>
+                    </strong>
+                    <!-- check-box -->
+                    <div class="check-box-full type02">
+                      <div>
+                        <input type="radio" name="dd03" id="dd03_01">
+                        <label for="dd03_01">아니오</label>
+                      </div>
+                      <div>
+                        <input type="radio" name="dd03" id="dd03_02">
+                        <label for="dd03_02">예</label>
+                      </div>
+                    </div>
+                    <!-- //check-box -->
+                  </div>
+                  <!-- //item -->
+                  <!-- item -->
+                  <div class="int">
+                    <strong class="int-tit">
+                      <span class="tip-box txt-type ct">
+                        <button type="button" class="btn-line-text col-gray-blue">실손의료비 보험금 청구서류 접수대행 서비스</button>에 신청하시겠어요? (선택)
+                        <div class="balloon-box">
+                          <div class="tip-txt">
+                            <p>
+                              AIA생명을 포함하여 2개 이상의 보험사에 실손보험을 가입하신 경우에 한하여, 신용정보법에 따라 다른 보험사에 실손 보험금 청구서류 일체를 대신 접수해 드립니다.<br> 
+                              다른 보험사가 접수대행 신청서 및 청구서류를 수신한 날이 다른 보험사의 보험금 청구일이 되며, 심사에 필요한 서류 제출을 추가로 요청할 수 있습니다.
+                            </p>
+                          </div>                        
+                        </div>
+                      </span>
+                    </strong>
+                    <!-- check-box -->
+                    <div class="check-box-full type02">
+                      <div>
+                        <input type="radio" name="dd04" id="dd04_01">
+                        <label for="dd04_01">아니오</label>
+                      </div>
+                      <div>
+                        <input type="radio" name="dd04" id="dd04_02">
+                        <label for="dd04_02">예</label>
+                      </div>
+                    </div>
+                    <!-- //check-box -->
+                    <!-- <p class="txt-error">실손의료비 보험금 청구서류 접수대행 서비스 신청 여부에 체크해주시기 바랍니다.</p> -->
+                  </div>
+                  <!-- //item -->
+                  <div class="demand-pay-info">
+                    <ul class="point-list02">
+                      <li>보험금 심사 진행상항은 문자를 통해 안내 드립니다.</li>
+                      <li>손해사정서안내문은 계약자/피보험자/수익자 모두에게 안내됩니다.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
           <!-- //form --> 
           <div class="grp-button-asis btn-fix">
             <div>
-              <button type="button" class="btn btn-default btn-primary" data-target="_self">보험금 청구</button>
+              <button type="button" class="btn btn-default btn-primary">다음</button>
             </div>
           </div>
-        </div>
-        <div class="tab-content tab-cont-box" data-tab="tab01" role="tabpanel">
-          <div class="demand-history-info">
-            <p><strong>6개월 이전의 청구 이력(지급여부)</strong>은<br> 
-            보험금청구 헬프데스크(<a href="tel:02-2128-1508">02-2128-1508</a>)로 문의 바랍니다.</p>
-          </div>
-          <ul class="demand-history">
-            <li>
-              <dl>
-                <dt>접수일</dt>
-                <dd>2020.01.01</dd>
-              </dl>
-              <dl>
-                <dt>접수번호</dt>
-                <dd>
-                  <button type="button" class="btn-line-text pop-btn btn-pop99">202109130006</button><!-- 20211111 -->
-                </dd>
-              </dl>
-              <dl>
-                <dt>피보험자</dt>
-                <dd>홍길동</dd>
-              </dl>
-              <dl>
-                <dt>보험금 청구채널</dt>
-                <dd>
-                  우편 접수<!-- 20211111 -->
-                </dd>
-              </dl>
-              <dl>
-                <dt>진행상황</dt>
-                <dd class="col-pink">심사중</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>접수일</dt>
-                <dd>2020.01.01</dd>
-              </dl>
-              <dl>
-                <dt>접수번호</dt>
-                <dd>
-                  <button type="button" class="btn-line-text pop-btn btn-pop99">202109130006</button><!-- 20211111 -->
-                </dd>
-              </dl>
-              <dl>
-                <dt>피보험자</dt>
-                <dd>홍길동</dd>
-              </dl>
-              <dl>
-                <dt>보험금 청구채널</dt>
-                <dd>
-                  인터넷 접수<!-- 20211111 -->
-                </dd>
-              </dl>
-              <dl>
-                <dt>진행상황</dt>
-                <dd>
-                  <button type="button" class="btn-line-text">지급</button>
-                </dd>
-              </dl>
-              <button type="button" class="btn-ditail">서류보완</button>
-            </li>
-            <li>
-              <dl>
-                <dt>접수일</dt>
-                <dd>2020.01.01</dd>
-              </dl>
-              <dl>
-                <dt>접수번호</dt>
-                <dd>
-                  202109130006<!-- 20211111 -->
-                </dd>
-              </dl>
-              <dl>
-                <dt>피보험자</dt>
-                <dd>홍길동</dd>
-              </dl>
-              <dl>
-                <dt>보험금 청구채널</dt>
-                <dd>
-                  우편 접수<!-- 20211111 -->
-                </dd>
-              </dl>
-              <dl>
-                <dt>진행상황</dt>
-                <dd class="col-pink">1차 서류심사중</dd>
-              </dl>
-            </li>
-          </ul>
-        </div>
-        <div class="tab-content tab-cont-box" data-tab="tab01" role="tabpanel">
-          <div class="demand-history-info">
-            <p>사고보험금 모바일 창구 청구 중 자동 저장된 임시저장 목록 입니다.</p>
-            <p><strong>최근 3건까지 저장 가능</strong>하며 작성하신 청구내용은 수정이 가능합니다.</p>
-          </div>
-          <!-- no-date -->
-          <div class="no-date">
-            현재 온라인 창구에서 사고보험금 청구하신 이력이 없습니다.
-          </div>
-          <!-- //no-date -->
-          <ul class="demand-history type02">
-            <li>
-              <button type="button" class="link-arrow-big">
-                <dl>
-                  <dt>임시번호</dt>
-                  <dd>TS210908009201</dd>
-                </dl>
-                <dl>
-                  <dt>임시저장</dt>
-                  <dd>2021.09.08 17:07:59</dd>
-                </dl>
-              </button>
-            </li>
-            <li>
-              <button type="button" class="link-arrow-big">
-                <dl>
-                  <dt>임시번호</dt>
-                  <dd>TS210908009201</dd>
-                </dl>
-                <dl>
-                  <dt>임시저장</dt>
-                  <dd>2021.09.08 17:07:59</dd>
-                </dl>
-              </button>
-            </li>
-          </ul>
         </div>
       </div>
       <!-- // container -->      
@@ -920,65 +1093,31 @@
 				<div class="wrap-popup">
           <div class="popup">
             <div class="pop-head">
-              <h1>계약 상세 조회</h1>
+              <h1>사고유형(발생원인)</h1>
             </div>
-            <div class="pop-cont">
-              <div>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
-                컨텐츠<br>
+            <div class="pop-cont bg-gray">
+              <div class="white-shadow-box">
+                <p>청구하신 사고내용과 관련하여 당사에 가입된 보험계약에서 보장 가능한 모든 보험금을 지급해 드립니다.</p>
+                <ul>
+                  <li>
+                    <strong>질병</strong> : 신체 내부요인으로 몸이 불편한 경우</li>
+                  <li>
+                    <strong>재해</strong> : 급격하고 우연한 외래의 사고로 신체를 다쳤거나, <em>법정 제 1군 감염병에</em> 감염된 경우
+                    <span>(예시 : 넘어져서 골절, 교통사고로 입원, 코로나19 확진받고 입원한 경우 ‘재해‘ 선택)</span>
+                  </li>
+                  <li><strong>기타</strong> : 사망, 장해, 진단, 통원, 영구치상실 청구 시
+                  </li>
+                </ul>
               </div>
-              <div class="grp-button-asis type02 mg-t80">
-                <div>
-                  <button type="button" class="btn btn-default btn-primary" data-target="_self">확인</button>
-                </div>
-              </div>
+              <dl class="dl-gray-txt">
+                <dt>법정 제 1군 감염병</dt>
+                <dd>
+                  <ul>
+                    <li>감염병의 예방 및 관리에 관한 법률(시행일: 2020.01.01) 제2조 제2항에 규정한 제1급감염병(에볼라바이러스병, 마버그열, 라싸열, 크리미안콩고출혈열, 남아메리카출혈열, ,리프트밸리열, 두창, 페스트, 탄저, 보툴리눔독소증, 야토병, 신종감염병증후군, 중증급성호흡기증후군(SARS), 중동호흡기증후군(MERS), 동물인플루엔자 인체감염증, 신종인플루엔자, 디프테리아)으로 치료받으신 경우 재해를 선택해 주세요.</li>
+                    <li>단, 실손의료비만 단독으로 청구사힐 경우에는 질병을 선택해 주세요. (실손보험에서는 질병으로 취급됨)</li>
+                  </ul>
+                </dd>
+              </dl>
             </div>
             <button type="button" class="btn-close close-btn01">닫기</button>
           </div>
@@ -987,53 +1126,6 @@
 			</article>
 			<!-- // full 팝업  -->
 
-			<!-- 청구 내역 팝업 20211111 추가-->
-			<article class="layer-popup alert asis02 pop-open99">
-				<!-- popup -->
-				<div class="wrap-popup">
-          <div class="popup">
-            <div class="pop-head">
-              <h1>청구 내역</h1>
-            </div>
-            <div class="pop-cont">
-              <ul class="reclamation-list">
-                <li>
-                  <dl>
-                    <dt>접수번호</dt>
-                    <dd>2021090060006</dd>
-                  </dl>
-                </li>
-                <li>
-                  <dl>
-                    <dt>접수일</dt>
-                    <dd>2021.01.01</dd>
-                  </dl>
-                </li>
-                <li>
-                  <dl>
-                    <dt>사고유형</dt>
-                    <dd>재해 > 일반재해</dd>
-                  </dl>
-                </li>
-                <li>
-                  <dl>
-                    <dt>청구사유</dt>
-                    <dd>입원, 수술</dd>
-                  </dl>
-                </li>
-              </ul>
-              <div class="grp-button-asis">
-                <div>
-                  <button type="button" class="btn btn-default btn-primary" data-target="_self">확인</button>
-                </div>
-              </div>
-            </div>
-            <button type="button" class="btn-close close-btn99">닫기</button>
-          </div>
-				</div>
-				<!-- // popup  -->
-			</article>
-			<!-- // 청구 내역 팝업  -->
 
 
       <!-- footer -->
@@ -1237,6 +1329,39 @@
           } else {
             $('.footer').css('display', 'none');
           }
+        });
+        $('input[type=radio][name=dd]').change(function() {
+          if (this.value == '01') {
+            $('.check-pd.type01').css('display', 'block');
+            $('.check-pd.type02').css('display', 'none');
+            $('.check-pd.type05').css('display', 'none');
+            $('.check-pd.type06').css('display', 'block');
+          } else if (this.value == '02') {
+            $('.check-pd.type01').css('display', 'none');
+            $('.check-pd.type02').css('display', 'block');
+            $('.check-pd.type05').css('display', 'none');
+            $('.check-pd.type06').css('display', 'none');
+          }
+        });
+        $('input[type=radio][name=dd03]').change(function() {
+          if (this.value == '01') {
+            $('.check-pd.type03').css('display', 'block');
+            $('.check-pd.type04').css('display', 'none');
+            $('.check-pd.type05').css('display', 'block');
+            $('.check-pd.type06').css('display', 'block');
+          } else if (this.value == '02') {
+            $('.check-pd.type03').css('display', 'none');
+            $('.check-pd.type04').css('display', 'block');
+            $('.check-pd.type05').css('display', 'block');
+            $('.check-pd.type06').css('display', 'block');
+          }
+        });
+        //20211021
+        $('.date-picker').datepicker({
+          showOn: "button",
+          buttonImage: "data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.9375 0.25C13.2223 0.25 13.4576 0.461615 13.4949 0.736172L13.5 0.8125V1.75H16.3125C17.1954 1.75 17.92 2.42808 17.9938 3.2919L18 3.4375V15.8125C18 16.6954 17.3219 17.42 16.4581 17.4938L16.3125 17.5H1.6875C0.804571 17.5 0.0800172 16.8219 0.00619413 15.9581L0 15.8125V3.4375C0 2.55457 0.678084 1.83002 1.5419 1.75619L1.6875 1.75H4.5V0.8125C4.5 0.50184 4.75184 0.25 5.0625 0.25C5.34727 0.25 5.58262 0.461615 5.61986 0.736172L5.625 0.8125V1.75H12.375V0.8125C12.375 0.50184 12.6268 0.25 12.9375 0.25ZM16.875 7.375H1.125V15.8125C1.125 16.0921 1.32899 16.324 1.59626 16.3676L1.6875 16.375H16.3125C16.5921 16.375 16.824 16.171 16.8676 15.9037L16.875 15.8125V7.375ZM4.21875 13L4.31069 13.005C4.73343 13.0508 5.0625 13.4088 5.0625 13.8438C5.0625 14.3097 4.68474 14.6875 4.21875 14.6875C3.75276 14.6875 3.375 14.3097 3.375 13.8438C3.375 13.4088 3.70407 13.0508 4.12681 13.005L4.21875 13ZM9 13L9.09194 13.005C9.51468 13.0508 9.84375 13.4088 9.84375 13.8438C9.84375 14.3097 9.46599 14.6875 9 14.6875C8.53401 14.6875 8.15625 14.3097 8.15625 13.8438C8.15625 13.4088 8.48532 13.0508 8.90806 13.005L9 13ZM13.7812 13L13.8732 13.005C14.2959 13.0508 14.625 13.4088 14.625 13.8438C14.625 14.3097 14.2472 14.6875 13.7812 14.6875C13.3153 14.6875 12.9375 14.3097 12.9375 13.8438C12.9375 13.4088 13.2666 13.0508 13.6893 13.005L13.7812 13ZM4.21875 9.0625L4.31069 9.06745C4.73343 9.11326 5.0625 9.47133 5.0625 9.90625C5.0625 10.3722 4.68474 10.75 4.21875 10.75C3.75276 10.75 3.375 10.3722 3.375 9.90625C3.375 9.47133 3.70407 9.11326 4.12681 9.06745L4.21875 9.0625ZM9 9.0625L9.09194 9.06745C9.51468 9.11326 9.84375 9.47133 9.84375 9.90625C9.84375 10.3722 9.46599 10.75 9 10.75C8.53401 10.75 8.15625 10.3722 8.15625 9.90625C8.15625 9.47133 8.48532 9.11326 8.90806 9.06745L9 9.0625ZM13.7812 9.0625L13.8732 9.06745C14.2959 9.11326 14.625 9.47133 14.625 9.90625C14.625 10.3722 14.2472 10.75 13.7812 10.75C13.3153 10.75 12.9375 10.3722 12.9375 9.90625C12.9375 9.47133 13.2666 9.11326 13.6893 9.06745L13.7812 9.0625ZM16.3125 2.875H13.5V3.75C13.5 4.06066 13.2482 4.3125 12.9375 4.3125C12.6527 4.3125 12.4174 4.10088 12.3801 3.82633L12.375 3.75V2.875H5.625V3.75C5.625 4.06066 5.37316 4.3125 5.0625 4.3125C4.77773 4.3125 4.54238 4.10088 4.50514 3.82633L4.5 3.75V2.875H1.6875C1.40791 2.875 1.17596 3.07899 1.13236 3.34626L1.125 3.4375V6.25H16.875V3.4375C16.875 3.15791 16.671 2.92596 16.4037 2.88236L16.3125 2.875Z' fill='%23B3B1A8'/%3E%3C/svg%3E%0A",
+          buttonImageOnly: true,
+          buttonText: "Select date"
         });
 
       </script>
