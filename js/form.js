@@ -47,9 +47,11 @@ $(document).ready(function(){
 		$(this).parents().children('label').addClass('lab-top');
 	});
 	$('.ipt-idnum input').blur(function(){
-		if( $(this).val() == ''){
+		if( $(this).val() == '' ){
 			$(this).parents('.ipt-box02').removeClass('active');
 			$(this).parents().children('label').removeClass('lab-top');
+		} else {
+			$(this).parents('.ipt-box02').removeClass('active');
 		}
 	});
 
