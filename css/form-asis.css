@@ -129,6 +129,7 @@ p.point-list02::before {
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
+.col-red,
 .blit-list.col-red li {
     color: #FF0000;
 }
@@ -273,7 +274,7 @@ ul.blit-gray li span {
     margin: 0 0 28px;
 }
 .int-box.int-txt.type04 {
-    margin: 0 0 20px;
+    margin: 0 0 8px;
 }
 .int-box.int-txt.type04 .int {
     margin-top: 32px !important;
@@ -525,7 +526,7 @@ input[type="date"]:valid:before{
 } 
 .int-tit.type03 > span:last-child {
     margin-right: 0;
-    width: calc(100% - 180px);
+    width: calc(100% - 190px);
     text-align: right;
 } 
 .int-tit span.essential::after {
@@ -952,6 +953,7 @@ button {
     font-size: 16px;
 }	
 .grp-button-asis .btn-white {
+    padding: 0;
     font-size: 16px;
     color: #554344;
     background: #fff;
@@ -1828,8 +1830,6 @@ button {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
 }
 
 .img-list > div {
@@ -1855,7 +1855,7 @@ button {
     width: 34px;
     height: 34px;
     font-size: 0;
-    background: url('data:image/svg+xml,%3Csvg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M8.13521 7.08772C8.112 7.06456 8.09895 7.03312 8.09895 7.00032C8.09895 6.96753 8.112 6.93608 8.13521 6.91292L13.4499 1.59874C13.7391 1.30912 13.7388 0.839884 13.4492 0.550675C13.1595 0.261465 12.6903 0.261797 12.4011 0.551415L7.08691 5.86363C7.06375 5.88685 7.0323 5.89989 6.99951 5.89989C6.96671 5.89989 6.93527 5.88685 6.91211 5.86363L1.59792 0.551415C1.30871 0.26207 0.839696 0.261959 0.550351 0.551168C0.261005 0.840378 0.260894 1.30939 0.550104 1.59874L5.8638 6.91292C5.88702 6.93608 5.90006 6.96753 5.90006 7.00032C5.90006 7.03312 5.88702 7.06456 5.8638 7.08772L0.550104 12.4024C0.363018 12.5896 0.29 12.8623 0.358554 13.1179C0.427109 13.3736 0.626821 13.5732 0.882461 13.6416C1.1381 13.71 1.41083 13.6369 1.59792 13.4497L6.91211 8.13504C6.93527 8.11182 6.96671 8.09878 6.99951 8.09878C7.0323 8.09878 7.06375 8.11182 7.08691 8.13504L12.4011 13.4497C12.6903 13.7391 13.1593 13.7392 13.4487 13.45C13.738 13.1608 13.7381 12.6917 13.4489 12.4024L8.13521 7.08772Z" fill="%23333D47"/%3E%3C/svg%3E%0A') no-repeat center center;
+    background: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.13521 7.08772C8.112 7.06456 8.09895 7.03312 8.09895 7.00032C8.09895 6.96753 8.112 6.93608 8.13521 6.91292L13.4499 1.59874C13.7391 1.30912 13.7388 0.839884 13.4492 0.550675C13.1595 0.261465 12.6903 0.261797 12.4011 0.551415L7.08691 5.86363C7.06375 5.88685 7.0323 5.89989 6.99951 5.89989C6.96671 5.89989 6.93527 5.88685 6.91211 5.86363L1.59792 0.551415C1.30871 0.26207 0.839696 0.261959 0.550351 0.551168C0.261005 0.840378 0.260894 1.30939 0.550104 1.59874L5.8638 6.91292C5.88702 6.93608 5.90006 6.96753 5.90006 7.00032C5.90006 7.03312 5.88702 7.06456 5.8638 7.08772L0.550104 12.4024C0.363018 12.5896 0.29 12.8623 0.358554 13.1179C0.427109 13.3736 0.626821 13.5732 0.882461 13.6416C1.1381 13.71 1.41083 13.6369 1.59792 13.4497L6.91211 8.13504C6.93527 8.11182 6.96671 8.09878 6.99951 8.09878C7.0323 8.09878 7.06375 8.11182 7.08691 8.13504L12.4011 13.4497C12.6903 13.7391 13.1593 13.7392 13.4487 13.45C13.738 13.1608 13.7381 12.6917 13.4489 12.4024L8.13521 7.08772Z' fill='%23333D47'/%3E%3C/svg%3E%0A") no-repeat center center;
 }
 
 .img-list .img-box {
@@ -1881,9 +1881,12 @@ button {
 .demand-pay-cont.form-box-asis .int-box.int-radio.type03 .int {
     margin-top: 50px;
 }
-.demand-pay-cont.form-box-asis .int-box.int-radio.type03 .int:first-child,
+.demand-pay-cont.form-box-asis .int-box.int-radio.type03 .int:first-child {
+    margin-top: 80px;
+}
 .demand-pay-info {
     margin-top: 80px;
+    width: 100%;
 }
 .demand-pay-cont.form-box-asis .int-box .check-box-full {
     margin-top: 8px;
@@ -2280,6 +2283,7 @@ button {
         right: 0;
         padding: 0 16px 32px;
         background: rgba(255,255,255,0.95);
+        z-index: 2;
     }
     
     
@@ -2375,7 +2379,7 @@ button {
     }
     
     .demand-pay-cont.form-box-asis .int-box .int {
-        margin-top: 32px;
+        margin-top: 20px;
     }
     
     .demand-pay-cont.form-box-asis .int-box.int-radio.type03 .int {

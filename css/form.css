@@ -63,6 +63,14 @@ dd {
 .ft16 {
     font-size: 16px;
 }
+
+.btn-txt-link {
+    padding: 0;
+    line-height: 1.2;
+    color: #0A6E93;
+    font-weight: 700;
+    border-bottom: 1px solid #0A6E93;
+}
 /* -------------------------------------------------------------------------------
 	checkbox, radio
  ------------------------------------------------------------------------------- */
@@ -547,32 +555,51 @@ p.icon-error + .grp-button {
   	color: #5B636B;
 }
 .ipt input + label.lab-top,
-.ipt-box02.active .lab-top  {
+.ipt-box02 .lab-top  {
     top: 16px;
   	font-size: 12px;
   	color: #5B636B;
     z-index: 2;
 }
-.ipt-box + p.icon-error,
-.ipt-box02 > p.icon-error,
-.ipt input:focus ~ label span,
-.ipt input:not(:placeholder-shown) ~ label span,
-.ipt-box .ipt i.finish-check,
+.ipt-box + p.icon-error {
+    display: none;  
+}
+.ipt-box02 > p.icon-error {
+    display: none;  
+}
+.ipt input:focus ~ label span {
+    display: none;  
+}
+.ipt input:not(:placeholder-shown) ~ label span {
+    display: none;  
+}
+.ipt-box .ipt i.finish-check {
+    display: none;  
+}
 .ipt-pass .ipt i {
     display: none;  
 }
 
-.ipt-box.err-sel input,
+.ipt-box.err-sel input {
+    border: 1px solid #BA0361;
+    border-width: 1px 1px 2px;
+}
 .ipt-box.err-sel select {
     border: 1px solid #BA0361;
     border-width: 1px 1px 2px;
 }
-.ipt-box.err-sel + p.icon-error,
+.ipt-box.err-sel + p.icon-error {
+    display: block;    
+}
 .ipt-box02.err-sel > p.icon-error {
     display: block;    
 }
-.ipt-box.active .ipt i,
-.ipt-box.check-ok .ipt i.finish-check,
+.ipt-box.active .ipt i {
+	display: block;
+}
+.ipt-box.check-ok .ipt i.finish-check {
+	display: block;
+}
 .ipt-pass .ipt input:not(:placeholder-shown) ~ label + i {
 	display: block;
 }
@@ -1176,6 +1203,7 @@ input::placeholder {
     border-radius: 8px;
 }
 .agr-toggle dl {
+    margin: 0;
     width: 100%;
 }
 .agr-toggle > dt {
@@ -1304,6 +1332,11 @@ input::placeholder {
 }
 .ok-check p {
     margin: 48px 0 12px;    
+}
+
+.ok-check .btn-txt-link {
+    margin: 12px auto 0;
+    display: block;
 }
 .search-box {
     padding: 64px 0 80px;
