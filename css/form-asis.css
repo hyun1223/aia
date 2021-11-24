@@ -802,10 +802,7 @@ input[type="date"]:valid:before{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
     flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     width: 500px;
 }
 .check-inline div {
@@ -960,6 +957,10 @@ button {
     border: 1px solid #D6D8DA;
 }	
 .grp-button-asis.type04 {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
     margin: 0 !important;
     padding: 20px 136px;
     display: -webkit-box;
@@ -2270,6 +2271,10 @@ button {
         margin-top: 16px;
     }
     .grp-button-asis.type04 {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
         padding: 20px 16px;
     }
     .grp-button-asis.type04 div + div {
@@ -2360,12 +2365,11 @@ button {
         width: calc(50% - 8px);
     }
     .pop-img-box {
-        height: calc(100vh - 140px);
+        height: 100%;
     }
     .pop-img-box img {
-        width: 100%;
+        max-height: calc(100vh - 140px);
     }
-    
     .check-inline {
         width: 100%;
         justify-content: space-between;
