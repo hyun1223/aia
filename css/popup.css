@@ -543,7 +543,7 @@
 	} 
 	.layer-popup.type03 .wrap-popup .pop-cont,
 	.layer-popup.fix .wrap-popup .pop-cont {
-		height: calc(100% - 60px);
+		height: calc((var(--vh, 1vh) * 100) - 60px);
 	}
 	.layer-popup.fix .wrap-popup .grp-button-asis.pop-fix,
 	.layer-popup.fix.pop-white .wrap-popup .grp-button.btn-fix,
@@ -554,7 +554,7 @@
 		display: block;
 	}
 	.layer-popup.pop-white.head-line-two .wrap-popup .pop-cont {
-		height: calc(100vh - 88px);
+		height: calc((var(--vh, 1vh) * 100) - 88px);
 	}
 
 	
