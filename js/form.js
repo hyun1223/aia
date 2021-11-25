@@ -34,13 +34,19 @@ $(document).ready(function(){
 	//input focus
 	$('.ipt input').focus(function(){
 		$(this).next().addClass('lab-top');
+		if ($(this).parents().parents().hasClass('ipt-pass')) {
+			$(this).parents().parents().addClass('active');
+		}
 	});
 	$('.ipt input').blur(function(){
 		if($(this).val() == ''){
 			$(this).next().removeClass('lab-top');
+			if ($(this).parents().parents().hasClass('ipt-pass')) {
+				$(this).parents().parents().removeClass('active');
+			}
 		}
 	});
-
+	
 	//input 주민번호  //20211111
 	$('.ipt-idnum input').focus(function(){
 		$(this).parents('.ipt-box02').addClass('active');
@@ -98,6 +104,16 @@ function layerHandler(obj) {
 		return false;
 	});
 };
+
+
+// mobile popup 높이
+var vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", vh + "px");
+
+window.addEventListener("resize", function(){
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", vh + "px");
+});
 
 
 //select popup

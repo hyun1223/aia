@@ -29,6 +29,11 @@ li {
 a {
 	color: inherit;
 }
+form {
+    margin: 0;
+    padding: 0;
+    margin-block-end: 0;
+}
 .pd0 {
     padding: 0 !important;
 }
@@ -600,7 +605,7 @@ p.icon-error + .grp-button {
 .ipt-box.check-ok .ipt i.finish-check {
 	display: block;
 }
-.ipt-pass .ipt input:not(:placeholder-shown) ~ label + i {
+.ipt-pass.active .ipt input ~ label + i {
 	display: block;
 }
 
@@ -1359,6 +1364,9 @@ input::placeholder {
 	media
  ------------------------------------------------------------------------------- */ 
 @media all and (max-width:767px){
+    .container {
+        padding: 0px;
+    }
     .m-bp-b {
         display: block;
     }
