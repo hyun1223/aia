@@ -34,7 +34,7 @@ dl, dd {
     display: none !important;
 }
 .dp-b {
-    display: block;
+    display: block !important;
 }
 .rela {
     position: relative;
@@ -315,6 +315,8 @@ ul.blit-gray li span {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #DBDAD4;
+    border-radius: 0;
+    -webkit-border-radius: 0;
 }
 .int-box .int input[type="text"]::placeholder,
 .int-box .int input[type="date"]::placeholder,
@@ -786,6 +788,8 @@ input[type="date"]:valid:before{
 	text-align: left;
     color: #554344;
 	border: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
 	z-index: 1;
     -webkit-appearance: none !important; /* 화살표 없애기 for chrome*/ 
     -moz-appearance: none !important;    /* 화살표 없애기 for firefox*/ 
@@ -1813,7 +1817,7 @@ button {
 .pop-img-box img {
     margin: auto;
     display: block;
-    width: auto;
+    width: 100%;
     height: 100%;
 }
 .file-info {

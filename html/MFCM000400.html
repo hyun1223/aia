@@ -987,7 +987,12 @@
       <!-- //footer -->
 
       <script>
-        $('.login-my-aia').css('min-height', ($(window).height() - $('.topnav.global-nav').height()) + 'px');
+
+        if($(window).width() > 767) {
+          $('.login-my-aia').css('min-height', ($(window).height() - $('.topnav.global-nav').height()) + 'px');
+        } else {
+          $('.login-my-aia').css('min-height', ($(window).height() - $('.topnav.global-nav').height() - 20) + 'px').css('padding-bottom', '95px');
+        }
         //login	
         $(window).resize(function () {
           if($(window).width() > 767) {
