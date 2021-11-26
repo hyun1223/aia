@@ -429,6 +429,9 @@ input[type="date"]:valid:before{
     display: inline;
     padding-right: 2px;
 }
+.error-int-radio + p.txt-error {
+    display: block;
+} 
 .error-int p.txt-error {
     display: block;
 } 

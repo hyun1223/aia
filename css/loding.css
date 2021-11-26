@@ -41,6 +41,38 @@
 	border-radius: 16px;
 	z-index: 2;
   }
+  .loging-txt-info {
+	position: absolute;
+	top: calc(50% + 74px);
+	left: 50%;
+	display:block;
+	max-width: 350px;
+	width: calc(100% - 32px);
+	text-align:center;
+	color: #fff;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%); 
+	z-index: 3;
+  }
+  .loging-txt-info div {
+	  position: relative;
+	  padding: 22px 18px;
+  }
+  .loging-txt-info::before {
+	position: absolute;
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #333D47;
+	opacity: 0.9;
+	box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+  }
   .cssload-arc {
 	position: relative;
 	overflow: hidden;
@@ -48,7 +80,7 @@
 	font-size: 18px;
 	line-height: 28px;
 	color: #333D47;
-	padding: 77px 0 0 40px;
+	padding: 77px 0 0 38px;
   }
   .line-base,
   .cssload-arc-cube {
