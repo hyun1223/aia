@@ -876,7 +876,7 @@ input[type="date"]:valid:before{
     transform: translate(-50%, -100%);
 }
 .tip-box.tip04 .balloon-box .tip-txt {
-    width: 210px;
+    width: 280px;
 }
 .tip-box.tip04 .balloon-box .tip-txt::before {
     left: calc(50% - 3px);
@@ -2560,8 +2560,15 @@ button {
     }
     .fail-cont .white-shadow-box {
         padding: 32px 20px;
+    }    
+    .tip-box.tip04 .balloon-box {
+        left: 9px;
+        -webkit-transform: translate(-60%, -100%);
+        transform: translate(-60%, -100%);
     }
-    
+    .tip-box.tip04 .balloon-box .tip-txt::before {
+        left: calc(60% - 3px);
+    }    
 }
 @media all and (min-width:768px){
     .container.input-container { 
