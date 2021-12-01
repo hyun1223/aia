@@ -611,7 +611,7 @@ p.icon-error + .grp-button {
 
 .ipt-box input:read-only {
 	color: #8F959A !important;
-	border-color:#5B636B !important;
+	/* border-color:#5B636B !important; */
 }
 .ipt-box input:read-only + label {
 	color: #8F959A !important;
@@ -1153,8 +1153,10 @@ input::placeholder {
     color: #333D47;
 }
 .white-shadow-box strong {
-    margin-bottom: 24px;
     display: block;
+}
+.white-shadow-box strong + p {
+    margin-top: 24px;
 }
 .white-shadow-box p {
     font-size: 16px;
