@@ -76,6 +76,24 @@ dd {
     font-weight: 700;
     border-bottom: 1px solid #0A6E93;
 }
+
+.info-box {
+    position: relative;
+    margin-top: 24px;
+    padding: 10px 40px;
+    font-size: 12px;
+    line-height: 18px;
+    border-bottom: 1px solid #D6D8DA;
+}
+.info-box::before {
+    position: absolute;
+    top: 16px;
+    left: 5px;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12ZM11.625 6L11.7476 6.0066C12.3112 6.06768 12.75 6.5451 12.75 7.125C12.75 7.74632 12.2463 8.25 11.625 8.25C11.0037 8.25 10.5 7.74632 10.5 7.125C10.5 6.5451 10.9388 6.06768 11.5024 6.0066L11.625 6ZM11.25 9.75C12.0297 9.75 12.6704 10.3449 12.7431 11.1055L12.75 11.25V17.7373C12.75 18.1515 12.4142 18.4873 12 18.4873C11.5858 18.4873 11.25 18.1515 11.25 17.7373V11.25H10.5C10.0858 11.25 9.75 10.9142 9.75 10.5C9.75 10.1203 10.0322 9.80651 10.3982 9.75685L10.5 9.75H11.25Z' fill='%235B636B'/%3E%3C/svg%3E%0A");
+}
 /* -------------------------------------------------------------------------------
 	checkbox, radio
  ------------------------------------------------------------------------------- */
@@ -626,21 +644,28 @@ p.icon-error + .grp-button {
 .ipt-box select:disabled + label {
 	color: #848A90 !important;
 }
-input::-webkit-input-placeholder {
+.ipt-box input::-webkit-input-placeholder {
 	color: #8F959A !important;
     opacity: 0;
 }
-input:-ms-input-placeholder {
+.ipt-box input:-ms-input-placeholder {
 	color: transparent;
 }
-.ipt-box02 .ipt-idnum input:-ms-input-placeholder {
+.ipt-box input::placeholder {
+	color: #8F959A !important;
+}
+.ipt-box02 input::-webkit-input-placeholder {
+	color: #8F959A !important;
+    opacity: 0;
+}
+.ipt-box02 input::-ms-input-placeholder {
+	color: #8F959A !important;
+}
+.ipt-box02 input::placeholder {
+	color: #8F959A !important;
+}
+.ipt-idnum input:-ms-input-placeholder {
 	color: transparent;
-}
-input::-ms-input-placeholder {
-	color: #8F959A !important;
-}
-input::placeholder {
-	color: #8F959A !important;
 }
 .ipt-idnum input::placeholder {
 	color: #8F959A !important;
@@ -1656,6 +1681,9 @@ input::placeholder {
     .search-tit h3{
         font-size: 32px;
         line-height: 36px;
+    }        
+    .info-box {
+        padding-right: 100px;
     }
 }
 
