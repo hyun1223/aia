@@ -734,10 +734,31 @@
         <div class="demand-pay">
           <div class="tit-line">
             <h3>[필수] 보험금 청구 정보 <span class="m-bp-b">제공에 동의해주세요.</span></h3>
-            <dl class="receipt-num">
-              <dt>접수번호</dt>
-              <dd>20210831000121212</dd>
-            </dl>
+            <!-- 20211206 -->
+            <ul class="demand-history type03">
+              <li>
+                <div class="form-box-asis">
+                  <form>
+                    <dl class="receipt-num">
+                      <dt>접수번호</dt>
+                      <dd>20210831000121212</dd>
+                    </dl>
+                    <dl>
+                      <dt>피보험자</dt>
+                      <dd>김청구</dd>
+                    </dl>
+                    <dl class="int-box"><!-- 에러시 class="error-int"추가 -->
+                      <dt><label for="name01">수익자</label></dt>
+                      <dd>
+                        <input type="text" placeholder="한글, 영문만 입력 가능합니다." value="김청구" id="name01">
+                        <p class="txt-error">수익자 이름을 기재하셔야 합니다.</p>
+                      </dd>
+                    </dl>
+                  </form>
+                </div>
+              </li>
+            </ul>
+            <!-- //20211206 -->
           </div>
           <dl class="demand-pay-agr pink-check">
             <dt class="agr-check-all">

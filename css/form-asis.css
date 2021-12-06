@@ -415,7 +415,6 @@ input[type="date"]:valid:before{
     font-size: 16px;
     line-height: 24px;
 }
-
 .int-box p.txt-error {
     display: none;
     margin-top: 4px !important;
@@ -434,6 +433,7 @@ input[type="date"]:valid:before{
 } 
 .error-int p.txt-error {
     display: block;
+    font-weight: normal;
 } 
 .int + .int-btn {
     margin-top: 8px;
@@ -1616,6 +1616,27 @@ button {
     margin-top: 4px;
 }
 
+.demand-history.type03{
+    border-top: none;
+}
+.demand-history.type03 li {
+    padding: 20px 30px 10px;
+    border-bottom: none;
+}
+.demand-history.type03 li dl dt,
+.demand-history.type03 li dl dd {
+    line-height: 40px;
+}
+.demand-history.type03 li .int-box {
+    align-items: flex-start;
+    padding-top: 10px;
+}
+.demand-history.type03 li .int-box dd {
+    width: calc(100% - 170px);
+}
+.demand-history.type03 li .int-box dd input {
+    width: 100%;
+}
 .reclamation-list {
     border-top: 1px solid #EDECE9;
 }
@@ -2099,7 +2120,7 @@ button {
     color: #596C80;
 }
 .receipt-num dd {
-    margin-left: 12px;
+    /* margin-left: 12px; */
     font-weight: 700;
 }
 
@@ -2421,6 +2442,18 @@ button {
         padding: 20px 48px 20px 20px;
     }
     
+    .demand-history.type03 li {
+        padding: 0 20px 10px;
+    }
+    .demand-history.type03 li dt {
+        min-width: 100px;
+    }
+    .demand-history.type03 li .int-box {
+        padding-top: 0;
+    }
+    .demand-history.type03 li .int-box dd {
+        width: 100%;
+    }
     .reclamation-list li {
         padding: 16px 0;
     }
@@ -2539,6 +2572,7 @@ button {
         font-size: 16px;
         line-height: 24px;
     }
+    
 }
 @media all and (max-width:359px){
     .tit-line {
