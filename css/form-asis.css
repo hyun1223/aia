@@ -477,6 +477,32 @@ input[type="date"]:valid:before{
 .int-box .int.int-btn.type03 .int-type {
     width: calc(100% - 154px);
 }
+.int-box .int.type02 > div {
+    border: 1px solid #DBDAD4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #DBDAD4;
+    line-height: 38px;
+    font-size: 16px;
+}
+.int-box .int.type02 input,
+.int-box .int.type02 input:focus {
+    border: none;
+}
+.int-box .int.type02 input:read-only {
+    border: none;
+    background: transparent;
+}
+.int-box .int.type02 div input:first-child {
+    min-width: 90px;
+    width: 90px;
+}
+
+.int-box .int.type02.active > div {
+    border:1px solid #22a8da;
+}
+
 .info-list {
     margin-top: 16px;
 }

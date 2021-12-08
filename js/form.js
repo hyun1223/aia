@@ -60,6 +60,13 @@ $(document).ready(function(){
 			$(this).parents('.ipt-box02').removeClass('active');
 		}
 	});
+	//input 주민번호(cosmos) //20211207
+	$('.int.type02 div input').focus(function(){
+		$(this).parents('.int.type02').addClass('active');
+	});
+	$('.int.type02 div input').blur(function(){
+		$(this).parents('.int.type02').removeClass('active');
+	});
 
 	//toolTip focus
 	$('.tip-box button').focus(function(){
