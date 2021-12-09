@@ -2,14 +2,12 @@ body {
     word-break: keep-all;
     color: #333D47;
 }
-input[type="text"], 
-input[type="textarea"], 
+input[type="text"],
 input[type="password"], 
 input[type="email"], 
 input[type="tel"], 
 input[type="url"], 
-input[type="search"], 
-input[type="url"], 
+input[type="search"],
 textarea, 
 select.primary-select {
     color: #333D47;

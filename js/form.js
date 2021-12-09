@@ -95,6 +95,15 @@ $(document).ready(function(){
 		window.open('https://cert.vno.co.kr/app/agree/agree_m_05.jsp', '개인정보 제 3자 제공 동의(KT, LGU+ 알뜰폰 통합)', 'width=500, height=540');
 	});
 
+	//모바일 키보드 포커싱
+	if($(window).width() < 767) {
+		$('input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="url"], input[type="search"], textarea').focus(function () {
+			$('html, body').animate({
+				scrollTop: ($(this).offset().top - 100) + 'px'
+			}, 'fast');
+		});
+	}    
+
 });
 
 // popup

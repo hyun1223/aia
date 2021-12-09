@@ -952,7 +952,8 @@
       <script>
         if($(window).width() < 767) {
           $('.login-my-aia').css('min-height', ($(window).height() - $('.topnav.global-nav').height() - $('.btn-bot-box').height() - 96) + 'px');
-        }
+          $('.footer').css('display', 'none');
+        }        
         $(window).resize(function () {
           if($(window).width() > 767) {
             $('.footer').css('display', 'block');

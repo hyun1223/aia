@@ -1008,7 +1008,8 @@
         /* 20211018 추가 */
         if($(window).width() < 767) {
           $('.join-aia').css('min-height', ($(window).height() - $('.topnav.global-nav').height() - 63) + 'px');
-        }
+            $('.footer').css('display', 'none');
+        }     
         $(window).resize(function () {
           if($(window).width() > 767) {
             $('.footer').css('display', 'block');

@@ -1117,6 +1117,9 @@
       <script>
         $('.login-my-aia').css('min-height', ($(window).height() - $('.topnav.global-nav').height() - $('.join-info').height() - 110) + 'px');
         
+        if($(window).width() < 767) {
+          $('.footer').css('display', 'none');
+        }       
         $(window).resize(function () {
           if($(window).width() > 767) {
             $('.footer').css('display', 'block');

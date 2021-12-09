@@ -970,6 +970,9 @@
       <!-- //footer -->
       <script>
         
+        if($(window).width() < 767) {
+          $('.footer').css('display', 'none');
+        } 
         $(window).resize(function () {
           if($(window).width() > 767) {
             $('.footer').css('display', 'block');

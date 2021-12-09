@@ -787,7 +787,7 @@
               <div class="grp-button type03">
                 <BUtton type="button" class="btnL">중복 확인</BUtton>
               </div>
-              <div class="grp-button mg-box01">
+              <div class="grp-button btn-fix"><!-- 20211208 -->
                 <BUtton type="button" class="btnL pop-btn btn-open99">확인</BUtton>
               </div>
             </form>
@@ -992,6 +992,18 @@
       </div>
       <!-- //footer -->
       <script>
+        //20211208
+        $('.login-my-aia').css('min-height', ($(window).height() - $('.topnav.global-nav').height() - $('.join-info').height() - 110) + 'px');             
+        if($(window).width() < 767) {
+          $('.footer').css('display', 'none');
+        }     
+        $(window).resize(function () {
+          if($(window).width() > 767) {
+            $('.footer').css('display', 'block');
+          } else {
+            $('.footer').css('display', 'none');
+          }
+        });
       </script>
     </body>
 </html>
