@@ -34,15 +34,15 @@ $(document).ready(function(){
 	//input focus
 	$('.ipt input').focus(function(){
 		$(this).next().addClass('lab-top');
-		if ($(this).parents().parents().hasClass('ipt-pass')) {
-			$(this).parents().parents().addClass('active');
+		if ($(this).parent().parent().hasClass('ipt-pass')) {
+			$(this).parent().parent().addClass('active');
 		}
 	});
 	$('.ipt input').blur(function(){
 		if($(this).val() == ''){
 			$(this).next().removeClass('lab-top');
-			if ($(this).parents().parents().hasClass('ipt-pass')) {
-				$(this).parents().parents().removeClass('active');
+			if ($(this).parent().parent().hasClass('ipt-pass')) {
+				$(this).parent().parent().removeClass('active');
 			}
 		}
 	});
@@ -101,6 +101,18 @@ $(document).ready(function(){
 			$('html, body').animate({
 				scrollTop: ($(this).offset().top - 100) + 'px'
 			}, 'fast');
+		});	
+		$('.layer-popup input[type="text"], .layer-popup input[type="password"], .layer-popup input[type="email"], .layer-popup input[type="tel"], .layer-popup input[type="url"], .layer-popup input[type="search"], .layer-popup textarea').focus(function () {
+			var offset = $(this).offset().top;
+			if( offset > $(this).parents('.pop-cont').height() ) {
+				$(this).parents('.pop-cont').animate({
+						scrollTop: offset - 400 + 'px'
+				}, 'fast');
+			} else {
+				$(this).parents('.pop-cont').animate({
+						scrollTop: offset + 'px'
+				}, 'fast');
+			}
 		});
 	}    
 

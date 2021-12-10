@@ -760,19 +760,21 @@
             <form>
               <div class="int-box">
                 <!-- item -->
-                <div class="int">
+                <div class="int error-int"><!-- 에러시 추가 error-int -->
                   <label for="k_name">이름</label>
                   <input type="text" placeholder="피보험자 이름" id="k_name">
+                  <p class="txt-error">이름을 입력해 주세요.</p><!-- 20211210 -->
                 </div>
                 <!-- //item -->
                 <!-- item 20211207 -->
-                <div class="int type02">
+                <div class="int type02 error-int">
                   <label for="id_num">주민등록번호</label>
                   <div>
                     <input type="tel" placeholder="앞 6자리" id="id_num" maxlength="6" >
                     -
                     <input type="password" placeholder="뒤 7자리" id="id_num" maxlength="7" readonly="readonly">
                   </div>
+                  <p class="txt-error">주민번호를 정확히 입력해주세요.</p><!-- 20211210 -->
                 </div>
                 <!-- //item 20211207 -->
               </div>
