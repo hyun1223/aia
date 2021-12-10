@@ -209,7 +209,7 @@ dd {
 	opacity: 0.5;
 }
 
-.agr-check div input[type="checkbox"] + label {
+.agr-toggle .agr-check div input[type="checkbox"] + label {
 	display: block;
 	position: relative;
 	padding: 2px 0 2px 74px;
@@ -220,16 +220,16 @@ dd {
     text-indent: -37px;
     letter-spacing: -1px;
 }
-.agr-check div input[type="checkbox"] + label span {
+.agr-toggle .agr-check div input[type="checkbox"] + label span {
     display: block;
     padding-left: 37px;
 }
-.agr-check div input[type="checkbox"]:focus + label,
+.agr-toggle .agr-check div input[type="checkbox"]:focus + label,
 .agr-check02 div input[type="checkbox"]:focus + label {
 	border: 1px solid #333D47;
 }
-.agr-check div input[type="checkbox"] + label::before,
-.agr-check div input[type="checkbox"] + label::after,
+.agr-toggle .agr-check div input[type="checkbox"] + label::before,
+.agr-toggle .agr-check div input[type="checkbox"] + label::after,
 .agr-check02 div input[type="checkbox"] + label::before {
 	content: '';
 	position: absolute;
@@ -241,26 +241,26 @@ dd {
 	-moz-transform:translateY(-50%);
 	-o-transform:translateY(-50%);
 }
-.agr-check div input[type="checkbox"] + label::before {
+.agr-toggle .agr-check div input[type="checkbox"] + label::before {
 	top: 12px;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
     background: #E0E2E3;
     border: 1px solid #E0E2E3;
 }
-.agr-check div input[type="checkbox"] + label::after {
+.agr-toggle .agr-check div input[type="checkbox"] + label::after {
 	top: 12px;
     background: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.7628 0.878688C10.3723 0.488165 9.73914 0.488165 9.34861 0.878688L4.39886 5.82844L2.27754 3.70712C1.88701 3.3166 1.25385 3.3166 0.863317 3.70712C0.472797 4.09764 0.472797 4.73081 0.863331 5.12133L3.69176 7.94976C3.71616 7.97417 3.74153 7.99706 3.76771 8.01841C4.16048 8.33877 4.73985 8.31588 5.10597 7.94977L10.7628 2.2929C11.1534 1.90238 11.1534 1.26921 10.7628 0.878688Z' fill='white'/%3E%3C/svg%3E%0A") no-repeat center 8px;
 }
-.agr-check div input[type="checkbox"]:checked + label::before {
+.agr-toggle .agr-check div input[type="checkbox"]:checked + label::before {
     background: #333D47;
     border: 1px solid #333D47;
 }
-.agr-check.all div input[type="checkbox"] + label {
+.agr-toggle .agr-check.all div input[type="checkbox"] + label {
     font-size: 16px;
     line-height: 20px;
 }
-.agr-check02 div input[type="checkbox"] + label {
+.agr-toggle .agr-check02 div input[type="checkbox"] + label {
 	position: relative;
     padding-left: 25px;
     font-size: 14px;
@@ -268,7 +268,7 @@ dd {
     color: #858B91;
 	border: 1px solid #fff;
 }
-.agr-check02 div input[type="checkbox"] + label::before {
+.agr-toggle .agr-check02 div input[type="checkbox"] + label::before {
 	top: 9px;
     background: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.7143 0.714253C13.1936 0.193554 12.3493 0.193553 11.8286 0.714252L5.22917 7.31372L2.40053 4.48509C1.87983 3.96439 1.03561 3.96439 0.514914 4.48509C-0.00578468 5.00578 -0.00578527 5.85001 0.514914 6.3707L4.26696 10.1228C4.27328 10.1293 4.27968 10.1359 4.28616 10.1423C4.80686 10.663 5.65108 10.663 6.17178 10.1423L13.7143 2.59987C14.235 2.07917 14.235 1.23495 13.7143 0.714253Z' fill='%23E0E2E3'/%3E%3C/svg%3E%0A") no-repeat 0 center;
 }
@@ -1272,14 +1272,14 @@ p.icon-error + .grp-button {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }
-.agr-list li dl dd {
+.tgl-list li dl dd {
     display: none;
     padding-left: 34px;
 }
-.agr-list li.active dl dd {
+.tgl-list li.active dl dd {
     display: block;
 }
-.agr-list ul li {
+.agr-list .tgl-list li {
     margin-bottom: 20px;
     width: 100%;
     display: -webkit-box;
@@ -1287,16 +1287,16 @@ p.icon-error + .grp-button {
     display: -ms-flexbox;
     display: flex;
 }
-.agr-list ul li:last-child {
+.agr-list .tgl-list li:last-child {
     margin: 0;
 }
-.agr-list ul li ul {
+.agr-list .tgl-list li ul {
     margin-top: 14px;
 }
-.agr-list ul li ul li {
+.agr-list .tgl-list li ul li {
     margin-bottom: 8px;
 }
-.agr-list ul li > div {
+.agr-list .tgl-list li > div {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -1609,18 +1609,18 @@ p.icon-error + .grp-button {
         margin: 60px 0 44px;
         font-size: 32px;
     }
-    .agr-list ul li {
+    .agr-list .tgl-list li {
         margin-bottom: 24px;
     }
     .agr-toggle > dd {
         padding: 32px 20px;
     }
-    .agr-check div input[type="checkbox"] + label {
+    .agr-toggle .agr-check div input[type="checkbox"] + label {
         padding: 0 0 0 74px;
         font-size: 16px;
         line-height: 24px;
     }
-    .agr-check div input[type="checkbox"] + label span {
+    .agr-toggle .agr-check div input[type="checkbox"] + label span {
         display: inline-block;
     }
     .agr-toggle > dt {
