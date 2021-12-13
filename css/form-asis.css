@@ -496,8 +496,8 @@ input[type="date"]:valid:before{
     background: transparent;
 }
 .int-box .int.type02 div input:first-child {
-    min-width: 90px;
-    width: 90px;
+    min-width: 95px;
+    width: 95px;
 }
 
 .int-box .int.type02.active > div {
@@ -1656,6 +1656,7 @@ button {
 .demand-history.type03 li dl dt,
 .demand-history.type03 li dl dd {
     line-height: 40px;
+    margin-left: 0;
 }
 .demand-history.type03 li .int-box {
     align-items: flex-start;
@@ -2108,11 +2109,8 @@ button {
     margin: auto;      
     width: 656px;
     position: relative;
-    min-height: 540px;
+    min-height: 600px;
     text-align: center;
-}
-.bg-gray-container .ct-cont.type02 {
-    min-height: 580px;
 }
 .ok-check {
     margin-bottom: 80px;    
@@ -2158,7 +2156,7 @@ button {
     color: #596C80;
 }
 .receipt-num dd {
-    /* margin-left: 12px; */
+    margin-left: 12px;
     font-weight: 700;
 }
 

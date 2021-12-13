@@ -400,42 +400,33 @@
       </div>
       <hr>
       <div class="container input-container">
-        <h3>button & popup</h3>
+        <h3>button</h3>
         <strong class="ex-guide-tit02">1개 - left</strong> 
         <div class="grp-button-asis">
           <div>
-            <BUtton type="button" class="btn-primary pop-btn btn-open01">popup - fullScroll</BUtton>
+            <BUtton type="button" class="btn-primary">확인</BUtton>
           </div>
         </div>
         <strong class="ex-guide-tit02">1개 - left (모바일 플루팅)</strong> 
         <div class="grp-button-asis btn-fix">
           <div>
-            <button type="button" class="btn btn-default btn-primary pop-btn btn-pop01">청구 서류 첨부</button>
+            <button type="button" class="btn btn-default btn-primary">확인</button>
           </div>
         </div>
         <strong class="ex-guide-tit02">1개 - left (가로3/1크기)</strong> 
         <div class="grp-button-asis type03">
           <div>
-            <button type="button" class="btn btn-default btn-primary">다음</button>
+            <button type="button" class="btn btn-default btn-primary">확인</button>
           </div>
         </div>
         <strong class="ex-guide-tit02">1개 - center</strong> 
         <div class="grp-button-asis type02">
           <div>
-            <BUtton type="button" class="btn-primary pop-btn btn-open03">popup - full(이미지 상세)</BUtton>
+            <BUtton type="button" class="btn-primary">확인</BUtton>
           </div>
         </div>
         <strong class="ex-guide-tit02">1개 - content 상세</strong>
         <button type="button" class="btn-ditail">상세 내용</button>
-        <strong class="ex-guide-tit02">2개</strong>
-        <div class="grp-button-asis type04">
-          <div>
-            <BUtton type="button" class="btn-primary pop-btn btn-open02">popup - alert</BUtton>
-          </div>
-            <div>
-            <BUtton type="button" class="btn-secondary pop-btn btn-open99">popup - alert(head X)</BUtton>
-          </div>
-        </div>
         <strong class="ex-guide-tit02">2개</strong>
         <div class="grp-button-asis type05">
           <div>
@@ -447,6 +438,26 @@
             <button type="button" class="btn btn-default btn-secondary" data-target="_self">
               취소
             </button>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="container input-container">
+        <h3>popup</h3>
+        <div class="grp-button-asis type05">
+          <div>
+            <BUtton type="button" class="btn-primary pop-btn btn-open01">popup - fullScroll</BUtton>
+          </div>
+          <div>
+            <BUtton type="button" class="btn-primary pop-btn btn-open03">popup - full(이미지 상세)</BUtton>
+          </div>
+        </div>
+        <div class="grp-button-asis type05 margin-top-3xl">
+          <div>
+            <button type="button" class="btn btn-default btn-primary pop-btn btn-pop02">popup - alert</button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-default btn-primary pop-btn btn-pop98">popup - alert(confirm)</button>
           </div>
         </div>
       </div>
@@ -1212,33 +1223,6 @@
 				<!-- // popup  -->
 			</article>
 			<!-- //alert 팝업  -->
-			<!-- alert 팝업 -->
-			<article class="layer-popup alert type02 pop-open99">
-				<!-- popup -->
-				<div class="wrap-popup">
-          <div class="popup">
-            <div class="pop-cont">  
-              <div class="alt-cont">
-                <strong>제목</strong>
-                <p>
-                  컨텐츠<br>
-                  컨텐츠<br>
-                  컨텐츠
-                </p>
-              </div> 
-              <div class="grp-button-asis">
-                <div>
-                  <BUtton type="button" class="btn btn-default btn-primary close-btn99">확인</BUtton>
-                </div>
-              </div>
-            </div>
-            <button type="button" class="btn-close close-btn99">닫기</button>
-          </div>
-				</div>
-				<!-- // popup  -->
-			</article>
-			<!-- //alert 팝업  -->
-			
 			<!-- full 팝업 -->
 			<article class="layer-popup type03 pop-open03">
 				<!-- popup -->
@@ -1288,17 +1272,36 @@
 				<!-- // popup  -->
 			</article>
 			<!-- // full 팝업  -->
-			<!-- 안내 팝업 -->
-			<article class="layer-popup pop-sel">
+      
+			<!-- 첨푸파일 삭제 확인 팝업 20211111 -->
+			<article class="layer-popup alert asis pop-open98">
 				<!-- popup -->
 				<div class="wrap-popup">
           <div class="popup">
-            <ul>
-            </ul>
+            <div class="pop-head">
+              <h1>첨부파일 삭제</h1>
+            </div>
+            <div class="pop-cont alt-txt">
+              <strong>해당 파일을 삭제하시겠습니까?</strong>
+              
+              <div class="grp-button-asis type05">
+                <div>
+                  <button type="button" class="btn btn-default btn-primary" data-target="_self">
+                    확인
+                  </button>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-default btn-secondary" data-target="_self">
+                    취소
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn-close close-btn98">닫기</button>
           </div>
 				</div>
 				<!-- // popup  -->
 			</article>
-			<!-- //안내 팝업  -->
+			<!-- // 첨푸파일 삭제 확인 팝업  -->
     </body>
 </html>
