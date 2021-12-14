@@ -84,6 +84,9 @@ dl, dd {
 .txt-blue {
     color: #0A6E93 !important;
 }
+.only-m {
+    display: none;
+}
 .point-list li,
 p.point-list {
     position: relative;
@@ -2283,6 +2286,9 @@ button {
 
 
 @media all and (max-width:767px){
+    .only-m {
+        display: block;
+    }
     .container {
         padding: 0px;
     }
