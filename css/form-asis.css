@@ -498,9 +498,16 @@ input[type="date"]:valid:before{
     border: none;
     background: transparent;
 }
+.int-box .int.type02 input:disabled {
+    border: none;
+    background: #FAF9F3;
+}
 .int-box .int.type02 div input:first-child {
     min-width: 95px;
     width: 95px;
+}
+.int-box .int.type02 div input:last-child {
+    margin-left: 5px;
 }
 
 .int-box .int.type02.active > div {
@@ -2258,7 +2265,7 @@ button {
 
 .bg-gray-container .ct-cont.fail-cont {
     width: 488px;
-    min-height: 330px;
+    min-height: 450px;
 }
 .fail-cont h3 {
     display: block;
@@ -2561,6 +2568,9 @@ button {
     .bg-gray-container .grp-button-asis.btn-fix { 
        background: rgba(247,247,248,0.95);
     }
+    .fail-cont {
+        min-height: 330px;
+    }
     .fail-cont h3 {
         font-size: 24px;
         line-height: 32px;
@@ -2762,6 +2772,10 @@ button {
     }
     .grp-button-asis.btn-last-hidden div:last-child {
         display: none;
+    }
+    .grp-button-asis.one div {
+        margin: auto;
+        width: 75% !important;
     }
     .debit-step {
         -webkit-box-pack: justify;

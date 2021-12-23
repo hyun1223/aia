@@ -19,12 +19,13 @@
         <link rel="stylesheet" href="../asis/table_design.css" type="text/css">
         <link rel="stylesheet" href="../asis/transkey.css" type="text/css">
         <link rel="stylesheet" href="../css/popup.css" type="text/css"> 
-        <link rel="stylesheet" href="../css/form.css" type="text/css"> 
+        <link rel="stylesheet" href="../css/form.css" type="text/css">
+        <link rel="stylesheet" href="../css/form-asis.css" type="text/css"> 
         <script type="text/javascript" src="../asis/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="../asis/aia-header-v2.min.js"></script>
         <script type="text/javascript" src="../asis/aia-footer-v2.min.js"></script>
         <script type="text/javascript" src="../js/form.js"></script>
-        <title>서비스 이용불가 안내</title>      
+        <title>정보확인 실패</title>      
     </head>
     <body>
       <!-- header -->
@@ -731,24 +732,23 @@
 
 
       <!-- container -->
-      <div class="container login-container">
-        <div class="login-my-aia pd0">
-          <div class="login-tit type04"><!-- 2차 수정 -->
-            <h3>서비스 이용불가 안내</h3>
-          </div>
-          <!-- 2차 수정 -->
+      <div class="container bg-gray-container">
+        <div class="ct-cont fail-cont">
+          <h3>
+            미성년자는 온라인으로 <br>
+            보험금 청구 진행을 <br>
+            하실 수 없습니다.
+          </h3>
           <div class="white-shadow-box">
-            <strong>AIA생명의 보험계약이 존재하지 않습니다.<br>사이버 서비스를 이용하실 수 없습니다.</strong>
+            <ul>
+              <li>가까운 영업점을 통해 청구 접수가 가능합니다.</li>
+            </ul>
           </div>
-        </div>
-        <div class="btn-bot-box">
-          <div class="grp-button">
-            <BUtton type="button" class="btnL">고객센터</BUtton>
+          <div class="grp-button-asis one btn-fix">
+            <div>
+              <button type="button" class="btn btn-default btn-primary">확인</button>
+            </div>
           </div>
-          <div class="grp-button type02">
-            <BUtton type="button" class="btnL">홈으로</BUtton>
-          </div>
-          <!-- //2차 수정 -->
         </div>
       </div>
       <!-- // container -->
@@ -950,13 +950,20 @@
       <!-- //footer -->
 
       <script>
-        if($(window).width() < 767) {
-          $('.login-my-aia').css('min-height', ($(window).height() - $('.btn-bot-box').height() - 96) + 'px');//2차 수정
+        if($(window).width() > 767) {
+          $('.ct-cont').css('height', ($(window).height() - $('.topnav.global-nav').height() - 200 + 'px'));
         } else {
-          $('.login-my-aia').css('min-height', '360px');
-          $('.login-my-aia').css('height', ($(window).height() - $('.btn-bot-box').height() - 192) + 'px');
-        }      
-        $('.topnav, .footer').css('display', 'none');
+          $('.ct-cont').css('min-height', ($(window).height() - $('.topnav.global-nav').height() - 250 + 'px'));
+          $('.footer').css('display', 'none');
+        }
+        $(window).resize(function () {
+          if($(window).width() > 767) {
+            $('.footer').css('display', 'block');
+          } else {
+            $('.footer').css('display', 'none');
+          }
+        });
+
       </script>
     </body>
 </html>

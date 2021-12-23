@@ -955,11 +955,11 @@
 
       <script>
         if($(window).width() > 767) {
-          $('.ct-cont').css('height', ($(window).height() - $('.topnav.global-nav').height() - 180 + 'px'));
+          $('.ct-cont').css('height', ($(window).height() - $('.topnav.global-nav').height() - 200 + 'px'));//20211221
         } else {
           $('.ct-cont').css('min-height', ($(window).height() - $('.topnav.global-nav').height() - 250 + 'px'));
           $('.footer').css('display', 'none');
-        }    
+        }
         $(window).resize(function () {
           if($(window).width() > 767) {
             $('.footer').css('display', 'block');

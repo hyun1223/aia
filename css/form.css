@@ -1175,7 +1175,7 @@ p.icon-error + .grp-button {
     line-height: 30px;
     color: #333D47;
 }
-.white-shadow-box strong {
+.white-shadow-box > strong {
     display: block;
 }
 .white-shadow-box strong + p {
@@ -1593,7 +1593,7 @@ p.icon-error + .grp-button {
     .ft-drop .ft-drop-box .ft-cont .btn-line-text {
         display: none;
     }
-    .white-shadow-box {
+    .login-my-aia .white-shadow-box {
         margin: 0 0 200px;
         padding: 48px;
         text-align: center;
