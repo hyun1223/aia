@@ -665,12 +665,14 @@
 	.layer-popup.alert.asis .wrap-popup .pop-cont .grp-button-asis div {
 		padding: 0 240px;
 	}
-	.layer-popup.alert.asis .wrap-popup .pop-cont .grp-button-asis.type05 div {
+	.layer-popup.alert.asis .wrap-popup .pop-cont .grp-button-asis.type05 div,
+	.layer-popup.alert.asis .wrap-popup .pop-cont .grp-button-asis.type06 div {
 		margin-top: 0;
 		padding: 0;
 		width: calc(50% - 8px) !important;
 	}
-	.layer-popup .wrap-popup .pop-cont .grp-button-asis.type05 {
+	.layer-popup .wrap-popup .pop-cont .grp-button-asis.type05,
+	.layer-popup .wrap-popup .pop-cont .grp-button-asis.type06 {
 		padding: 0 110px;
 	}
 	.layer-popup.fix.pop-white .wrap-popup {
